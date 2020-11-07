@@ -241,8 +241,8 @@ public class VideoEditorAsset {
   public var tracksInfo: [VideoEditor.VideoEditorAssetTrackInfo] {
     get
   }
-  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], musicTrack: VideoEditor.MediaTrack?, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideshow: Swift.Bool)
-  public convenience init(sequence: VideoEditor.VideoSequence, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0))
+  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], musicTrack: VideoEditor.MediaTrack?, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideshow: Swift.Bool, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
+  public convenience init(sequence: VideoEditor.VideoSequence, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
@@ -271,6 +271,92 @@ extension VideoEditorAsset {
   }
   public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, rendererInstance: VideoEditor.CompositionRenderering?)
   @objc deinit
+}
+public enum VideoResolution {
+  case hd1280x720
+  case hd1920x1080
+  case default854x480
+  public var сaptureSessionPreset: AVFoundation.AVCaptureSession.Preset {
+    get
+  }
+  public var assetExportPreset: Swift.String {
+    get
+  }
+  public var size: CoreGraphics.CGSize {
+    get
+  }
+  public static func == (a: VideoEditor.VideoResolution, b: VideoEditor.VideoResolution) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct VideoResolutionConfiguration {
+  public let `default`: VideoEditor.VideoResolution
+  public let resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution]
+  public let thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat]
+  public let defaultThumnailHeight: CoreGraphics.CGFloat
+  public var current: VideoEditor.VideoResolution {
+    get
+  }
+  public var currentThumnailHeight: CoreGraphics.CGFloat {
+    get
+  }
+  public init(default: VideoEditor.VideoResolution, resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution], thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat], defaultThumnailHeight: CoreGraphics.CGFloat)
+}
+public enum DeviceModel : Swift.String {
+  case simulator
+  case iPod1
+  case iPod2
+  case iPod3
+  case iPod4
+  case iPod5
+  case iPad2
+  case iPad3
+  case iPad4
+  case iPhone4
+  case iPhone4S
+  case iPhone5
+  case iPhone5S
+  case iPhone5C
+  case iPadMini1
+  case iPadMini2
+  case iPadMini3
+  case iPadAir1
+  case iPadAir2
+  case iPadPro9_7
+  case iPadPro9_7_cell
+  case iPadPro10_5
+  case iPadPro10_5_cell
+  case iPadPro12_9
+  case iPadPro12_9_cell
+  case iPhone6
+  case iPhone6plus
+  case iPhone6S
+  case iPhone6Splus
+  case iPhoneSE
+  case iPhone7
+  case iPhone7plus
+  case iPhone8
+  case iPhone8plus
+  case iPhoneX
+  case iPhoneXS
+  case iPhoneXSmax
+  case iPhoneXR
+  case iPhone11
+  case iPhone11Pro
+  case iPhone11ProMax
+  case unrecognized
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIDevice {
+  public var type: VideoEditor.DeviceModel {
+    get
+  }
 }
 public class VideoSequenceItem {
   final public let originalURL: Foundation.URL
@@ -430,7 +516,7 @@ public class VideoEditorAssetTrackInfo {
   public var error: Swift.Error? {
     get
   }
-  public init(url: Foundation.URL, originalURL: Foundation.URL, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>)
+  public init(url: Foundation.URL, originalURL: Foundation.URL, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
   @objc deinit
 }
 public struct MediaTrackTimeRange {
