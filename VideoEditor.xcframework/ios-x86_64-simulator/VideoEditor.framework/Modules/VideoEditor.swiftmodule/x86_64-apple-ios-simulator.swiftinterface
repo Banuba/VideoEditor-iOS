@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -241,7 +241,7 @@ public class VideoEditorAsset {
   public var tracksInfo: [VideoEditor.VideoEditorAssetTrackInfo] {
     get
   }
-  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], musicTrack: VideoEditor.MediaTrack?, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideshow: Swift.Bool, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
+  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], musicTrack: VideoEditor.MediaTrack?, includeOriginalTrack: Swift.Bool = true, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideshow: Swift.Bool, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
   convenience public init(sequence: VideoEditor.VideoSequence, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
@@ -291,11 +291,11 @@ public enum VideoResolution {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-public struct VideoResolutionConfiguration {
-  public let `default`: VideoEditor.VideoResolution
-  public let resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution]
-  public let thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat]
-  public let defaultThumnailHeight: CoreGraphics.CGFloat
+@objc public class VideoResolutionConfiguration : ObjectiveC.NSObject {
+  final public let `default`: VideoEditor.VideoResolution
+  final public let resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution]
+  final public let thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat]
+  final public let defaultThumnailHeight: CoreGraphics.CGFloat
   public var current: VideoEditor.VideoResolution {
     get
   }
@@ -303,6 +303,8 @@ public struct VideoResolutionConfiguration {
     get
   }
   public init(default: VideoEditor.VideoResolution, resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution], thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat], defaultThumnailHeight: CoreGraphics.CGFloat)
+  @objc deinit
+  @objc override dynamic public init()
 }
 public enum DeviceModel : Swift.String {
   case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPad2, iPad3, iPad4, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPadMini1, iPadMini2, iPadMini3, iPadAir1, iPadAir2, iPadPro9_7, iPadPro9_7_cell, iPadPro10_5, iPadPro10_5_cell, iPadPro12_9, iPadPro12_9_cell, iPhone6, iPhone6plus, iPhone6S, iPhone6Splus, iPhoneSE, iPhone7, iPhone7plus, iPhone8, iPhone8plus, iPhoneX, iPhoneXS, iPhoneXSmax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, unrecognized
@@ -335,6 +337,7 @@ public class VideoSequenceItem {
     get
   }
   final public let isSlideshow: Swift.Bool
+  final public let includeOriginalTrack: Swift.Bool
   public func totalDuration() -> Foundation.TimeInterval
   public static func restore(folder: Foundation.URL) -> VideoEditor.VideoSequence
   @objc deinit
@@ -353,9 +356,6 @@ public class ExportVideoInfo {
   final public let frameRate: Swift.Int
   final public let codecType: AVFoundation.AVVideoCodecType
   final public let scalingMode: Swift.String
-  public var exportSettings: [Swift.String : Any] {
-    get
-  }
   public init(width: Swift.Int, height: Swift.Int, bitrate: Swift.Int, frameRate: Swift.Int, codecType: AVFoundation.AVVideoCodecType, scalingMode: Swift.String)
   @objc deinit
 }
@@ -426,12 +426,6 @@ extension EditorPlayer : VideoEditor.Playable {
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
 }
-@_hasMissingDesignatedInitializers public class VideoEditor {
-  public static func getNewEditorServicing() -> VideoEditor.VideoEditorService
-  public static func getNewSequenceServicing() -> VideoEditor.VideoSequenceServicing
-  public static func getPlayer(asset: AVFoundation.AVAsset, delegate: VideoEditor.PreviewPlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> VideoEditor.Playable
-  @objc deinit
-}
 public protocol AppliedEffect : AnyObject {
   func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEffectProtocol]
   func startCurrentFilter(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
@@ -449,6 +443,12 @@ public protocol EditorCompositionEffectProtocol : AnyObject {
   var endTime: CoreMedia.CMTime { get }
   var id: Swift.UInt { get }
   var path: Swift.String { get }
+}
+@_hasMissingDesignatedInitializers public class VideoEditorServiceBuilder {
+  public static func getNewEditorServicing() -> VideoEditor.VideoEditorService
+  public static func getNewSequenceServicing() -> VideoEditor.VideoSequenceServicing
+  public static func getPlayer(asset: AVFoundation.AVAsset, delegate: VideoEditor.PreviewPlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> VideoEditor.Playable
+  @objc deinit
 }
 public protocol PreviewPlayerDelegate : AnyObject {
   func playerPlaysFrameAtTime(_ time: CoreMedia.CMTime)
@@ -483,21 +483,20 @@ public struct MediaTrackTimeRange {
   public let playingTimeRange: CoreMedia.CMTimeRange
   public init(startTime: CoreMedia.CMTime, playingTimeRange: CoreMedia.CMTimeRange)
 }
-@objc public class MediaTrack : ObjectiveC.NSObject {
+public class MediaTrack {
   public static let unknownId: CoreMedia.CMPersistentTrackID
   final public let id: CoreMedia.CMPersistentTrackID
   final public let url: Foundation.URL
   final public let timeRange: VideoEditor.MediaTrackTimeRange
   final public let title: Swift.String?
   public init(id: CoreMedia.CMPersistentTrackID, url: Foundation.URL, timeRange: VideoEditor.MediaTrackTimeRange, title: Swift.String? = nil)
-  @objc override dynamic public init()
   @objc deinit
 }
 public protocol VideoSequenceServicing {
   var videoSequences: [VideoEditor.VideoSequence] { get }
   var currentSequence: VideoEditor.VideoSequence? { get }
-  func startNewSequence(musicTrack: VideoEditor.MediaTrack?, isSlideshow: Swift.Bool)
-  func startNewSequenceIfNeeded(musicTrack: VideoEditor.MediaTrack?)
+  func startNewSequence(musicTrack: VideoEditor.MediaTrack?, isSlideshow: Swift.Bool, includeOriginalTrack: Swift.Bool)
+  func startNewSequenceIfNeeded(musicTrack: VideoEditor.MediaTrack?, includeOriginalTrack: Swift.Bool)
   func cancelCurrentSequence()
   func removeAllSequences()
   func resetSequences()
