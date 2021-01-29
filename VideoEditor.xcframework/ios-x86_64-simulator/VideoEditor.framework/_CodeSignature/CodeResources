@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/VideoEditor-Swift.h</key>
 		<data>
-		+Rnfo2zYN3R54z6iBcXtZChd3yc=
+		T7XLIgml587cFSdpo68nIQwSnvY=
 		</data>
 		<key>Headers/VideoEditor.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9LnJp5O0afAIdIqKILQa93TsrGY=
+		eLjUEN2yW2hh29BJIdSMZ8QY15Q=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		0Q50s75rVZDCL5oOHnkNIZDeKnE=
+		MaLcPt30xnJ85RjrorPFsnSYBc8=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		a/T9wtY1lkZJSaxUmQKtHCYflM4=
+		4XFBFcrKovpCnMiPg16QxUF+voY=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YRB5uqdRsNzKYEJS2teh3C0WcPE=
+		J/+7Bpi3wYCzTV/nry4flv3mx48=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		0Q50s75rVZDCL5oOHnkNIZDeKnE=
+		MaLcPt30xnJ85RjrorPFsnSYBc8=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		a/T9wtY1lkZJSaxUmQKtHCYflM4=
+		4XFBFcrKovpCnMiPg16QxUF+voY=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		YRB5uqdRsNzKYEJS2teh3C0WcPE=
+		J/+7Bpi3wYCzTV/nry4flv3mx48=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tv8icshGE7HDFdmPpy9wUSS6gJwyDjBCAP4uVWg0V3Q=
+			8q95SQrA1SVFVEl2z6duMh9eWyBdsxnKCLSHz0cdVHs=
 			</data>
 		</dict>
 		<key>Headers/VideoEditor.h</key>
@@ -69,42 +69,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HBXXPCXDBJEm5CFKXKieDHFqX+KdcWnvUKJATraihLw=
+			s43SMs0MHlFc9AcRgphMaIok4jwZIQGZ9lPcibBG0S4=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E00Wlk1bNeycW4C8dBjS4fFg2I2UletAxXq2Oho1ODo=
+			1Xe9aRgZ5S7H0IUFEidQC/WR52+IdCfMs7n5Wjpf5nM=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OKhJvDRHhzZJgmDZiQ02vG/wnU/yJtaHVaBS2TGeYP4=
+			Vuz1wXN4Ht9oSUlRkXVxOWNSmYahmaMeBb2674/dnYk=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HBXXPCXDBJEm5CFKXKieDHFqX+KdcWnvUKJATraihLw=
+			s43SMs0MHlFc9AcRgphMaIok4jwZIQGZ9lPcibBG0S4=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E00Wlk1bNeycW4C8dBjS4fFg2I2UletAxXq2Oho1ODo=
+			1Xe9aRgZ5S7H0IUFEidQC/WR52+IdCfMs7n5Wjpf5nM=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OKhJvDRHhzZJgmDZiQ02vG/wnU/yJtaHVaBS2TGeYP4=
+			Vuz1wXN4Ht9oSUlRkXVxOWNSmYahmaMeBb2674/dnYk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

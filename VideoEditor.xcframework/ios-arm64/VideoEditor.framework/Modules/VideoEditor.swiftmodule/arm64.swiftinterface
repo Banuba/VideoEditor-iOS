@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -231,7 +231,7 @@ public protocol ExportScalable {
 }
 public class VideoEditorAsset {
   public var composition: AVFoundation.AVMutableComposition!
-  final public let isSlideshow: Swift.Bool
+  final public let isSlideShow: Swift.Bool
   public var instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]? {
     get
   }
@@ -241,7 +241,7 @@ public class VideoEditorAsset {
   public var tracksInfo: [VideoEditor.VideoEditorAssetTrackInfo] {
     get
   }
-  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], musicTrack: VideoEditor.MediaTrack?, includeOriginalTrack: Swift.Bool = true, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideshow: Swift.Bool, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
+  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], musicTrack: VideoEditor.MediaTrack?, includeOriginalTrack: Swift.Bool = true, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideShow: Swift.Bool, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
   convenience public init(sequence: VideoEditor.VideoSequence, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
@@ -263,13 +263,14 @@ extension VideoEditorAsset {
   public func moveTrack(fromIndex: Swift.Int, toIndex: Swift.Int)
 }
 @_hasMissingDesignatedInitializers public class VideoEditorFilterModel {
-  final public let filterType: VideoEditor.EditorEffectType
-  final public let name: Swift.String
-  final public let path: Swift.String
   public var id: Swift.UInt {
     get
   }
-  convenience public init(name: Swift.String, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, rendererInstance: VideoEditor.CompositionRenderering?)
+  final public let filterType: VideoEditor.EditorEffectType
+  final public let name: Swift.String
+  final public let path: Swift.String
+  public var preview: Foundation.URL?
+  convenience public init(name: Swift.String, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
   @objc deinit
 }
 public enum VideoResolution {
@@ -294,15 +295,15 @@ public enum VideoResolution {
 public struct VideoResolutionConfiguration {
   public let `default`: VideoEditor.VideoResolution
   public let resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution]
-  public let thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat]
-  public let defaultThumnailHeight: CoreGraphics.CGFloat
+  public let thumbnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat]
+  public let defaultThumbnailHeight: CoreGraphics.CGFloat
   public var current: VideoEditor.VideoResolution {
     get
   }
-  public var currentThumnailHeight: CoreGraphics.CGFloat {
+  public var currentThumbnailHeight: CoreGraphics.CGFloat {
     get
   }
-  public init(default: VideoEditor.VideoResolution, resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution], thumnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat], defaultThumnailHeight: CoreGraphics.CGFloat)
+  public init(default: VideoEditor.VideoResolution, resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution], thumbnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat], defaultThumbnailHeight: CoreGraphics.CGFloat)
 }
 public enum DeviceModel : Swift.String {
   case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPad2, iPad3, iPad4, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPadMini1, iPadMini2, iPadMini3, iPadAir1, iPadAir2, iPadPro9_7, iPadPro9_7_cell, iPadPro10_5, iPadPro10_5_cell, iPadPro12_9, iPadPro12_9_cell, iPhone6, iPhone6plus, iPhone6S, iPhone6Splus, iPhoneSE, iPhone7, iPhone7plus, iPhone8, iPhone8plus, iPhoneX, iPhoneXS, iPhoneXSmax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, unrecognized
@@ -334,7 +335,7 @@ public class VideoSequenceItem {
   public var musicTrack: VideoEditor.MediaTrack? {
     get
   }
-  final public let isSlideshow: Swift.Bool
+  final public let isSlideShow: Swift.Bool
   final public let includeOriginalTrack: Swift.Bool
   public func totalDuration() -> Foundation.TimeInterval
   public static func restore(folder: Foundation.URL) -> VideoEditor.VideoSequence
@@ -436,6 +437,17 @@ public protocol AppliedEffect : AnyObject {
   func restoreStack()
   func hasChangesInAppliedEffects() -> Swift.Bool
 }
+public enum AssetRotation : Swift.UInt8 {
+  case none
+  case rotate90
+  case rotate180
+  case rotate270
+  public typealias RawValue = Swift.UInt8
+  public init?(rawValue: Swift.UInt8)
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 public protocol EditorCompositionEffectProtocol : AnyObject {
   var startTime: CoreMedia.CMTime { get }
   var endTime: CoreMedia.CMTime { get }
@@ -451,6 +463,10 @@ public protocol EditorCompositionEffectProtocol : AnyObject {
 public protocol PreviewPlayerDelegate : AnyObject {
   func playerPlaysFrameAtTime(_ time: CoreMedia.CMTime)
   func didEndPlaying()
+}
+public protocol Rotatable {
+  var rotation: VideoEditor.AssetRotation { get set }
+  func rotate(clockwise: Swift.Bool)
 }
 public class VideoEditorAssetTrackInfo {
   public var originalURL: Foundation.URL {
@@ -473,7 +489,12 @@ public class VideoEditorAssetTrackInfo {
   public var error: Swift.Error? {
     get
   }
+  public var rotation: VideoEditor.AssetRotation {
+    get
+    set
+  }
   public init(url: Foundation.URL, originalURL: Foundation.URL, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
+  public func rotate(clockwise: Swift.Bool)
   @objc deinit
 }
 public struct MediaTrackTimeRange {
@@ -493,13 +514,16 @@ public class MediaTrack {
 public protocol VideoSequenceServicing {
   var videoSequences: [VideoEditor.VideoSequence] { get }
   var currentSequence: VideoEditor.VideoSequence? { get }
-  func startNewSequence(musicTrack: VideoEditor.MediaTrack?, isSlideshow: Swift.Bool, includeOriginalTrack: Swift.Bool)
-  func startNewSequenceIfNeeded(musicTrack: VideoEditor.MediaTrack?, includeOriginalTrack: Swift.Bool)
+  func startNewSequence(musicTrack: VideoEditor.MediaTrack?, isSlideShow: Swift.Bool, includeOriginalTrack: Swift.Bool)
+  func startNewSequenceIfNeeded(musicTrack: VideoEditor.MediaTrack?, includeOriginalTrack: Swift.Bool, isSlideShow: Swift.Bool)
   func cancelCurrentSequence()
   func removeAllSequences()
   func resetSequences()
   func addVideo(at url: Foundation.URL, speed: Swift.Double, preview: UIKit.UIImage?)
   func removeLastVideo() -> VideoEditor.VideoSequenceItem?
+}
+extension VideoSequenceServicing {
+  public func addVideo(at url: Foundation.URL, speed: Swift.Double = 1.0, preview: UIKit.UIImage? = nil)
 }
 extension VideoEditor.EditorEffectType : Swift.Equatable {}
 extension VideoEditor.EditorEffectType : Swift.Hashable {}
@@ -508,3 +532,6 @@ extension VideoEditor.VideoResolution : Swift.Hashable {}
 extension VideoEditor.DeviceModel : Swift.Equatable {}
 extension VideoEditor.DeviceModel : Swift.Hashable {}
 extension VideoEditor.DeviceModel : Swift.RawRepresentable {}
+extension VideoEditor.AssetRotation : Swift.Equatable {}
+extension VideoEditor.AssetRotation : Swift.Hashable {}
+extension VideoEditor.AssetRotation : Swift.RawRepresentable {}
