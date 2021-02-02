@@ -210,6 +210,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+/// The video resolution configuration
 SWIFT_CLASS("_TtC11VideoEditor28VideoResolutionConfiguration")
 @interface VideoResolutionConfiguration : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
