@@ -286,6 +286,7 @@ extension VideoEditorAsset : VideoEditor.AssetEditable {
 public enum VideoResolution {
   case hd1280x720
   case hd1920x1080
+  case md960x540
   case default854x480
   public var сaptureSessionPreset: AVFoundation.AVCaptureSession.Preset {
     get
@@ -409,6 +410,7 @@ public class ExportVideoInfo {
   public enum Resolution : Swift.String {
     case ld360
     case md480
+    case md540
     case hd720
     case fullHd1080
     public typealias RawValue = Swift.String
