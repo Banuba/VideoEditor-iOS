@@ -3,6 +3,7 @@
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
+import BanubaUtilities
 import CoreGraphics
 import CoreMedia
 import CoreVideo
@@ -105,7 +106,10 @@ public protocol VideoEditorTrackServicing {
   func setAudioTrackVolume(_ volume: Swift.Float, to player: VideoEditor.Playable?)
 }
 public protocol ImageSlideshow {
-  func exportSlideshow(to: Foundation.URL, from images: [VideoEditor.VideoEditorImageAssetProtocol], quality: Swift.String, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
+  func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
+}
+extension ImageSlideshow {
+  public func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
 public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.ImageSlideshow, VideoEditor.VideoEditorTrackServicing {
   var asset: AVFoundation.AVAsset? { get }
@@ -166,7 +170,7 @@ extension VideoEditorService : VideoEditor.VideoEditorTrackServicing {
   public func hasAudioTrack() -> Swift.Bool
 }
 extension VideoEditorService : VideoEditor.ImageSlideshow {
-  public func exportSlideshow(to url: Foundation.URL, from images: [VideoEditor.VideoEditorImageAssetProtocol], quality: Swift.String, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
+  public func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
 public class VideoTrimData {
   public var start: CoreMedia.CMTime {
@@ -248,8 +252,8 @@ public class VideoEditorAsset {
   public var tracksInfo: [VideoEditor.VideoEditorAssetTrackInfo] {
     get
   }
-  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideShow: Swift.Bool, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
-  public convenience init(sequence: VideoEditor.VideoSequence, isGalleryAssets: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration)
+  public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), isSlideShow: Swift.Bool, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
+  public convenience init(sequence: VideoEditor.VideoSequence, isGalleryAssets: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
@@ -283,93 +287,6 @@ extension VideoEditorAsset : VideoEditor.AssetEditable {
   public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
   @objc deinit
 }
-public enum VideoResolution {
-  case hd1280x720
-  case hd1920x1080
-  case md960x540
-  case default854x480
-  public var сaptureSessionPreset: AVFoundation.AVCaptureSession.Preset {
-    get
-  }
-  public var assetExportPreset: Swift.String {
-    get
-  }
-  public var size: CoreGraphics.CGSize {
-    get
-  }
-  public static func == (a: VideoEditor.VideoResolution, b: VideoEditor.VideoResolution) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct VideoResolutionConfiguration {
-  public let `default`: VideoEditor.VideoResolution
-  public let resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution]
-  public let thumbnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat]
-  public let defaultThumbnailHeight: CoreGraphics.CGFloat
-  public var current: VideoEditor.VideoResolution {
-    get
-  }
-  public var currentThumbnailHeight: CoreGraphics.CGFloat {
-    get
-  }
-  public init(default: VideoEditor.VideoResolution, resolutions: [VideoEditor.DeviceModel : VideoEditor.VideoResolution], thumbnailHeights: [VideoEditor.DeviceModel : CoreGraphics.CGFloat], defaultThumbnailHeight: CoreGraphics.CGFloat)
-}
-public enum DeviceModel : Swift.String {
-  case simulator
-  case iPod1
-  case iPod2
-  case iPod3
-  case iPod4
-  case iPod5
-  case iPad2
-  case iPad3
-  case iPad4
-  case iPhone4
-  case iPhone4S
-  case iPhone5
-  case iPhone5S
-  case iPhone5C
-  case iPadMini1
-  case iPadMini2
-  case iPadMini3
-  case iPadAir1
-  case iPadAir2
-  case iPadPro9_7
-  case iPadPro9_7_cell
-  case iPadPro10_5
-  case iPadPro10_5_cell
-  case iPadPro12_9
-  case iPadPro12_9_cell
-  case iPhone6
-  case iPhone6plus
-  case iPhone6S
-  case iPhone6Splus
-  case iPhoneSE
-  case iPhone7
-  case iPhone7plus
-  case iPhone8
-  case iPhone8plus
-  case iPhoneX
-  case iPhoneXS
-  case iPhoneXSmax
-  case iPhoneXR
-  case iPhone11
-  case iPhone11Pro
-  case iPhone11ProMax
-  case unrecognized
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension UIDevice {
-  public var type: VideoEditor.DeviceModel {
-    get
-  }
-}
 public class VideoSequenceItem {
   final public let url: Foundation.URL
   final public let duration: Foundation.TimeInterval
@@ -394,6 +311,7 @@ public class VideoSequenceItem {
   }
   final public let isSlideShow: Swift.Bool
   final public let isTrimSequence: Swift.Bool
+  public func addVideo(at path: Swift.String, speed: Swift.Double, isGalleryAsset: Swift.Bool, preview: UIKit.UIImage?) -> Foundation.URL?
   public func totalDuration(isSpeedCountingEnabled: Swift.Bool = true) -> Foundation.TimeInterval
   public static func restore(folder: Foundation.URL) -> VideoEditor.VideoSequence
   public func reorderVideos(withOrderedVideoUrls orderedUrls: [Foundation.URL])
@@ -424,7 +342,7 @@ public class ExportVideoInfo {
   @objc deinit
 }
 public struct ExportVideoInfoFactory {
-  public static func assetExportSettings(resolution: VideoEditor.VideoResolution, useHEVCCodecIfPossible: Swift.Bool) -> VideoEditor.ExportVideoInfo
+  public static func assetExportSettings(resolution: BanubaUtilities.VideoResolution, useHEVCCodecIfPossible: Swift.Bool) -> VideoEditor.ExportVideoInfo
 }
 public protocol Playable : AnyObject {
   func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
@@ -541,7 +459,7 @@ public class VideoEditorAssetTrackInfo {
     get
   }
   final public let fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>
-  final public let videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration
+  final public let videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
   public var thumbnail: UIKit.UIImage?
   public var thumbnails: [UIKit.UIImage]
   public var trimTimeRange: CoreMedia.CMTimeRange
@@ -566,7 +484,7 @@ public class VideoEditorAssetTrackInfo {
     get
   }
   public var timeRangeInGlobal: CoreMedia.CMTimeRange
-  public init(url: Foundation.URL, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: VideoEditor.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool)
+  public init(url: Foundation.URL, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool)
   public func replaceAssetUrl(_ url: Foundation.URL)
   public func rotate(clockwise: Swift.Bool)
   public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
@@ -585,7 +503,8 @@ public class MediaTrack : Swift.Codable {
   final public let url: Foundation.URL
   public var timeRange: VideoEditor.MediaTrackTimeRange
   final public let title: Swift.String?
-  public init(id: CoreMedia.CMPersistentTrackID, url: Foundation.URL, timeRange: VideoEditor.MediaTrackTimeRange, title: Swift.String? = nil)
+  final public let isEditable: Swift.Bool
+  public init(id: CoreMedia.CMPersistentTrackID, url: Foundation.URL, timeRange: VideoEditor.MediaTrackTimeRange, isEditable: Swift.Bool, title: Swift.String? = nil)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws

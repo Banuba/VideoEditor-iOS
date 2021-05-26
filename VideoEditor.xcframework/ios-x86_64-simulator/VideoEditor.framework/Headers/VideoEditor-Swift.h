@@ -209,7 +209,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-
 SWIFT_CLASS("_TtC11VideoEditor14VoiceTrackItem")
 @interface VoiceTrackItem : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
