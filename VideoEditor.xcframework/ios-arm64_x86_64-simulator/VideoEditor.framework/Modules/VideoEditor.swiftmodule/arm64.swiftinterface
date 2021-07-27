@@ -22,13 +22,17 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
   func unloadImage()
 }
 @_hasMissingDesignatedInitializers public class AudioMixer {
+  public struct VolumeDefaults {
+    public static var defaultVolume: Swift.Float
+    public static var muteVolume: Swift.Float
+  }
   public var audioMix: AVFoundation.AVAudioMix {
     get
   }
-  public func resetVolumeToDefault(trackId: CoreMedia.CMPersistentTrackID)
-  public func setVolume(volume: Swift.Float, for trackId: CoreMedia.CMPersistentTrackID)
-  public func volume(for trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
-  public func isVolumeDefault(for trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
+  public func resetTrackVolumeToDefault(trackId: CoreMedia.CMPersistentTrackID)
+  public func setVolume(_ volume: Swift.Float, forTrackId trackId: CoreMedia.CMPersistentTrackID)
+  public func volume(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
+  public func isVolumeDefault(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   @objc deinit
 }
 public protocol CompositionRenderering : AnyObject {
