@@ -73,6 +73,12 @@ extension PlayersBundle : BanubaUtilities.Playable {
   public var avPlayer: AVFoundation.AVPlayer {
     get
   }
+  public var startTimePlay: CoreMedia.CMTime {
+    get
+  }
+  public var endTimePlay: CoreMedia.CMTime {
+    get
+  }
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
   public func pausePlay()
@@ -90,11 +96,11 @@ extension PlayersBundle : BanubaUtilities.PlayerDelegate {
   public func playerPlaysFrame(_ preview: BanubaUtilities.Playable, atTime time: CoreMedia.CMTime)
 }
 public enum EditorEffectType : Swift.Int {
-  case color
-  case visual
-  case time
   case gif
   case text
+  case time
+  case color
+  case visual
   case mask
   case transform
   public init?(rawValue: Swift.Int)
@@ -211,6 +217,12 @@ public class MusicPlayer : BanubaUtilities.Playable {
   }
   weak public var playerDelegate: BanubaUtilities.PlayerDelegate?
   public var isPlaying: Swift.Bool
+  public var startTimePlay: CoreMedia.CMTime {
+    get
+  }
+  public var endTimePlay: CoreMedia.CMTime {
+    get
+  }
   public init(item: AVFoundation.AVPlayerItem?)
   @objc deinit
 }
@@ -332,7 +344,7 @@ public class VideoSequenceItem {
   public init(assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
   @objc deinit
 }
-@objc public class VideoSequence : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers public class VideoSequence : ObjectiveC.NSObject {
   final public let folderURL: Foundation.URL
   public var modificationDate: Foundation.Date
   public var preview: UIKit.UIImage?
@@ -349,7 +361,6 @@ public class VideoSequenceItem {
   public var isGallerySequence: Swift.Bool {
     get
   }
-  required public init(folderURL: Foundation.URL)
   public static func generateName() -> Swift.String
   @discardableResult
   public func addVideo(at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isOriginalVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
@@ -414,6 +425,12 @@ public struct VideoSequenceNameDuplacatesFinder {
   }
   weak public var playerDelegate: BanubaUtilities.PlayerDelegate?
   public var isPlaying: Swift.Bool
+  public var startTimePlay: CoreMedia.CMTime {
+    get
+  }
+  public var endTimePlay: CoreMedia.CMTime {
+    get
+  }
   @objc deinit
 }
 extension EditorPlayer : BanubaUtilities.Playable {
