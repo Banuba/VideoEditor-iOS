@@ -413,7 +413,7 @@ public class ExportVideoInfo {
     }
   }
   final public let resolution: VideoEditor.ExportVideoInfo.Resolution
-  public init(resolution: VideoEditor.ExportVideoInfo.Resolution, useHEVCCodecIfPossible: Swift.Bool)
+  public init(resolution: VideoEditor.ExportVideoInfo.Resolution, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize)
   @objc deinit
 }
 public struct ExportVideoInfoFactory {
