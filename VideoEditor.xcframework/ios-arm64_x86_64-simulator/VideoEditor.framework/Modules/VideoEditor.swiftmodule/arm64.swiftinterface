@@ -308,6 +308,12 @@ extension VideoEditorAsset : VideoEditor.AssetEditable {
   public static func adjustVideoSize(_ videoSize: CoreGraphics.CGSize, withAspectRatio aspectRatio: Swift.Double) -> CoreGraphics.CGSize
   @objc deinit
 }
+public class VideoTextureCache {
+  public init(with context: OpenGLES.EAGLContext)
+  public func flush()
+  public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreVideo.CVOpenGLESTexture?
+  @objc deinit
+}
 public enum ContentLocationType {
   case remote
   case local
@@ -332,6 +338,11 @@ public enum ContentLocationType {
   public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
   @objc deinit
 }
+public class SimpleTextGLRenderer {
+  required public init()
+  @objc deinit
+  public func renderToCurrentFramebuffer(screenSymbolsWidth: Swift.UInt32, screenSymbolsHeight: Swift.UInt32, text: [OpenGLES.GLint])
+}
 public class VideoSequenceItem {
   final public let url: Foundation.URL
   final public let duration: Foundation.TimeInterval
@@ -344,7 +355,7 @@ public class VideoSequenceItem {
   public init(assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class VideoSequence : ObjectiveC.NSObject {
+@objc public class VideoSequence : ObjectiveC.NSObject {
   final public let folderURL: Foundation.URL
   public var modificationDate: Foundation.Date
   public var preview: UIKit.UIImage?
@@ -361,6 +372,7 @@ public class VideoSequenceItem {
   public var isGallerySequence: Swift.Bool {
     get
   }
+  required public init(folderURL: Foundation.URL)
   public static func generateName() -> Swift.String
   @discardableResult
   public func addVideo(at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isOriginalVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
@@ -480,6 +492,16 @@ public protocol AppliedEffect : AnyObject {
   func restoreStack()
   func hasChangesInAppliedEffects() -> Swift.Bool
 }
+@_hasMissingDesignatedInitializers public class EffectsSharedContext {
+  public static var shared: VideoEditor.EffectsSharedContext
+  public var context: OpenGLES.EAGLContext {
+    get
+  }
+  final public let textureCache: VideoEditor.VideoTextureCache
+  public func setCurrent()
+  public func getProgram(vertexSource: Swift.String, fragmentSource: Swift.String) -> VideoEditor.GLProgram
+  @objc deinit
+}
 public enum AssetRotation : Swift.UInt8, Swift.Codable {
   case none
   case rotate90
@@ -578,6 +600,18 @@ public class MediaTrack : Swift.Codable {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
+}
+public class GLProgram {
+  public var initialized: Swift.Bool {
+    get
+  }
+  public init(vertexSource: Swift.String, fragmentSource: Swift.String)
+  @objc deinit
+  public func add(attribute: Swift.String)
+  public func getIndex(attribute: Swift.String) -> OpenGLES.GLuint
+  public func getIndex(uniform: Swift.String) -> OpenGLES.GLint
+  public func use()
+  public func link() -> Swift.Bool
 }
 public protocol VideoSequenceServicing {
   var videoSequences: [VideoEditor.VideoSequence] { get }
