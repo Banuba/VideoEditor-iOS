@@ -3,6 +3,7 @@
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
+import BanubaLicenseServicingSDK
 import BanubaUtilities
 import CoreGraphics
 import CoreMedia
@@ -116,6 +117,9 @@ public protocol VideoEditorTrackServicing {
   func setAudioTrackVolume(_ volume: Swift.Float)
   func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.Playable?)
 }
+public protocol WatermarkApplicatorServicing : AnyObject {
+  func watermarkVideoEditorFilterModel(configuration: VideoEditor.WatermarkConfiguration) -> VideoEditor.VideoEditorFilterModel
+}
 public protocol ImageSlideshow {
   func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
@@ -138,7 +142,7 @@ public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.Im
   func videoPartsCount() -> Swift.Int
   static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
   static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
-  init(requiredEffectIds: [Swift.Int])
+  init(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing)
 }
 public class VideoEditorService {
   public var videoAsset: VideoEditor.VideoEditorAsset? {
@@ -151,7 +155,7 @@ public class VideoEditorService {
   public var videoSize: CoreGraphics.CGSize
   public var exportFrameDuration: CoreMedia.CMTime
   public var audioMixer: VideoEditor.AudioMixer?
-  required public init(requiredEffectIds: [Swift.Int])
+  required public init(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing)
   @objc deinit
 }
 extension VideoEditorService : VideoEditor.AppliedEffect {
@@ -314,6 +318,22 @@ public class VideoTextureCache {
   public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreVideo.CVOpenGLESTexture?
   @objc deinit
 }
+public enum ExportQuality {
+  case videoConfiguration(VideoEditor.ExportVideoInfo)
+  case auto
+}
+public struct GifSettings {
+  public var duration: Foundation.TimeInterval
+  public init(duration: Foundation.TimeInterval)
+}
+public struct ExportVideoConfiguration {
+  public let fileURL: Foundation.URL
+  public let quality: VideoEditor.ExportQuality
+  public let watermarkConfiguration: VideoEditor.WatermarkConfiguration?
+  public let useHEVCCodecIfPossible: Swift.Bool
+  public var gifSettings: VideoEditor.GifSettings?
+  public init(fileURL: Foundation.URL, quality: VideoEditor.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, gifSettings: VideoEditor.GifSettings?)
+}
 public enum ContentLocationType {
   case remote
   case local
@@ -417,7 +437,7 @@ public class ExportVideoInfo {
   @objc deinit
 }
 public struct ExportVideoInfoFactory {
-  public static func assetExportSettings(resolution: BanubaUtilities.VideoResolution, useHEVCCodecIfPossible: Swift.Bool) -> VideoEditor.ExportVideoInfo
+  public static func assetExportSettings(resolution: BanubaUtilities.VideoResolution, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize) -> VideoEditor.ExportVideoInfo
 }
 public struct VideoSequenceNameDuplacatesFinder {
   public let sequenceName: Swift.String
@@ -475,7 +495,7 @@ extension EditorPlayer : BanubaUtilities.Playable {
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
 }
 @_hasMissingDesignatedInitializers public class VideoEditorServiceBuilder {
-  public static func getNewEditorServicing(requiredEffectIds: [Swift.Int]) -> VideoEditor.VideoEditorService
+  public static func getNewEditorServicing(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing) -> VideoEditor.VideoEditorService
   public static func getNewSequenceServicing() -> VideoEditor.VideoSequenceServicing
   public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
   @objc deinit
@@ -612,6 +632,34 @@ public class GLProgram {
   public func getIndex(uniform: Swift.String) -> OpenGLES.GLint
   public func use()
   public func link() -> Swift.Bool
+}
+@objc public class ImageConfiguration : ObjectiveC.NSObject, BanubaUtilities.ImageConfigurationProtocol {
+  public var imageName: Swift.String
+  @objc public var image: UIKit.UIImage? {
+    @objc get
+  }
+  public init(imageName: Swift.String)
+  public init(image: UIKit.UIImage)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct WatermarkConfiguration {
+  public var watermark: VideoEditor.ImageConfiguration
+  public var size: CoreGraphics.CGSize
+  public var sharedOffset: CoreGraphics.CGFloat
+  public var position: VideoEditor.WatermarkConfiguration.WatermarkPosition
+  public enum WatermarkPosition {
+    case leftTop
+    case leftBottom
+    case rightTop
+    case rightBottom
+    public static func == (a: VideoEditor.WatermarkConfiguration.WatermarkPosition, b: VideoEditor.WatermarkConfiguration.WatermarkPosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(watermark: VideoEditor.ImageConfiguration, size: CoreGraphics.CGSize, sharedOffset: CoreGraphics.CGFloat, position: VideoEditor.WatermarkConfiguration.WatermarkPosition)
 }
 public protocol VideoSequenceServicing {
   var videoSequences: [VideoEditor.VideoSequence] { get }

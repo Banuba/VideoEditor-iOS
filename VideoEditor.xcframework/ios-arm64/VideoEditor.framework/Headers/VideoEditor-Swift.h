@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import BanubaUtilities;
 @import ObjectiveC;
 #endif
 
@@ -207,6 +208,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+
+
+@class UIImage;
+
+/// The image configuration
+SWIFT_CLASS("_TtC11VideoEditor18ImageConfiguration")
+@interface ImageConfiguration : NSObject <ImageConfigurationProtocol>
+/// The image stored or instance by name
+@property (nonatomic, readonly, strong) UIImage * _Nullable image;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC11VideoEditor13VideoSequence")
