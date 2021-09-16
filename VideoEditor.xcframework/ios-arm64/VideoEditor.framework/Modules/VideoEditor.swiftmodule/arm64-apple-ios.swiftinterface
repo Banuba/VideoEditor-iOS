@@ -118,7 +118,7 @@ public protocol VideoEditorTrackServicing {
   func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.Playable?)
 }
 public protocol WatermarkApplicatorServicing : AnyObject {
-  func watermarkVideoEditorFilterModel(configuration: VideoEditor.WatermarkConfiguration) -> VideoEditor.VideoEditorFilterModel
+  func adjustWatermarkEffect(configuration: VideoEditor.WatermarkConfiguration, videoSize: CoreGraphics.CGSize) -> VideoEditor.VideoEditorFilterModel
 }
 public protocol ImageSlideshow {
   func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
@@ -137,7 +137,7 @@ public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.Im
   func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
   func getPlayer(delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
-  func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel], enableInternalEffects: Swift.Bool, internalEffectStartId: Swift.UInt)
+  func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel])
   func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
   func videoPartsCount() -> Swift.Int
   static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
@@ -182,7 +182,7 @@ extension VideoEditorService : VideoEditor.VideoEditorServicing {
   public func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   public func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
   public func getPlayer(delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
-  public func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel], enableInternalEffects: Swift.Bool, internalEffectStartId: Swift.UInt)
+  public func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel])
   public func videoPartsCount() -> Swift.Int
 }
 extension VideoEditorService : VideoEditor.VideoEditorTrackServicing {
@@ -326,13 +326,18 @@ public struct GifSettings {
   public var duration: Foundation.TimeInterval
   public init(duration: Foundation.TimeInterval)
 }
+public struct ExportConfiguration {
+  public let videoConfigurations: [VideoEditor.ExportVideoConfiguration]
+  public let isCoverEnabled: Swift.Bool
+  public var gifSettings: VideoEditor.GifSettings?
+  public init(videoConfigurations: [VideoEditor.ExportVideoConfiguration], isCoverEnabled: Swift.Bool, gifSettings: VideoEditor.GifSettings?)
+}
 public struct ExportVideoConfiguration {
   public let fileURL: Foundation.URL
   public let quality: VideoEditor.ExportQuality
   public let watermarkConfiguration: VideoEditor.WatermarkConfiguration?
   public let useHEVCCodecIfPossible: Swift.Bool
-  public var gifSettings: VideoEditor.GifSettings?
-  public init(fileURL: Foundation.URL, quality: VideoEditor.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, watermarkConfiguration: VideoEditor.WatermarkConfiguration?, gifSettings: VideoEditor.GifSettings?)
+  public init(fileURL: Foundation.URL, quality: VideoEditor.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, watermarkConfiguration: VideoEditor.WatermarkConfiguration?)
 }
 public enum ContentLocationType {
   case remote
@@ -343,7 +348,7 @@ public enum ContentLocationType {
     get
   }
 }
-@_hasMissingDesignatedInitializers public class VideoEditorFilterModel {
+public class VideoEditorFilterModel {
   public var id: Swift.UInt {
     get
   }
@@ -356,6 +361,7 @@ public enum ContentLocationType {
   final public let contentLocationType: VideoEditor.ContentLocationType
   public var preview: Foundation.URL?
   public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
+  public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
   @objc deinit
 }
 public class SimpleTextGLRenderer {
@@ -426,6 +432,9 @@ public class ExportVideoInfo {
     case md540
     case hd720
     case fullHd1080
+    public var size: CoreGraphics.CGSize {
+      get
+    }
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
