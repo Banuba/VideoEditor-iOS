@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -15,6 +15,7 @@ import QuartzCore
 import Swift
 import UIKit
 @_exported import VideoEditor
+import _Concurrency
 public protocol VideoEditorImageAssetProtocol : AnyObject {
   var duration: Foundation.TimeInterval { get }
   var image: CoreGraphics.CGImage? { get }
@@ -48,7 +49,7 @@ public protocol CompositionRenderering : AnyObject {
   }
   @objc deinit
 }
-extension PlayersBundle : BanubaUtilities.Playable {
+extension VideoEditor.PlayersBundle : BanubaUtilities.Playable {
   public var currentTime: Foundation.TimeInterval {
     get
   }
@@ -92,7 +93,7 @@ extension PlayersBundle : BanubaUtilities.Playable {
   public func reloadPreview()
   public func reloadPreview(shouldAutoStart: Swift.Bool)
 }
-extension PlayersBundle : BanubaUtilities.PlayerDelegate {
+extension VideoEditor.PlayersBundle : BanubaUtilities.PlayerDelegate {
   public func playerDidEndPlaying(_ preview: BanubaUtilities.Playable)
   public func playerPlaysFrame(_ preview: BanubaUtilities.Playable, atTime time: CoreMedia.CMTime)
 }
@@ -123,7 +124,7 @@ public protocol WatermarkApplicatorServicing : AnyObject {
 public protocol ImageSlideshow {
   func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
-extension ImageSlideshow {
+extension VideoEditor.ImageSlideshow {
   public func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
 public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.ImageSlideshow, VideoEditor.VideoEditorTrackServicing {
@@ -131,8 +132,8 @@ public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.Im
   var videoAsset: VideoEditor.VideoEditorAsset? { get set }
   var exportFrameDuration: CoreMedia.CMTime { get set }
   var videoSize: CoreGraphics.CGSize { get set }
-  func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
-  func exportAudio(to fileURL: Foundation.URL, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
+  func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
+  func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   func mergeVideoWithAudio(videoUrl: Foundation.URL, audioUrl: Foundation.URL, videoSize: CoreGraphics.CGSize, audioStartTime: Foundation.TimeInterval, success: @escaping ((Foundation.URL) -> Swift.Void), failure: @escaping ((Swift.Error?) -> Swift.Void))
   func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
@@ -158,7 +159,7 @@ public class VideoEditorService {
   required public init(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing)
   @objc deinit
 }
-extension VideoEditorService : VideoEditor.AppliedEffect {
+extension VideoEditor.VideoEditorService : VideoEditor.AppliedEffect {
   public func applyFilter(effectModel: VideoEditor.VideoEditorFilterModel, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool)
   public func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
   public func undoLast(type: VideoEditor.EditorEffectType) -> VideoEditor.EditorCompositionEffectProtocol?
@@ -171,13 +172,13 @@ extension VideoEditorService : VideoEditor.AppliedEffect {
   public func restoreStack()
   public func hasChangesInAppliedEffects() -> Swift.Bool
 }
-extension VideoEditorService : VideoEditor.VideoEditorServicing {
+extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorServicing {
   public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
   public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
   public func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
-  public func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
-  public func exportCleanVideo(to file: Foundation.URL, mediaInfo: VideoEditor.ExportVideoInfo, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
-  public func exportAudio(to fileURL: Foundation.URL, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
+  public func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
+  public func exportCleanVideo(to file: Foundation.URL, mediaInfo: VideoEditor.ExportVideoInfo, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
+  public func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   public func mergeVideoWithAudio(videoUrl: Foundation.URL, audioUrl: Foundation.URL, videoSize: CoreGraphics.CGSize, audioStartTime: Foundation.TimeInterval, success: @escaping ((Foundation.URL) -> Swift.Void), failure: @escaping ((Swift.Error?) -> Swift.Void))
   public func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   public func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
@@ -185,14 +186,14 @@ extension VideoEditorService : VideoEditor.VideoEditorServicing {
   public func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel])
   public func videoPartsCount() -> Swift.Int
 }
-extension VideoEditorService : VideoEditor.VideoEditorTrackServicing {
+extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorTrackServicing {
   public func audioTrackVolume() -> Swift.Float
   public func isAudioTrackVolumeChanged() -> Swift.Bool
   public func setAudioTrackVolume(_ volume: Swift.Float)
   public func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.Playable?)
   public func hasAudioTrack() -> Swift.Bool
 }
-extension VideoEditorService : VideoEditor.ImageSlideshow {
+extension VideoEditor.VideoEditorService : VideoEditor.ImageSlideshow {
   public func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
 public class VideoTrimData {
@@ -230,7 +231,7 @@ public class MusicPlayer : BanubaUtilities.Playable {
   public init(item: AVFoundation.AVPlayerItem?)
   @objc deinit
 }
-extension MusicPlayer {
+extension VideoEditor.MusicPlayer {
   public var videoDurationCMTime: CoreMedia.CMTime {
     get
   }
@@ -290,17 +291,17 @@ public class VideoEditorAsset {
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
   @objc deinit
 }
-extension VideoEditorAsset {
+extension VideoEditor.VideoEditorAsset {
   public func changeMusicTrackPosition(_ musicTrack: VideoEditor.MediaTrack) -> Swift.Bool
   @discardableResult
   public func addMusicTrack(_ musicTrack: VideoEditor.MediaTrack) -> (compositionTrack: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack)?
   @discardableResult
   public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
 }
-extension VideoEditorAsset : VideoEditor.ExportScalable {
+extension VideoEditor.VideoEditorAsset : VideoEditor.ExportScalable {
   public func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: VideoEditor.VideoTrimData?, completion: ((Swift.Error?) -> Swift.Void)?)
 }
-extension VideoEditorAsset : VideoEditor.AssetEditable {
+extension VideoEditor.VideoEditorAsset : VideoEditor.AssetEditable {
   public func addTracks(_ tracks: [VideoEditor.VideoEditorAssetTrackInfo])
   public func removeTrack(at index: Swift.Int)
   public func removeTrack(_ track: VideoEditor.VideoEditorAssetTrackInfo)
@@ -412,17 +413,15 @@ public class VideoSequenceItem {
   public func replaceVideos(withNewVideos videos: [Foundation.URL], isGalleryItems: Swift.Bool)
   public func hasReplacedVideos() -> Swift.Bool
   public func restoreOriginalVideos()
-  @objc override dynamic public init()
   @objc deinit
 }
-extension VideoSequence {
+extension VideoEditor.VideoSequence {
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
 }
 @objc public class VoiceTrackItem : ObjectiveC.NSObject {
   final public let url: Foundation.URL
   final public let timeRange: CoreMedia.CMTimeRange
   public init(url: Foundation.URL, timeRange: CoreMedia.CMTimeRange)
-  @objc override dynamic public init()
   @objc deinit
 }
 public class ExportVideoInfo {
@@ -474,7 +473,7 @@ public struct VideoSequenceNameDuplacatesFinder {
   }
   @objc deinit
 }
-extension EditorPlayer : BanubaUtilities.Playable {
+extension VideoEditor.EditorPlayer : BanubaUtilities.Playable {
   public var videoDurationCMTime: CoreMedia.CMTime {
     get
   }
@@ -649,7 +648,6 @@ public class GLProgram {
   }
   public init(imageName: Swift.String)
   public init(image: UIKit.UIImage)
-  @objc override dynamic public init()
   @objc deinit
 }
 public struct WatermarkConfiguration {
