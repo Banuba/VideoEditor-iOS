@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -35,6 +35,8 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
   public func setVolume(_ volume: Swift.Float, forTrackId trackId: CoreMedia.CMPersistentTrackID)
   public func volume(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   public func isVolumeDefault(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
+  public func mutedMusicMix() -> AVFoundation.AVAudioMix
+  public func mutedAudioMix() -> AVFoundation.AVAudioMix
   @objc deinit
 }
 public protocol CompositionRenderering : AnyObject {
@@ -132,6 +134,7 @@ public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.Im
   var videoAsset: VideoEditor.VideoEditorAsset? { get set }
   var exportFrameDuration: CoreMedia.CMTime { get set }
   var videoSize: CoreGraphics.CGSize { get set }
+  var audioMixer: VideoEditor.AudioMixer? { get set }
   func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   func mergeVideoWithAudio(videoUrl: Foundation.URL, audioUrl: Foundation.URL, videoSize: CoreGraphics.CGSize, audioStartTime: Foundation.TimeInterval, success: @escaping ((Foundation.URL) -> Swift.Void), failure: @escaping ((Swift.Error?) -> Swift.Void))
@@ -146,6 +149,8 @@ public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.Im
   init(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing)
 }
 public class VideoEditorService {
+  public func getVideoPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
+  public func getMusicPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
   public var videoAsset: VideoEditor.VideoEditorAsset? {
     get
     set(value)
@@ -264,7 +269,7 @@ public protocol ExportScalable {
   func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: VideoEditor.VideoTrimData?, completion: ((Swift.Error?) -> Swift.Void)?)
 }
 public protocol AssetEditable {
-  func addTracks(_ tracks: [VideoEditor.VideoEditorAssetTrackInfo])
+  func addTracks(_ tracks: [VideoEditor.VideoEditorAssetTrackInfo], atIndex index: Swift.Int)
   func removeTrack(at index: Swift.Int)
   func removeTrack(_ track: VideoEditor.VideoEditorAssetTrackInfo)
   func moveTrack(fromIndex: Swift.Int, toIndex: Swift.Int)
@@ -292,9 +297,9 @@ public class VideoEditorAsset {
   @objc deinit
 }
 extension VideoEditor.VideoEditorAsset {
-  public func changeMusicTrackPosition(_ musicTrack: VideoEditor.MediaTrack) -> Swift.Bool
+  public func changeMusicTrackPosition(_ musicTrack: BanubaUtilities.MediaTrack) -> Swift.Bool
   @discardableResult
-  public func addMusicTrack(_ musicTrack: VideoEditor.MediaTrack) -> (compositionTrack: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack)?
+  public func addMusicTrack(_ musicTrack: BanubaUtilities.MediaTrack) -> (compositionTrack: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack)?
   @discardableResult
   public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
 }
@@ -302,7 +307,7 @@ extension VideoEditor.VideoEditorAsset : VideoEditor.ExportScalable {
   public func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: VideoEditor.VideoTrimData?, completion: ((Swift.Error?) -> Swift.Void)?)
 }
 extension VideoEditor.VideoEditorAsset : VideoEditor.AssetEditable {
-  public func addTracks(_ tracks: [VideoEditor.VideoEditorAssetTrackInfo])
+  public func addTracks(_ tracks: [VideoEditor.VideoEditorAssetTrackInfo], atIndex index: Swift.Int)
   public func removeTrack(at index: Swift.Int)
   public func removeTrack(_ track: VideoEditor.VideoEditorAssetTrackInfo)
   public func moveTrack(fromIndex: Swift.Int, toIndex: Swift.Int)
@@ -379,6 +384,9 @@ public class VideoSequenceItem {
   public var speed: Swift.Double {
     get
   }
+  public var name: Swift.String {
+    get
+  }
   public init(assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
   @objc deinit
 }
@@ -400,20 +408,27 @@ public class VideoSequenceItem {
     get
   }
   required public init(folderURL: Foundation.URL)
+  public func remove()
+  @objc deinit
+}
+extension VideoEditor.VideoSequence {
   public static func generateName() -> Swift.String
+}
+extension VideoEditor.VideoSequence {
   @discardableResult
-  public func addVideo(at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isOriginalVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
+  public func addVideo(at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
   @discardableResult
   public func removeVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
-  public func totalDuration(isSpeedCountingEnabled: Swift.Bool = true) -> Foundation.TimeInterval
   @discardableResult
-  public func removeLastVideo() -> VideoEditor.VideoSequenceItem?
-  public func remove()
+  public func deleteVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
+  public var hasRemovedVideos: Swift.Bool {
+    get
+  }
+  public func restoreRemovedVideos()
   public func reorderVideos(withOrderedVideoUrls orderedUrls: [Foundation.URL])
-  public func replaceVideos(withNewVideos videos: [Foundation.URL], isGalleryItems: Swift.Bool)
-  public func hasReplacedVideos() -> Swift.Bool
-  public func restoreOriginalVideos()
-  @objc deinit
+}
+extension VideoEditor.VideoSequence {
+  public func totalDuration(isSpeedCountingEnabled: Swift.Bool = true) -> Foundation.TimeInterval
 }
 extension VideoEditor.VideoSequence {
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
@@ -452,7 +467,7 @@ public struct VideoSequenceNameDuplacatesFinder {
   public init(sequenceName: Swift.String)
   public func findDuplicates(inSequenceNames sequenceNames: [Swift.String]) -> [Swift.String]
 }
-@_hasMissingDesignatedInitializers public class EditorPlayer {
+public class EditorPlayer {
   public var avPlayer: AVFoundation.AVPlayer {
     get
   }
@@ -471,6 +486,7 @@ public struct VideoSequenceNameDuplacatesFinder {
   public var endTimePlay: CoreMedia.CMTime {
     get
   }
+  public init(item: AVFoundation.AVPlayerItem?)
   @objc deinit
 }
 extension VideoEditor.EditorPlayer : BanubaUtilities.Playable {
@@ -501,6 +517,12 @@ extension VideoEditor.EditorPlayer : BanubaUtilities.Playable {
   public func pausePlay()
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
   public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
+}
+public protocol VideoEditorSDKServicing {
+  var videoEditorService: VideoEditor.VideoEditorService { get }
+}
+public protocol AudioVideoEditorSDKServicing : VideoEditor.VideoEditorSDKServicing {
+  var audioService: BanubaUtilities.AudioServicing { get }
 }
 @_hasMissingDesignatedInitializers public class VideoEditorServiceBuilder {
   public static func getNewEditorServicing(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing) -> VideoEditor.VideoEditorService
@@ -545,6 +567,9 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
     get
   }
 }
+extension UIKit.UIImage {
+  public static func orientation(byRotation rotation: VideoEditor.AssetRotation) -> UIKit.UIImage.Orientation
+}
 public enum EffectSpeed : Swift.Float {
   case normal
   case slowmo
@@ -569,7 +594,7 @@ public protocol Rotatable {
   var rotation: VideoEditor.AssetRotation { get set }
   func rotate(clockwise: Swift.Bool)
 }
-public class VideoEditorAssetTrackInfo {
+public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
   public var url: Foundation.URL {
     get
   }
@@ -609,25 +634,13 @@ public class VideoEditorAssetTrackInfo {
   public func rotate(clockwise: Swift.Bool)
   public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
   @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
 }
-public struct MediaTrackTimeRange : Swift.Codable {
-  public let startTime: CoreMedia.CMTime
-  public let playingTimeRange: CoreMedia.CMTimeRange
-  public init(startTime: CoreMedia.CMTime, playingTimeRange: CoreMedia.CMTimeRange)
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
-}
-public class MediaTrack : Swift.Codable {
-  public static var unknownId: CoreMedia.CMPersistentTrackID
-  public var id: CoreMedia.CMPersistentTrackID
-  final public let url: Foundation.URL
-  public var timeRange: VideoEditor.MediaTrackTimeRange
-  final public let title: Swift.String?
-  final public let isEditable: Swift.Bool
-  public init(id: CoreMedia.CMPersistentTrackID, url: Foundation.URL, timeRange: VideoEditor.MediaTrackTimeRange, isEditable: Swift.Bool, title: Swift.String? = nil)
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+extension VideoEditor.VideoEditorAssetTrackInfo {
+  public static func == (lhs: VideoEditor.VideoEditorAssetTrackInfo, rhs: VideoEditor.VideoEditorAssetTrackInfo) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
 }
 public class GLProgram {
   public var initialized: Swift.Bool {
