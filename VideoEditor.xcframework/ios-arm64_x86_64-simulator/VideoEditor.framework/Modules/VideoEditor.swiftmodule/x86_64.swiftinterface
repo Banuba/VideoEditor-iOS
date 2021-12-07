@@ -138,6 +138,7 @@ public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.Im
   func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   func mergeVideoWithAudio(videoUrl: Foundation.URL, audioUrl: Foundation.URL, videoSize: CoreGraphics.CGSize, audioStartTime: Foundation.TimeInterval, success: @escaping ((Foundation.URL) -> Swift.Void), failure: @escaping ((Swift.Error?) -> Swift.Void))
+  func attachExpiredWatermarkIfNeeded()
   func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
   func getPlayer(delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
@@ -181,6 +182,7 @@ extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorServicing {
   public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
   public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
   public func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
+  public func attachExpiredWatermarkIfNeeded()
   public func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   public func exportCleanVideo(to file: Foundation.URL, mediaInfo: VideoEditor.ExportVideoInfo, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
   public func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
@@ -388,6 +390,7 @@ public class VideoSequenceItem {
     get
   }
   public init(assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
+  public func tryReplaceVideo(withVideAtURL videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
 @objc public class VideoSequence : ObjectiveC.NSObject {
