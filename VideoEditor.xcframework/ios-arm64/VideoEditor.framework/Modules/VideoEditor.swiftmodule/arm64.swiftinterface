@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -10,7 +10,7 @@ import CoreMedia
 import CoreVideo
 import Foundation
 import GLKit
-import OpenGLES
+import MetalKit
 import QuartzCore
 import Swift
 import UIKit
@@ -41,7 +41,7 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
 }
 public protocol CompositionRenderering : AnyObject {
   init()
-  func render(in pixelBuffer: CoreVideo.CVPixelBuffer, allSources: [CoreVideo.CVPixelBuffer], sampleTime: CoreMedia.CMTime, effect: VideoEditor.EditorCompositionEffectProtocol)
+  func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: VideoEditor.EditorCompositionEffectProtocol)
 }
 @_hasMissingDesignatedInitializers public class PlayersBundle {
   weak public var playerDelegate: BanubaUtilities.PlayerDelegate?
@@ -275,7 +275,7 @@ public protocol AssetEditable {
   func removeTrack(at index: Swift.Int)
   func removeTrack(_ track: VideoEditor.VideoEditorAssetTrackInfo)
   func moveTrack(fromIndex: Swift.Int, toIndex: Swift.Int)
-  func reorderTracks(withOrderedUrls orderedUrls: [Foundation.URL])
+  func reorderTracks(withTracks reorderedTracks: [VideoEditor.VideoEditorAssetTrackInfo])
 }
 public class VideoEditorAsset {
   public var composition: AVFoundation.AVMutableComposition!
@@ -313,17 +313,16 @@ extension VideoEditor.VideoEditorAsset : VideoEditor.AssetEditable {
   public func removeTrack(at index: Swift.Int)
   public func removeTrack(_ track: VideoEditor.VideoEditorAssetTrackInfo)
   public func moveTrack(fromIndex: Swift.Int, toIndex: Swift.Int)
-  public func reorderTracks(withOrderedUrls orderedUrls: [Foundation.URL])
+  public func reorderTracks(withTracks reorderedTracks: [VideoEditor.VideoEditorAssetTrackInfo])
+}
+@_hasMissingDesignatedInitializers public class MetalHelperHolder {
+  public static var shared: VideoEditor.MetalHelperHolder
+  final public let metalHelper: VideoEditor.MetalHelper
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class VideoAspectRatioCalculator {
   public static func calculateVideoAspectRatio(withVideoSize videoSize: CoreGraphics.CGSize) -> Swift.Double
   public static func adjustVideoSize(_ videoSize: CoreGraphics.CGSize, withAspectRatio aspectRatio: Swift.Double) -> CoreGraphics.CGSize
-  @objc deinit
-}
-public class VideoTextureCache {
-  public init(with context: OpenGLES.EAGLContext)
-  public func flush()
-  public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreVideo.CVOpenGLESTexture?
   @objc deinit
 }
 public enum ExportQuality {
@@ -372,15 +371,12 @@ public class VideoEditorFilterModel {
   public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
   @objc deinit
 }
-public class SimpleTextGLRenderer {
-  required public init()
-  @objc deinit
-  public func renderToCurrentFramebuffer(screenSymbolsWidth: Swift.UInt32, screenSymbolsHeight: Swift.UInt32, text: [OpenGLES.GLint])
-}
 public class VideoSequenceItem {
+  final public let uuidString: Swift.String
   final public let url: Foundation.URL
   final public let duration: Foundation.TimeInterval
   final public let isGalleryAsset: Swift.Bool
+  final public let isCopy: Swift.Bool
   public var rotation: VideoEditor.AssetRotation
   final public let preview: UIKit.UIImage?
   public var speed: Swift.Double {
@@ -389,7 +385,7 @@ public class VideoSequenceItem {
   public var name: Swift.String {
     get
   }
-  public init(assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
+  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
   public func tryReplaceVideo(withVideAtURL videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
@@ -419,7 +415,9 @@ extension VideoEditor.VideoSequence {
 }
 extension VideoEditor.VideoSequence {
   @discardableResult
-  public func addVideo(at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
+  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
+  @discardableResult
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil) -> VideoEditor.VideoSequenceItem?
   @discardableResult
   public func removeVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
   @discardableResult
@@ -428,7 +426,6 @@ extension VideoEditor.VideoSequence {
     get
   }
   public func restoreRemovedVideos()
-  public func reorderVideos(withOrderedVideoUrls orderedUrls: [Foundation.URL])
 }
 extension VideoEditor.VideoSequence {
   public func totalDuration(isSpeedCountingEnabled: Swift.Bool = true) -> Foundation.TimeInterval
@@ -449,6 +446,7 @@ public class ExportVideoInfo {
     case md540
     case hd720
     case fullHd1080
+    case original
     public var size: CoreGraphics.CGSize {
       get
     }
@@ -460,6 +458,7 @@ public class ExportVideoInfo {
   }
   final public let resolution: VideoEditor.ExportVideoInfo.Resolution
   public init(resolution: VideoEditor.ExportVideoInfo.Resolution, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize)
+  public static func setupOriginalSize(size: CoreGraphics.CGSize)
   @objc deinit
 }
 public struct ExportVideoInfoFactory {
@@ -545,16 +544,6 @@ public protocol AppliedEffect : AnyObject {
   func restoreStack()
   func hasChangesInAppliedEffects() -> Swift.Bool
 }
-@_hasMissingDesignatedInitializers public class EffectsSharedContext {
-  public static var shared: VideoEditor.EffectsSharedContext
-  public var context: OpenGLES.EAGLContext {
-    get
-  }
-  final public let textureCache: VideoEditor.VideoTextureCache
-  public func setCurrent()
-  public func getProgram(vertexSource: Swift.String, fragmentSource: Swift.String) -> VideoEditor.GLProgram
-  @objc deinit
-}
 public enum AssetRotation : Swift.UInt8, Swift.Codable {
   case none
   case rotate90
@@ -572,6 +561,12 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
 }
 extension UIKit.UIImage {
   public static func orientation(byRotation rotation: VideoEditor.AssetRotation) -> UIKit.UIImage.Orientation
+}
+@_hasMissingDesignatedInitializers public class MetalVerticesAndUVData {
+  public static var quadVertexData: [Swift.Float]
+  public static func quadVertexData(scale: Swift.Float) -> [Swift.Float]
+  public static var defaultTextureCoordinates: [Swift.Float]
+  @objc deinit
 }
 public enum EffectSpeed : Swift.Float {
   case normal
@@ -598,6 +593,7 @@ public protocol Rotatable {
   func rotate(clockwise: Swift.Bool)
 }
 public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
+  final public let uuidString: Swift.String
   public var url: Foundation.URL {
     get
   }
@@ -631,7 +627,7 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
     get
   }
   public var timeRangeInGlobal: CoreMedia.CMTimeRange
-  public init(url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool)
+  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool)
   public func copy() -> VideoEditor.VideoEditorAssetTrackInfo
   public func replaceAssetUrl(_ url: Foundation.URL)
   public func rotate(clockwise: Swift.Bool)
@@ -645,17 +641,31 @@ extension VideoEditor.VideoEditorAssetTrackInfo {
   public static func == (lhs: VideoEditor.VideoEditorAssetTrackInfo, rhs: VideoEditor.VideoEditorAssetTrackInfo) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
 }
-public class GLProgram {
-  public var initialized: Swift.Bool {
-    get
-  }
-  public init(vertexSource: Swift.String, fragmentSource: Swift.String)
+public struct MetalBlendingParameters {
+  public init(isBlendingEnabled: Swift.Bool, sourceRGBBlendFactor: Metal.MTLBlendFactor, destinationRGBBlendFactor: Metal.MTLBlendFactor, sourceAlphaBlendFactor: Metal.MTLBlendFactor, destinationAlphaBlendFactor: Metal.MTLBlendFactor)
+}
+public class MetalHelper {
+  final public let commandQueue: Metal.MTLCommandQueue
+  final public let depthStencilState: Metal.MTLDepthStencilState
+  public init(libraryBundle: Foundation.Bundle)
+  public func flush()
+  public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> Metal.MTLTexture?
+  public func createRenderPipeline(vertexFunctionName: Swift.String, fragmentFunctionName: Swift.String, pixelFormat: Metal.MTLPixelFormat = .bgra8Unorm, depthPixelFormat: Metal.MTLPixelFormat? = nil, blendParameters: VideoEditor.MetalBlendingParameters? = nil, bundle: Foundation.Bundle = Bundle.main, label: Swift.String? = nil) -> Metal.MTLRenderPipelineState?
+  public func setupRenderPassDescriptor(destinationTexture: Metal.MTLTexture, useBufferFetch: Swift.Bool = false) -> Metal.MTLRenderPassDescriptor
+  public func setupRenderPassDescriptor(destinationTexture: Metal.MTLTexture, depth: Metal.MTLTexture) -> Metal.MTLRenderPassDescriptor
+  public func makeBuffer<T>(array: [T]) -> Metal.MTLBuffer
+  public func makeBuffer(bytes pointer: Swift.UnsafeRawPointer, length: Swift.Int, options: Metal.MTLResourceOptions = []) -> Metal.MTLBuffer
+  public func makeTexture(descriptor: Metal.MTLTextureDescriptor) -> Metal.MTLTexture
+  public func makeDefaultUVBuffer() -> Metal.MTLBuffer
+  public func makeDefaultVertexBuffer() -> Metal.MTLBuffer
   @objc deinit
-  public func add(attribute: Swift.String)
-  public func getIndex(attribute: Swift.String) -> OpenGLES.GLuint
-  public func getIndex(uniform: Swift.String) -> OpenGLES.GLint
-  public func use()
-  public func link() -> Swift.Bool
+}
+extension VideoEditor.MetalHelper {
+  public func prepareCacheIfNeeded()
+  public func clearCache()
+}
+extension Metal.MTLBuffer {
+  public func replaceData<T>(with newData: [T])
 }
 @objc public class ImageConfiguration : ObjectiveC.NSObject, BanubaUtilities.ImageConfigurationProtocol {
   public var imageName: Swift.String
