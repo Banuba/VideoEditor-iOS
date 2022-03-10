@@ -2,7 +2,7 @@
 
 # Banuba VEExportSDK. API Reference.
 
-Video editor is a core module for interaction between playback modules, export, etc. All transformations with effects, sounds, time, trimming take place inside this module. In order to use exporting, applying effects, or getting a player, first you need to use the essence of the VideoEditorService entity and add the necessary video segments or assets to it.
+`VideoEditor` is a core module for interaction between playback modules, export, etc. All transformations with effects, sounds, time, trimming take place inside this module. In order to use exporting, applying effects, or getting a player, first you need to use the essence of the `VideoEditorService` entity and add the necessary video segments or assets to it.
 
 - [VideoEditorService](#VideoEditorService)
     + [Setup with Asset](#Setup-with-Asset)
