@@ -41,65 +41,17 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
 }
 public protocol CompositionRenderering : AnyObject {
   init()
-  func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: VideoEditor.EditorCompositionEffectProtocol)
+  func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: VideoEditor.EditorCompositionEffectProtocol, additionalParameters: [Swift.String : Any]?)
 }
-@_hasMissingDesignatedInitializers public class PlayersBundle {
-  weak public var playerDelegate: BanubaUtilities.PlayerDelegate?
-  public var isMuted: Swift.Bool {
-    get
-    set(value)
-  }
+@_hasMissingDesignatedInitializers public class EditorEffectsFilter {
+  public static func filterAddedEffects(effects: [VideoEditor.EditorCompositionEditableEffectProtocol]) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   @objc deinit
 }
-extension VideoEditor.PlayersBundle : BanubaUtilities.Playable {
-  public var currentTime: Foundation.TimeInterval {
-    get
-  }
-  public var videoDuration: Swift.Double {
-    get
-  }
-  public var currentTimeInCMTime: CoreMedia.CMTime {
-    get
-  }
-  public var videoDurationCMTime: CoreMedia.CMTime {
-    get
-  }
-  public var isPlaying: Swift.Bool {
-    get
-  }
-  public var playerItem: AVFoundation.AVPlayerItem? {
-    get
-  }
-  public var audioMix: AVFoundation.AVAudioMix? {
-    get
-    set(newValue)
-  }
-  public var avPlayer: AVFoundation.AVPlayer {
-    get
-  }
-  public var startTimePlay: CoreMedia.CMTime {
-    get
-  }
-  public var endTimePlay: CoreMedia.CMTime {
-    get
-  }
-  public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
-  public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
-  public func pausePlay()
-  public func stopPlay()
-  public func resumePlay()
-  public func previewLayer() -> AVFoundation.AVPlayerLayer
-  public func smoothlySeek(to time: CoreMedia.CMTime)
-  public func seek(to time: CoreMedia.CMTime)
-  public func startStopPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
-  public func reloadPreview()
-  public func reloadPreview(shouldAutoStart: Swift.Bool)
-}
-extension VideoEditor.PlayersBundle : BanubaUtilities.PlayerDelegate {
-  public func playerDidEndPlaying(_ preview: BanubaUtilities.Playable)
-  public func playerPlaysFrame(_ preview: BanubaUtilities.Playable, atTime time: CoreMedia.CMTime)
+public struct CustomSDKVideoCompositionConfig {
+  public static var renderingQueueName: Swift.String
 }
 public enum EditorEffectType : Swift.Int {
+  case pixelate
   case gif
   case text
   case time
@@ -118,35 +70,23 @@ public protocol VideoEditorTrackServicing {
   func audioTrackVolume() -> Swift.Float
   func isAudioTrackVolumeChanged() -> Swift.Bool
   func setAudioTrackVolume(_ volume: Swift.Float)
-  func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.Playable?)
+  func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.VideoEditorPlayable?)
 }
 public protocol WatermarkApplicatorServicing : AnyObject {
   func adjustWatermarkEffect(configuration: VideoEditor.WatermarkConfiguration, videoSize: CoreGraphics.CGSize) -> VideoEditor.VideoEditorFilterModel
 }
-public protocol ImageSlideshow {
-  func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
-}
-extension VideoEditor.ImageSlideshow {
-  public func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
-}
-public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.ImageSlideshow, VideoEditor.VideoEditorTrackServicing {
+public protocol VideoEditorServicing : VideoEditor.AppliedEffect, VideoEditor.VideoEditorTrackServicing {
   var asset: AVFoundation.AVAsset? { get }
   var videoAsset: VideoEditor.VideoEditorAsset? { get set }
   var exportFrameDuration: CoreMedia.CMTime { get set }
   var videoSize: CoreGraphics.CGSize { get set }
   var audioMixer: VideoEditor.AudioMixer? { get set }
-  func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
-  func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
-  func mergeVideoWithAudio(videoUrl: Foundation.URL, audioUrl: Foundation.URL, videoSize: CoreGraphics.CGSize, audioStartTime: Foundation.TimeInterval, success: @escaping ((Foundation.URL) -> Swift.Void), failure: @escaping ((Swift.Error?) -> Swift.Void))
   func attachExpiredWatermarkIfNeeded()
   func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
-  func getPlayer(delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
   func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel])
   func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
   func videoPartsCount() -> Swift.Int
-  static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
-  static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
   init(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing)
 }
 public class VideoEditorService {
@@ -162,34 +102,40 @@ public class VideoEditorService {
   public var videoSize: CoreGraphics.CGSize
   public var exportFrameDuration: CoreMedia.CMTime
   public var audioMixer: VideoEditor.AudioMixer?
+  public var effects: VideoEditor.AppliedEffectsStack {
+    get
+  }
+  final public let license: BanubaLicenseServicingSDK.License
+  final public let watermarkApplicator: VideoEditor.WatermarkApplicatorServicing
   required public init(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing)
   @objc deinit
+  public func createExportComposition(asset: AVFoundation.AVAsset, dataSource: VideoEditor.SDKVideoCompositionInstructionDataSource?) -> AVFoundation.AVVideoComposition?
 }
 extension VideoEditor.VideoEditorService : VideoEditor.AppliedEffect {
+  public func changeEffectTimeRange(withId id: Swift.UInt, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime)
   public func applyFilter(effectModel: VideoEditor.VideoEditorFilterModel, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool)
   public func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
   public func undoLast(type: VideoEditor.EditorEffectType) -> VideoEditor.EditorCompositionEffectProtocol?
+  public func undo(withId id: Swift.UInt)
   public func undoAll(type: VideoEditor.EditorEffectType)
   public func startCurrentFilter(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   public func endCurrentFilter(at: CoreMedia.CMTime)
-  public func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEffectProtocol]
-  public func getCurrentAppliedEffects() -> [VideoEditor.EditorCompositionEffectProtocol]
+  public func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
+  public func getCurrentAppliedEffects() -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   public func storeStack()
   public func restoreStack()
   public func hasChangesInAppliedEffects() -> Swift.Bool
 }
+extension VideoEditor.VideoEditorService : VideoEditor.SDKVideoCompositionInstructionDataSource {
+  public func getAllEffects(at time: CoreMedia.CMTime) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
+}
 extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorServicing {
-  public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
-  public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
   public func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
+  public func reattachMusicTracks(_ mutableAsset: AVFoundation.AVMutableComposition)
   public func attachExpiredWatermarkIfNeeded()
-  public func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: VideoEditor.ExportVideoInfo, watermarkFilterModel: VideoEditor.VideoEditorFilterModel?, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
-  public func exportCleanVideo(to file: Foundation.URL, mediaInfo: VideoEditor.ExportVideoInfo, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
-  public func exportAudio(to fileURL: Foundation.URL, completion: ((_ isSuccess: Swift.Bool, _ error: Swift.Error?) -> Swift.Void)?)
-  public func mergeVideoWithAudio(videoUrl: Foundation.URL, audioUrl: Foundation.URL, videoSize: CoreGraphics.CGSize, audioStartTime: Foundation.TimeInterval, success: @escaping ((Foundation.URL) -> Swift.Void), failure: @escaping ((Swift.Error?) -> Swift.Void))
+  public func createPIPAudioInputInstructions(mutableCompositionAudioTrack: [AVFoundation.AVMutableCompositionTrack], mutableCompositionVideoTrack: [AVFoundation.AVMutableCompositionTrack]) -> [AVFoundation.AVMutableAudioMixInputParameters]
   public func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   public func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
-  public func getPlayer(delegate: BanubaUtilities.PlayerDelegate?) -> BanubaUtilities.Playable
   public func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel])
   public func videoPartsCount() -> Swift.Int
 }
@@ -197,11 +143,8 @@ extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorTrackServicing
   public func audioTrackVolume() -> Swift.Float
   public func isAudioTrackVolumeChanged() -> Swift.Bool
   public func setAudioTrackVolume(_ volume: Swift.Float)
-  public func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.Playable?)
+  public func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.VideoEditorPlayable?)
   public func hasAudioTrack() -> Swift.Bool
-}
-extension VideoEditor.VideoEditorService : VideoEditor.ImageSlideshow {
-  public func exportSlideshowImages(_ images: [VideoEditor.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Swift.Bool, Foundation.URL, Swift.Error?) -> Swift.Void)?)
 }
 public class VideoTrimData {
   public var start: CoreMedia.CMTime {
@@ -215,57 +158,6 @@ public class VideoTrimData {
   }
   public init(start: CoreMedia.CMTime, end: CoreMedia.CMTime)
   @objc deinit
-}
-public class MusicPlayer : BanubaUtilities.Playable {
-  public var avPlayer: AVFoundation.AVPlayer {
-    get
-  }
-  public var playerItem: AVFoundation.AVPlayerItem? {
-    get
-  }
-  public var isMuted: Swift.Bool {
-    get
-    set(value)
-  }
-  weak public var playerDelegate: BanubaUtilities.PlayerDelegate?
-  public var isPlaying: Swift.Bool
-  public var startTimePlay: CoreMedia.CMTime {
-    get
-  }
-  public var endTimePlay: CoreMedia.CMTime {
-    get
-  }
-  public init(item: AVFoundation.AVPlayerItem?)
-  @objc deinit
-}
-extension VideoEditor.MusicPlayer {
-  public var videoDurationCMTime: CoreMedia.CMTime {
-    get
-  }
-  public var videoDuration: Swift.Double {
-    get
-  }
-  public var currentTimeInCMTime: CoreMedia.CMTime {
-    get
-  }
-  public var currentTime: Foundation.TimeInterval {
-    get
-  }
-  public var audioMix: AVFoundation.AVAudioMix? {
-    get
-    set(newValue)
-  }
-  public func seek(to time: CoreMedia.CMTime)
-  public func reloadPreview()
-  public func reloadPreview(shouldAutoStart: Swift.Bool)
-  public func startStopPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
-  public func stopPlay()
-  public func smoothlySeek(to time: CoreMedia.CMTime)
-  public func previewLayer() -> AVFoundation.AVPlayerLayer
-  public func resumePlay()
-  public func pausePlay()
-  public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
-  public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
 }
 public protocol ExportScalable {
   func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: VideoEditor.VideoTrimData?, completion: ((Swift.Error?) -> Swift.Void)?)
@@ -325,27 +217,6 @@ extension VideoEditor.VideoEditorAsset : VideoEditor.AssetEditable {
   public static func adjustVideoSize(_ videoSize: CoreGraphics.CGSize, withAspectRatio aspectRatio: Swift.Double) -> CoreGraphics.CGSize
   @objc deinit
 }
-public enum ExportQuality {
-  case videoConfiguration(VideoEditor.ExportVideoInfo)
-  case auto
-}
-public struct GifSettings {
-  public var duration: Foundation.TimeInterval
-  public init(duration: Foundation.TimeInterval)
-}
-public struct ExportConfiguration {
-  public let videoConfigurations: [VideoEditor.ExportVideoConfiguration]
-  public let isCoverEnabled: Swift.Bool
-  public var gifSettings: VideoEditor.GifSettings?
-  public init(videoConfigurations: [VideoEditor.ExportVideoConfiguration], isCoverEnabled: Swift.Bool, gifSettings: VideoEditor.GifSettings?)
-}
-public struct ExportVideoConfiguration {
-  public let fileURL: Foundation.URL
-  public let quality: VideoEditor.ExportQuality
-  public let watermarkConfiguration: VideoEditor.WatermarkConfiguration?
-  public let useHEVCCodecIfPossible: Swift.Bool
-  public init(fileURL: Foundation.URL, quality: VideoEditor.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, watermarkConfiguration: VideoEditor.WatermarkConfiguration?)
-}
 public enum ContentLocationType {
   case remote
   case local
@@ -367,8 +238,17 @@ public class VideoEditorFilterModel {
   final public let path: Swift.String
   final public let contentLocationType: VideoEditor.ContentLocationType
   public var preview: Foundation.URL?
-  public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
-  public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil)
+  public var additionalParameters: [Swift.String : Any]?
+  public var rendererInstance: VideoEditor.CompositionRenderering? {
+    get
+  }
+  public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
+  public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AppliedEffectsStack : VideoEditor.EffectStack {
+  public func getAllEffects(at time: CoreMedia.CMTime) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
+  public func getAllEffects() -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   @objc deinit
 }
 public class VideoSequenceItem {
@@ -376,6 +256,7 @@ public class VideoSequenceItem {
   final public let url: Foundation.URL
   final public let duration: Foundation.TimeInterval
   final public let isGalleryAsset: Swift.Bool
+  final public let isSlideShow: Swift.Bool
   final public let isCopy: Swift.Bool
   public var rotation: VideoEditor.AssetRotation
   final public let preview: UIKit.UIImage?
@@ -385,7 +266,7 @@ public class VideoSequenceItem {
   public var name: Swift.String {
     get
   }
-  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
+  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
   public func tryReplaceVideo(withVideAtURL videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
@@ -407,118 +288,57 @@ public class VideoSequenceItem {
     get
   }
   required public init(folderURL: Foundation.URL)
-  public func remove()
   @objc deinit
 }
 extension VideoEditor.VideoSequence {
-  public static func generateName() -> Swift.String
-}
-extension VideoEditor.VideoSequence {
-  @discardableResult
-  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
-  @discardableResult
-  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil) -> VideoEditor.VideoSequenceItem?
-  @discardableResult
-  public func removeVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
+  public func remove()
+  public func removeVideos()
   @discardableResult
   public func deleteVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
   public var hasRemovedVideos: Swift.Bool {
     get
   }
   public func restoreRemovedVideos()
+  @discardableResult
+  public func removeVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
+}
+extension VideoEditor.VideoSequence {
+  public static func generateName() -> Swift.String
+}
+extension VideoEditor.VideoSequence {
+  @discardableResult
+  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
+  @discardableResult
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil) -> VideoEditor.VideoSequenceItem?
+  public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
+}
+extension VideoEditor.VideoSequence {
+  public typealias SequnceVideos = (originalVideos: [VideoEditor.VideoSequenceItem], videos: [VideoEditor.VideoSequenceItem])
+  public func getVideoFileNames(in directory: Foundation.URL) -> VideoEditor.VideoSequence.SequnceVideos
 }
 extension VideoEditor.VideoSequence {
   public func totalDuration(isSpeedCountingEnabled: Swift.Bool = true) -> Foundation.TimeInterval
+  public func getDurations(isSpeedCountingEnabled: Swift.Bool = true) -> [Foundation.TimeInterval]
 }
 extension VideoEditor.VideoSequence {
-  public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
+  public static func restore(folder: Foundation.URL) -> VideoEditor.VideoSequence
 }
-@objc public class VoiceTrackItem : ObjectiveC.NSObject {
-  final public let url: Foundation.URL
-  final public let timeRange: CoreMedia.CMTimeRange
-  public init(url: Foundation.URL, timeRange: CoreMedia.CMTimeRange)
+@objc public class VideoImagesComposition : ObjectiveC.NSObject {
+  public init(sequence: VideoEditor.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
+  public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
   @objc deinit
 }
-public class ExportVideoInfo {
-  public enum Resolution : Swift.String {
-    case ld360
-    case md480
-    case md540
-    case hd720
-    case fullHd1080
-    case original
-    public var size: CoreGraphics.CGSize {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  final public let resolution: VideoEditor.ExportVideoInfo.Resolution
-  public init(resolution: VideoEditor.ExportVideoInfo.Resolution, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize)
-  public static func setupOriginalSize(size: CoreGraphics.CGSize)
+@_hasMissingDesignatedInitializers public class EffectStack {
+  public func getAllEffects(at time: CoreMedia.CMTime, from: [VideoEditor.EditorCompositionEditableEffectProtocol]) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   @objc deinit
 }
-public struct ExportVideoInfoFactory {
-  public static func assetExportSettings(resolution: BanubaUtilities.VideoResolution, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize) -> VideoEditor.ExportVideoInfo
+public protocol VideoImageEffectDrawable {
+  func draw(imageTexture: Metal.MTLTexture, in pixelBuffer: CoreVideo.CVPixelBuffer, sampleTime: Foundation.TimeInterval, startTime: Foundation.TimeInterval, endTime: Foundation.TimeInterval, imageSize: CoreGraphics.CGSize)
 }
 public struct VideoSequenceNameDuplacatesFinder {
   public let sequenceName: Swift.String
   public init(sequenceName: Swift.String)
   public func findDuplicates(inSequenceNames sequenceNames: [Swift.String]) -> [Swift.String]
-}
-public class EditorPlayer {
-  public var avPlayer: AVFoundation.AVPlayer {
-    get
-  }
-  public var playerItem: AVFoundation.AVPlayerItem? {
-    get
-  }
-  public var isMuted: Swift.Bool {
-    get
-    set(value)
-  }
-  weak public var playerDelegate: BanubaUtilities.PlayerDelegate?
-  public var isPlaying: Swift.Bool
-  public var startTimePlay: CoreMedia.CMTime {
-    get
-  }
-  public var endTimePlay: CoreMedia.CMTime {
-    get
-  }
-  public init(item: AVFoundation.AVPlayerItem?)
-  @objc deinit
-}
-extension VideoEditor.EditorPlayer : BanubaUtilities.Playable {
-  public var videoDurationCMTime: CoreMedia.CMTime {
-    get
-  }
-  public var videoDuration: Swift.Double {
-    get
-  }
-  public var currentTimeInCMTime: CoreMedia.CMTime {
-    get
-  }
-  public var currentTime: Foundation.TimeInterval {
-    get
-  }
-  public var audioMix: AVFoundation.AVAudioMix? {
-    get
-    set(newValue)
-  }
-  public func seek(to time: CoreMedia.CMTime)
-  public func reloadPreview()
-  public func reloadPreview(shouldAutoStart: Swift.Bool)
-  public func startStopPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
-  public func stopPlay()
-  public func smoothlySeek(to time: CoreMedia.CMTime)
-  public func previewLayer() -> AVFoundation.AVPlayerLayer
-  public func resumePlay()
-  public func pausePlay()
-  public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool)
-  public func startPlay(loop: Swift.Bool, fixedSpeed: Swift.Bool, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
 }
 public protocol VideoEditorSDKServicing {
   var videoEditorService: VideoEditor.VideoEditorService { get }
@@ -529,20 +349,24 @@ public protocol AudioVideoEditorSDKServicing : VideoEditor.VideoEditorSDKServici
 @_hasMissingDesignatedInitializers public class VideoEditorServiceBuilder {
   public static func getNewEditorServicing(token: Swift.String, watermarkApplicator: VideoEditor.WatermarkApplicatorServicing) -> VideoEditor.VideoEditorService
   public static func getNewSequenceServicing() -> VideoEditor.VideoSequenceServicing
-  public static func getPlayer(asset: AVFoundation.AVAsset, delegate: BanubaUtilities.PlayerDelegate?, instructions: [AVFoundation.AVVideoCompositionInstructionProtocol]?) -> BanubaUtilities.Playable
   @objc deinit
 }
 public protocol AppliedEffect : AnyObject {
-  func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEffectProtocol]
+  func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   func startCurrentFilter(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   func endCurrentFilter(at: CoreMedia.CMTime)
   func undoLast(type: VideoEditor.EditorEffectType) -> VideoEditor.EditorCompositionEffectProtocol?
   func undoAll(type: VideoEditor.EditorEffectType)
   func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
+  func changeEffectTimeRange(withId id: Swift.UInt, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime)
   func applyFilter(effectModel: VideoEditor.VideoEditorFilterModel, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool)
   func storeStack()
   func restoreStack()
   func hasChangesInAppliedEffects() -> Swift.Bool
+}
+public class VideoEditorImagesSequence {
+  @objc deinit
+  public init(imageAssets: [VideoEditor.VideoEditorImageAssetProtocol])
 }
 public enum AssetRotation : Swift.UInt8, Swift.Codable {
   case none
@@ -558,6 +382,27 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
   public var rawValue: Swift.UInt8 {
     get
   }
+}
+@_hasMissingDesignatedInitializers public class ExportScaledTimeline : VideoEditor.EffectStack {
+  public var composition: AVFoundation.AVMutableComposition? {
+    get
+  }
+  public init(with composition: AVFoundation.AVMutableComposition?)
+  public func scaleAndArrange(with effects: [VideoEditor.EditorCompositionEditableEffectProtocol])
+  @objc deinit
+}
+extension VideoEditor.ExportScaledTimeline : VideoEditor.SDKVideoCompositionInstructionDataSource {
+  public func getAllEffects(at time: CoreMedia.CMTime) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
+}
+public class AverageSum {
+  public init(name: Swift.String, skipFirstCount: Swift.Int, autoprint: Swift.Bool = true, autoprintInterval: Swift.UInt = 100)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AverageTimeSum : VideoEditor.AverageSum {
+  public func begin()
+  public func end()
+  override public init(name: Swift.String, skipFirstCount: Swift.Int, autoprint: Swift.Bool = super, autoprintInterval: Swift.UInt = super)
+  @objc deinit
 }
 extension UIKit.UIImage {
   public static func orientation(byRotation rotation: VideoEditor.AssetRotation) -> UIKit.UIImage.Orientation
@@ -579,14 +424,30 @@ public enum EffectSpeed : Swift.Float {
   }
 }
 @_hasMissingDesignatedInitializers public class EditorCompositionFactory {
+  public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, model: VideoEditor.VideoEditorFilterModel, uuid: Swift.String = UUID().uuidString, additionalParameters: [Swift.String : Any]?) -> VideoEditor.EditorCompositionEditableEffectProtocol
+  public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String, speed: VideoEditor.EffectSpeed, uuid: Swift.String, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, additionalParameters: [Swift.String : Any]?) -> VideoEditor.EditorCompositionEditableEffectProtocol
+  public static func zeroTimeEffect() -> VideoEditor.EditorCompositionEditableEffectProtocol
   @objc deinit
 }
 public protocol EditorCompositionEffectProtocol : AnyObject {
+  var additionalParameters: [Swift.String : Any]? { get }
   var startTime: CoreMedia.CMTime { get }
   var endTime: CoreMedia.CMTime { get }
   var id: Swift.UInt { get }
   var tokenId: Swift.String { get set }
   var path: Swift.String { get }
+}
+public protocol EditorCompositionEditableEffectProtocol : Foundation.NSCopying, VideoEditor.EditorCompositionEffectProtocol {
+  override var startTime: CoreMedia.CMTime { get set }
+  override var endTime: CoreMedia.CMTime { get set }
+  var filterType: VideoEditor.EditorEffectType { get }
+  var speed: VideoEditor.EffectSpeed { get }
+  var uuid: Swift.String { get }
+  var rendererClass: VideoEditor.CompositionRenderering.Type? { get }
+  var rendererInstance: VideoEditor.CompositionRenderering? { get }
+  override var additionalParameters: [Swift.String : Any]? { get }
+  func isInTime(_ time: CoreMedia.CMTime) -> Swift.Bool
+  func isEqual(to: VideoEditor.EditorCompositionEditableEffectProtocol) -> Swift.Bool
 }
 public protocol Rotatable {
   var rotation: VideoEditor.AssetRotation { get set }
@@ -611,6 +472,7 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
     get
   }
   public var isGalleryAsset: Swift.Bool
+  public var isSlideShow: Swift.Bool
   public var composition: AVFoundation.AVComposition! {
     get
   }
@@ -627,7 +489,7 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
     get
   }
   public var timeRangeInGlobal: CoreMedia.CMTimeRange
-  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool)
+  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool)
   public func copy() -> VideoEditor.VideoEditorAssetTrackInfo
   public func replaceAssetUrl(_ url: Foundation.URL)
   public func rotate(clockwise: Swift.Bool)
@@ -641,6 +503,15 @@ extension VideoEditor.VideoEditorAssetTrackInfo {
   public static func == (lhs: VideoEditor.VideoEditorAssetTrackInfo, rhs: VideoEditor.VideoEditorAssetTrackInfo) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
 }
+public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
+  func getAllEffects(at time: CoreMedia.CMTime) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
+}
+@objc @_inheritsConvenienceInitializers public class VideoImageEffectDrawersFactory : ObjectiveC.NSObject {
+  public static var normalDrawer: VideoEditor.VideoImageEffectDrawable
+  public static func drawer(for image: CoreGraphics.CGImage) -> VideoEditor.VideoImageEffectDrawable
+  @objc override dynamic public init()
+  @objc deinit
+}
 public struct MetalBlendingParameters {
   public init(isBlendingEnabled: Swift.Bool, sourceRGBBlendFactor: Metal.MTLBlendFactor, destinationRGBBlendFactor: Metal.MTLBlendFactor, sourceAlphaBlendFactor: Metal.MTLBlendFactor, destinationAlphaBlendFactor: Metal.MTLBlendFactor)
 }
@@ -650,6 +521,7 @@ public class MetalHelper {
   public init(libraryBundle: Foundation.Bundle)
   public func flush()
   public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> Metal.MTLTexture?
+  public func createMonochromeTexture(textureData: Swift.UnsafeMutablePointer<Swift.UInt8>, width: Swift.Int, height: Swift.Int) -> Metal.MTLTexture
   public func createRenderPipeline(vertexFunctionName: Swift.String, fragmentFunctionName: Swift.String, pixelFormat: Metal.MTLPixelFormat = .bgra8Unorm, depthPixelFormat: Metal.MTLPixelFormat? = nil, blendParameters: VideoEditor.MetalBlendingParameters? = nil, bundle: Foundation.Bundle = Bundle.main, label: Swift.String? = nil) -> Metal.MTLRenderPipelineState?
   public func setupRenderPassDescriptor(destinationTexture: Metal.MTLTexture, useBufferFetch: Swift.Bool = false) -> Metal.MTLRenderPassDescriptor
   public func setupRenderPassDescriptor(destinationTexture: Metal.MTLTexture, depth: Metal.MTLTexture) -> Metal.MTLRenderPassDescriptor
@@ -681,6 +553,7 @@ public struct WatermarkConfiguration {
   public var size: CoreGraphics.CGSize
   public var sharedOffset: CoreGraphics.CGFloat
   public var position: VideoEditor.WatermarkConfiguration.WatermarkPosition
+  public var id: Swift.UInt?
   public enum WatermarkPosition {
     case leftTop
     case leftBottom
@@ -692,7 +565,11 @@ public struct WatermarkConfiguration {
       get
     }
   }
-  public init(watermark: VideoEditor.ImageConfiguration, size: CoreGraphics.CGSize, sharedOffset: CoreGraphics.CGFloat, position: VideoEditor.WatermarkConfiguration.WatermarkPosition)
+  public static var expiredWatermarkId: Swift.UInt
+  public static var expiredWatermark: VideoEditor.WatermarkConfiguration {
+    get
+  }
+  public init(watermark: VideoEditor.ImageConfiguration, size: CoreGraphics.CGSize, sharedOffset: CoreGraphics.CGFloat, position: VideoEditor.WatermarkConfiguration.WatermarkPosition, id: Swift.UInt? = nil)
 }
 public protocol VideoSequenceServicing {
   var videoSequences: [VideoEditor.VideoSequence] { get }

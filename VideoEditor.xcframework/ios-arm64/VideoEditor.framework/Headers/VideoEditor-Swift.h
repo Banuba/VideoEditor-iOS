@@ -223,6 +223,20 @@ SWIFT_CLASS("_TtC11VideoEditor18ImageConfiguration")
 
 
 
+SWIFT_CLASS("_TtC11VideoEditor30VideoImageEffectDrawersFactory")
+@interface VideoImageEffectDrawersFactory : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// Image composition for slideshow creation
+SWIFT_CLASS("_TtC11VideoEditor22VideoImagesComposition")
+@interface VideoImagesComposition : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC11VideoEditor13VideoSequence")
 @interface VideoSequence : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -236,11 +250,7 @@ SWIFT_CLASS("_TtC11VideoEditor13VideoSequence")
 
 
 
-SWIFT_CLASS("_TtC11VideoEditor14VoiceTrackItem")
-@interface VoiceTrackItem : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
