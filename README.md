@@ -1,6 +1,6 @@
 [![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://www.banuba.com/video-editor-sdk)
 
-# Banuba VEExportSDK. API Reference.
+# Banuba VideoEditor SDK. API Reference.
 
 `VideoEditor` is a core module for interaction between playback modules, export, etc. All transformations with effects, sounds, time, trimming take place inside this module. In order to use exporting, applying effects, or getting a player, first you need to use the essence of the `VideoEditorService` entity and add the necessary video segments or assets to it.
 
