@@ -18,23 +18,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JvEXR1wnPZrplPhsqLuZSVKvl1c=
+		DGWqX4waSE0qlYub6fYfWp3ZiNk=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		FCH5rofsLCOFtYzBNF/JqRR+ti4=
+		xXo3UTufS09XuovaLhHkR+c6Wxk=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		FCH5rofsLCOFtYzBNF/JqRR+ti4=
+		xXo3UTufS09XuovaLhHkR+c6Wxk=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		ZvNsVIK/MQvp8W+wZSXs24YR/zg=
+		QI6kZrcqFwxlB8L1BK/HSeeR0Xs=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		ZvNsVIK/MQvp8W+wZSXs24YR/zg=
+		QI6kZrcqFwxlB8L1BK/HSeeR0Xs=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		60gHFR0VziwEyCwYnQn6IqRao5M=
+		ha0nVyV17x7fBhUUsm7qnQE/lCQ=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		60gHFR0VziwEyCwYnQn6IqRao5M=
+		ha0nVyV17x7fBhUUsm7qnQE/lCQ=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PsO5fc7KmnhmUlSu5n2dLSAX7vo=
+		Fyuo/W2ND0P3SHFl5fEsjTplQpY=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		PsO5fc7KmnhmUlSu5n2dLSAX7vo=
+		Fyuo/W2ND0P3SHFl5fEsjTplQpY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		MPltAfsqW7xa1hRrjuLuBoXvqPU=
+		w2czvoS4ag8uF3UrF0Jjrr7y93I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -124,28 +124,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l6/gPOlAYEb6Wl+IzKc2O7r0RWZVGS6P/tnqwVSY4d4=
+			QYVaP+Iwboz8L16J6tU4s52+M8z0D8ZGCVONuvE24dI=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l6/gPOlAYEb6Wl+IzKc2O7r0RWZVGS6P/tnqwVSY4d4=
+			QYVaP+Iwboz8L16J6tU4s52+M8z0D8ZGCVONuvE24dI=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XBSQGMh4HY7yRW+kmU6zl7+4IAMpHbV6Hz774ER6/n8=
+			J4YkxvZtcKqr661rpsCqCHmnpC3z+nPtST7r1Jt54nY=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XBSQGMh4HY7yRW+kmU6zl7+4IAMpHbV6Hz774ER6/n8=
+			J4YkxvZtcKqr661rpsCqCHmnpC3z+nPtST7r1Jt54nY=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9TkRBOWTMgcf1aZU+/oTaG0NNXv4SKEfagIoJDZaCKA=
+			Y6bXSdqvqFL7Y65xvX3v69S/LkziWfpLaC8TfQf/lHo=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64.swiftdoc</key>
@@ -187,7 +187,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9TkRBOWTMgcf1aZU+/oTaG0NNXv4SKEfagIoJDZaCKA=
+			Y6bXSdqvqFL7Y65xvX3v69S/LkziWfpLaC8TfQf/lHo=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -208,7 +208,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			90GBGd9DgQY8rloESVB6RS9yAC7dvLwaGPTYm0IRgKM=
+			dYdM0uDp98XAvhR+QOrgQ637By6ClMCKjzGWtsVip1s=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64.swiftdoc</key>
@@ -229,7 +229,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			90GBGd9DgQY8rloESVB6RS9yAC7dvLwaGPTYm0IRgKM=
+			dYdM0uDp98XAvhR+QOrgQ637By6ClMCKjzGWtsVip1s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -250,7 +250,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TwK7oCY3oo6XszvrYYnzP9va3oG2D5JChrLPg5uDHR4=
+			XWxwQQV5gZbT5W8WX3X8bw53EkXa3SFo4TG1puxo5IY=
 			</data>
 		</dict>
 	</dict>
