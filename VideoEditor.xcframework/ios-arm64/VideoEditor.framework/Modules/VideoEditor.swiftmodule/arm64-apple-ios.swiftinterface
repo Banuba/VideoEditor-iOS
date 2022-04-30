@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -25,8 +25,8 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
 }
 @_hasMissingDesignatedInitializers public class AudioMixer {
   public struct VolumeDefaults {
-    public static var defaultVolume: Swift.Float
-    public static var muteVolume: Swift.Float
+    public static let defaultVolume: Swift.Float
+    public static let muteVolume: Swift.Float
   }
   public var audioMix: AVFoundation.AVAudioMix {
     get
@@ -48,7 +48,7 @@ public protocol CompositionRenderering : AnyObject {
   @objc deinit
 }
 public struct CustomSDKVideoCompositionConfig {
-  public static var renderingQueueName: Swift.String
+  public static let renderingQueueName: Swift.String
 }
 public enum EditorEffectType : Swift.Int {
   case pixelate
@@ -94,7 +94,7 @@ public class VideoEditorService {
   public func getMusicPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
   public var videoAsset: VideoEditor.VideoEditorAsset? {
     get
-    set(value)
+    set
   }
   public var asset: AVFoundation.AVAsset? {
     get
@@ -184,7 +184,7 @@ public class VideoEditorAsset {
   public var videoResolutionCurrentSize: CoreGraphics.CGSize?
   public var fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>
   public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
-  public convenience init(sequence: VideoEditor.VideoSequence, isGalleryAssets: Swift.Bool, isSlideShow: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
+  convenience public init(sequence: VideoEditor.VideoSequence, isGalleryAssets: Swift.Bool, isSlideShow: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
@@ -208,7 +208,7 @@ extension VideoEditor.VideoEditorAsset : VideoEditor.AssetEditable {
   public func reorderTracks(withTracks reorderedTracks: [VideoEditor.VideoEditorAssetTrackInfo])
 }
 @_hasMissingDesignatedInitializers public class MetalHelperHolder {
-  public static var shared: VideoEditor.MetalHelperHolder
+  public static let shared: VideoEditor.MetalHelperHolder
   final public let metalHelper: VideoEditor.MetalHelper
   @objc deinit
 }
@@ -242,7 +242,7 @@ public class VideoEditorFilterModel {
   public var rendererInstance: VideoEditor.CompositionRenderering? {
     get
   }
-  public convenience init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
+  convenience public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
   public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
   @objc deinit
 }
@@ -408,9 +408,9 @@ extension UIKit.UIImage {
   public static func orientation(byRotation rotation: VideoEditor.AssetRotation) -> UIKit.UIImage.Orientation
 }
 @_hasMissingDesignatedInitializers public class MetalVerticesAndUVData {
-  public static var quadVertexData: [Swift.Float]
+  public static let quadVertexData: [Swift.Float]
   public static func quadVertexData(scale: Swift.Float) -> [Swift.Float]
-  public static var defaultTextureCoordinates: [Swift.Float]
+  public static let defaultTextureCoordinates: [Swift.Float]
   @objc deinit
 }
 public enum EffectSpeed : Swift.Float {
@@ -438,14 +438,14 @@ public protocol EditorCompositionEffectProtocol : AnyObject {
   var path: Swift.String { get }
 }
 public protocol EditorCompositionEditableEffectProtocol : Foundation.NSCopying, VideoEditor.EditorCompositionEffectProtocol {
-  override var startTime: CoreMedia.CMTime { get set }
-  override var endTime: CoreMedia.CMTime { get set }
+  var startTime: CoreMedia.CMTime { get set }
+  var endTime: CoreMedia.CMTime { get set }
   var filterType: VideoEditor.EditorEffectType { get }
   var speed: VideoEditor.EffectSpeed { get }
   var uuid: Swift.String { get }
   var rendererClass: VideoEditor.CompositionRenderering.Type? { get }
   var rendererInstance: VideoEditor.CompositionRenderering? { get }
-  override var additionalParameters: [Swift.String : Any]? { get }
+  var additionalParameters: [Swift.String : Any]? { get }
   func isInTime(_ time: CoreMedia.CMTime) -> Swift.Bool
   func isEqual(to: VideoEditor.EditorCompositionEditableEffectProtocol) -> Swift.Bool
 }
@@ -466,7 +466,7 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
   public var trimTimeRange: CoreMedia.CMTimeRange
   public var rotation: VideoEditor.AssetRotation {
     get
-    set(value)
+    set
   }
   public var videoName: Swift.String {
     get
@@ -507,7 +507,7 @@ public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
   func getAllEffects(at time: CoreMedia.CMTime) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
 }
 @objc @_inheritsConvenienceInitializers public class VideoImageEffectDrawersFactory : ObjectiveC.NSObject {
-  public static var normalDrawer: VideoEditor.VideoImageEffectDrawable
+  public static let normalDrawer: VideoEditor.VideoImageEffectDrawable
   public static func drawer(for image: CoreGraphics.CGImage) -> VideoEditor.VideoImageEffectDrawable
   @objc override dynamic public init()
   @objc deinit
@@ -585,3 +585,16 @@ public protocol VideoSequenceServicing {
   func removeSequence(_ videoSequence: VideoEditor.VideoSequence) -> Swift.Bool
   func removeAllSequences()
 }
+extension VideoEditor.EditorEffectType : Swift.Equatable {}
+extension VideoEditor.EditorEffectType : Swift.Hashable {}
+extension VideoEditor.EditorEffectType : Swift.RawRepresentable {}
+extension VideoEditor.ContentLocationType : Swift.Equatable {}
+extension VideoEditor.ContentLocationType : Swift.Hashable {}
+extension VideoEditor.AssetRotation : Swift.Equatable {}
+extension VideoEditor.AssetRotation : Swift.Hashable {}
+extension VideoEditor.AssetRotation : Swift.RawRepresentable {}
+extension VideoEditor.EffectSpeed : Swift.Equatable {}
+extension VideoEditor.EffectSpeed : Swift.Hashable {}
+extension VideoEditor.EffectSpeed : Swift.RawRepresentable {}
+extension VideoEditor.WatermarkConfiguration.WatermarkPosition : Swift.Equatable {}
+extension VideoEditor.WatermarkConfiguration.WatermarkPosition : Swift.Hashable {}
