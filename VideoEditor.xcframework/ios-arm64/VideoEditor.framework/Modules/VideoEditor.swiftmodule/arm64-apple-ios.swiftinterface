@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name VideoEditor
 import AVFoundation
 import AVKit
@@ -51,6 +51,7 @@ public struct CustomSDKVideoCompositionConfig {
   public static let renderingQueueName: Swift.String
 }
 public enum EditorEffectType : Swift.Int {
+  case transition
   case pixelate
   case gif
   case text
@@ -115,6 +116,7 @@ extension VideoEditor.VideoEditorService : VideoEditor.AppliedEffect {
   public func changeEffectTimeRange(withId id: Swift.UInt, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime)
   public func applyFilter(effectModel: VideoEditor.VideoEditorFilterModel, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool)
   public func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
+  @discardableResult
   public func undoLast(type: VideoEditor.EditorEffectType) -> VideoEditor.EditorCompositionEffectProtocol?
   public func undo(withId id: Swift.UInt)
   public func undoAll(type: VideoEditor.EditorEffectType)
@@ -243,7 +245,7 @@ public class VideoEditorFilterModel {
     get
   }
   convenience public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
-  public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
+  public init(name: Swift.String, type: VideoEditor.EditorEffectType, contentLocationType: VideoEditor.ContentLocationType = .local, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String = "", speed: VideoEditor.EffectSpeed = .normal, transition: BanubaUtilities.TransitionType = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AppliedEffectsStack : VideoEditor.EffectStack {
@@ -266,7 +268,8 @@ public class VideoSequenceItem {
   public var name: Swift.String {
     get
   }
-  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?)
+  public var transition: BanubaUtilities.TransitionType
+  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?, transition: BanubaUtilities.TransitionType)
   public func tryReplaceVideo(withVideAtURL videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
@@ -307,9 +310,9 @@ extension VideoEditor.VideoSequence {
 }
 extension VideoEditor.VideoSequence {
   @discardableResult
-  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true) -> VideoEditor.VideoSequenceItem?
+  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType) -> VideoEditor.VideoSequenceItem?
   @discardableResult
-  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil) -> VideoEditor.VideoSequenceItem?
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType) -> VideoEditor.VideoSequenceItem?
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
 }
 extension VideoEditor.VideoSequence {
@@ -425,7 +428,7 @@ public enum EffectSpeed : Swift.Float {
 }
 @_hasMissingDesignatedInitializers public class EditorCompositionFactory {
   public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, model: VideoEditor.VideoEditorFilterModel, uuid: Swift.String = UUID().uuidString, additionalParameters: [Swift.String : Any]?) -> VideoEditor.EditorCompositionEditableEffectProtocol
-  public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String, speed: VideoEditor.EffectSpeed, uuid: Swift.String, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, additionalParameters: [Swift.String : Any]?) -> VideoEditor.EditorCompositionEditableEffectProtocol
+  public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, type: VideoEditor.EditorEffectType, renderer: VideoEditor.CompositionRenderering.Type?, path: Swift.String, speed: VideoEditor.EffectSpeed, transition: BanubaUtilities.TransitionType = .normal, uuid: Swift.String, id: Swift.UInt, tokenId: Swift.String, rendererInstance: VideoEditor.CompositionRenderering?, additionalParameters: [Swift.String : Any]?) -> VideoEditor.EditorCompositionEditableEffectProtocol
   public static func zeroTimeEffect() -> VideoEditor.EditorCompositionEditableEffectProtocol
   @objc deinit
 }
@@ -442,6 +445,7 @@ public protocol EditorCompositionEditableEffectProtocol : Foundation.NSCopying, 
   var endTime: CoreMedia.CMTime { get set }
   var filterType: VideoEditor.EditorEffectType { get }
   var speed: VideoEditor.EffectSpeed { get }
+  var transitionType: BanubaUtilities.TransitionType { get }
   var uuid: Swift.String { get }
   var rendererClass: VideoEditor.CompositionRenderering.Type? { get }
   var rendererInstance: VideoEditor.CompositionRenderering? { get }
@@ -489,7 +493,8 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
     get
   }
   public var timeRangeInGlobal: CoreMedia.CMTimeRange
-  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool)
+  public var transitionEffectType: BanubaUtilities.TransitionType
+  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreGraphics.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, transitionEffectType: BanubaUtilities.TransitionType)
   public func copy() -> VideoEditor.VideoEditorAssetTrackInfo
   public func replaceAssetUrl(_ url: Foundation.URL)
   public func rotate(clockwise: Swift.Bool)
