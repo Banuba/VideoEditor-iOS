@@ -82,6 +82,7 @@ This kind of constructor initialize `VideoEditorAsset` with set of `VideoEditorA
   ///   - videoResolutionConfiguration: Resolution configuration
   ///   - isGalleryAsset: is track created from gallery
   ///   - isSlideShow: is track created from photo
+  ///   - transitionEffectType: Transition effect type
   public init(
     uuidString: String,
     url: URL,
@@ -90,7 +91,8 @@ This kind of constructor initialize `VideoEditorAsset` with set of `VideoEditorA
     fillAspectRatioRange: ClosedRange<CGFloat>,
     videoResolutionConfiguration: VideoResolutionConfiguration,
     isGalleryAsset: Bool,
-    isSlideShow: Bool
+    isSlideShow: Bool,
+    transitionEffectType: TransitionType
   )
 ```
 
@@ -136,6 +138,8 @@ Propeties of different conditions, time ranges, avAsset compositions, instructio
   var urlAsset: AVAsset
   /// Track time range according to composed asset
   var timeRangeInGlobal: CMTimeRang
+  /// Transition effect type. Default is without transition effect
+  var transitionEffectType: TransitionType
 ```
 
 ##### Copy func
@@ -149,7 +153,7 @@ Propeties of different conditions, time ranges, avAsset compositions, instructio
   /// Replace asset url
   /// - Parameters:
   ///   - url: Asset url
-  func replaceAssetUrl(_ url: URL
+  func replaceAssetUrl(_ url: URL)
 ```
 
 ##### Rotate current asset representation
@@ -245,7 +249,8 @@ This kind of constructor initialize `VideoEditorAsset` with `VideoSequence` inst
     rotation: AssetRotation = .none,
     preview: UIImage? = nil,
     shouldMoveFile: Bool = true,
-    shouldUseUniqName: Bool = true
+    shouldUseUniqName: Bool = true,
+    transition: TransitionType
   ) -> VideoSequenceItem?
   
   /// Adds video to the sequence by adding copy of existing video
@@ -267,7 +272,8 @@ This kind of constructor initialize `VideoEditorAsset` with `VideoSequence` inst
     isSlideShow: Bool,
     isRemoved: Bool = false,
     rotation: AssetRotation = .none,
-    preview: UIImage? = nil
+    preview: UIImage? = nil,
+    transition: TransitionType
   ) -> VideoSequenceItem?
   
   /// Tell sequence that sequence video did update
