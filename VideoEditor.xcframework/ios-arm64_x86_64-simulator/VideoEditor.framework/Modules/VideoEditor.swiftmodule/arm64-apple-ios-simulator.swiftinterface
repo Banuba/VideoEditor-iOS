@@ -123,6 +123,7 @@ extension VideoEditor.VideoEditorService : VideoEditor.AppliedEffect {
   public func startCurrentFilter(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   public func endCurrentFilter(at: CoreMedia.CMTime)
   public func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
+  public func getStoredEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   public func getCurrentAppliedEffects() -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   public func storeStack()
   public func restoreStack()
@@ -197,7 +198,7 @@ extension VideoEditor.VideoEditorAsset {
   @discardableResult
   public func addMusicTrack(_ musicTrack: BanubaUtilities.MediaTrack) -> (compositionTrack: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack)?
   @discardableResult
-  public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
+  public func removeMusic(trackId: CoreMedia.CMPersistentTrackID, url: Foundation.URL) -> Swift.Bool
 }
 extension VideoEditor.VideoEditorAsset : VideoEditor.ExportScalable {
   public func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: VideoEditor.VideoTrimData?, completion: ((Swift.Error?) -> Swift.Void)?)
@@ -342,6 +343,7 @@ public struct VideoSequenceNameDuplacatesFinder {
   public let sequenceName: Swift.String
   public init(sequenceName: Swift.String)
   public func findDuplicates(inSequenceNames sequenceNames: [Swift.String]) -> [Swift.String]
+  public func getIndex(fromName: Swift.String?) -> Swift.Int?
 }
 public protocol VideoEditorSDKServicing {
   var videoEditorService: VideoEditor.VideoEditorService { get }
@@ -355,6 +357,7 @@ public protocol AudioVideoEditorSDKServicing : VideoEditor.VideoEditorSDKServici
   @objc deinit
 }
 public protocol AppliedEffect : AnyObject {
+  func getStoredEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   func startCurrentFilter(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   func endCurrentFilter(at: CoreMedia.CMTime)
@@ -453,6 +456,10 @@ public protocol EditorCompositionEditableEffectProtocol : Foundation.NSCopying, 
   func isInTime(_ time: CoreMedia.CMTime) -> Swift.Bool
   func isEqual(to: VideoEditor.EditorCompositionEditableEffectProtocol) -> Swift.Bool
 }
+public struct VideoSequenceNameFormatter {
+  public init()
+  public func formattedDraftSubtitleFromTime(_ time: Foundation.TimeInterval) -> Swift.String
+}
 public protocol Rotatable {
   var rotation: VideoEditor.AssetRotation { get set }
   func rotate(clockwise: Swift.Bool)
@@ -546,11 +553,12 @@ extension Metal.MTLBuffer {
 }
 @objc public class ImageConfiguration : ObjectiveC.NSObject, BanubaUtilities.ImageConfigurationProtocol {
   public var imageName: Swift.String
+  @objc public var tintColor: UIKit.UIColor?
   @objc public var image: UIKit.UIImage? {
     @objc get
   }
-  public init(imageName: Swift.String)
-  public init(image: UIKit.UIImage)
+  public init(imageName: Swift.String, tintColor: UIKit.UIColor? = nil)
+  public init(image: UIKit.UIImage, tintColor: UIKit.UIColor? = nil)
   @objc deinit
 }
 public struct WatermarkConfiguration {
@@ -580,6 +588,7 @@ public protocol VideoSequenceServicing {
   var videoSequences: [VideoEditor.VideoSequence] { get }
   var currentSequence: VideoEditor.VideoSequence? { get }
   func setupCurrentSequence(_ videoSequence: VideoEditor.VideoSequence?)
+  func updateSequences()
   @discardableResult
   func startNewSequence() -> VideoEditor.VideoSequence
   func cancelCurrentSequence()

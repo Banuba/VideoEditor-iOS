@@ -217,11 +217,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+@class UIColor;
 @class UIImage;
 
 /// The image configuration
 SWIFT_CLASS("_TtC11VideoEditor18ImageConfiguration")
 @interface ImageConfiguration : NSObject <ImageConfigurationProtocol>
+/// Set this tint color of your UIImageView to configurate templаte image
+@property (nonatomic, strong) UIColor * _Nullable tintColor;
 /// The image stored or instance by name
 @property (nonatomic, readonly, strong) UIImage * _Nullable image;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
