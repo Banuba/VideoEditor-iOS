@@ -68,7 +68,7 @@ This kind of constructor initialize `VideoEditorAsset` with set of `VideoEditorA
   )
 ```
 
-`VideoEditorAssetTrackInfo` is video composition entity with set of options and funcs.
+`VideoEditorAssetTrackInfo: Equatable, Hashable` is video composition entity with set of options and funcs.
 
 ##### Constructor.
 ``` swift
@@ -156,6 +156,10 @@ Propeties of different conditions, time ranges, avAsset compositions, instructio
   func replaceAssetUrl(_ url: URL)
 ```
 
+##### Get time range with existing speed extension
+``` swift
+  func getTimeRangeWithSpeedExtension() -> CMTimeRange
+```
 ##### Rotate current asset representation
 ``` swift
   /// Rotate video
@@ -212,6 +216,9 @@ This kind of constructor initialize `VideoEditorAsset` with `VideoSequence` inst
   /// Completle delete video from video sequence with all data
   @discardableResult
   func deleteVideo(_ video: VideoSequenceItem) -> Bool
+  
+  /// Restore removed videos
+  public func restoreRemovedVideos()
   
   /// Restore removed videos
   func restoreRemovedVideos() 
@@ -384,7 +391,7 @@ Pre-export functionality to get current Asset composition representation.
 
 #### Music functionality
 
-`VideoEditorAsset` could contains different types of music: voice, tracks and etc. So you could add your own audio tracks with infinite counting and any time ranges.
+`VideoEditorAsset: MusicApplicable` could contains different types of music: voice, tracks and etc. So you could add your own audio tracks with infinite counting and any time ranges.
 ``` swift
   /// Change music track position
   /// - Parameters:
@@ -418,6 +425,11 @@ Thumbnails userd for displaying trimming frames.
 ``` swift
   /// Reload current composition
   func reloadComposition()
+  
+  /// Get asset part index
+  /// - Parameters:
+  ///  - time: time of video part
+  func getPartIndex(at time: CMTime) -> Int?
 ```
 
 #### Related properties
@@ -438,8 +450,6 @@ Thumbnails userd for displaying trimming frames.
   var videoResolutionCurrentSize: CGSize?
   /// Video aspect ratio range
   var fillAspectRatioRange: ClosedRange<CGFloat>
-  /// Music tracks placed in asset
-  var musicTracks: [VideoEditorAssetMusicTrack]
 ```
 
 ## Applied effects
