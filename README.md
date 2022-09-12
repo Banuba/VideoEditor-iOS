@@ -395,7 +395,7 @@ Pre-export functionality to get current Asset composition representation.
 ``` swift
   /// Change music track position
   /// - Parameters:
-  ///   - musicTrack: Reuired music track
+  ///   - musicTrack: Required music track
   func changeMusicTrackPosition(_ musicTrack: MediaTrack) -> Bool
   
   @discardableResult
