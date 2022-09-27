@@ -31,7 +31,6 @@
 - [Image generator](#Image-generator)
 - [Music Functionality](#Music-functionality)
 - [Related propeties](#Related-properties)
-- [Trim video](#Trim-video)
 
 ## VideoEditorService
 
