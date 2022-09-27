@@ -116,7 +116,8 @@ Propeties of different conditions, time ranges, avAsset compositions, instructio
   var thumbnail: UIImage?
   /// Available track thumbnails
   var thumbnails: [UIImage]
-  /// Trim time range
+  /// Trim time range. Describes time range of track witch will be placed in video asset.
+  /// Invalid by default. In invalid state timeRange will be used for positioning in video asset.
   var trimTimeRange: CMTimeRange
   /// Asset rotation
   var rotation: AssetRotation
@@ -555,7 +556,7 @@ Also `VideoEditorService` could manage audio/video volume and etc.
 
 ## Related properties
 
-`VideoEditorService` has propties which you could operate on, such as different conditions, instructions, main `VideoEditorAsset`instance and etc.
+`VideoEditorService` has propties which you could operate on, such as different conditions, instructions, main `VideoEditorAsset` instance and etc.
 
 Number of exisitng videos.
 ``` swift
