@@ -6,6 +6,6 @@ framework module VideoEditor {
 }
 
 module VideoEditor.Swift {
-    header "VideoEditor-Swift.h"
-    requires objc
+  header "VideoEditor-Swift.h"
+  requires objc
 }
