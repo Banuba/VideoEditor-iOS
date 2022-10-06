@@ -138,7 +138,7 @@ Propeties of different conditions, time ranges, avAsset compositions, instructio
   /// AVURLAsset
   var urlAsset: AVAsset
   /// Track time range according to composed asset
-  var timeRangeInGlobal: CMTimeRang
+  var timeRangeInGlobal: CMTimeRange
   /// Transition effect type. Default is without transition effect
   var transitionEffectType: TransitionType
 ```
