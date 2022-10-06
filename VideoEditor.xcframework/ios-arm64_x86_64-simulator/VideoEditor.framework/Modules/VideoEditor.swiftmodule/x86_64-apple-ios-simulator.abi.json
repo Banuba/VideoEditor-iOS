@@ -2179,8 +2179,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "DrawCustomInstructionOperation",
-        "printedName": "DrawCustomInstructionOperation",
+        "name": "DrawCustomSDKInstructionOperation",
+        "printedName": "DrawCustomSDKInstructionOperation",
         "children": [
           {
             "kind": "Var",
@@ -2195,8 +2195,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:11VideoEditor30DrawCustomInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvp",
-            "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvp",
+            "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvp",
+            "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -2219,8 +2219,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11VideoEditor30DrawCustomInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvg",
-                "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvg",
+                "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvg",
+                "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationC7requestSo014AVAsynchronousA18CompositionRequestCvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
                 "declAttributes": [
@@ -2237,9 +2237,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "DrawCustomInstructionOperation",
-                "printedName": "VideoEditor.DrawCustomInstructionOperation",
-                "usr": "c:@M@VideoEditor@objc(cs)DrawCustomInstructionOperation"
+                "name": "DrawCustomSDKInstructionOperation",
+                "printedName": "VideoEditor.DrawCustomSDKInstructionOperation",
+                "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC"
               },
               {
                 "kind": "TypeNominal",
@@ -2249,8 +2249,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11VideoEditor30DrawCustomInstructionOperationC7requestACSo014AVAsynchronousA18CompositionRequestC_tcfc",
-            "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationC7requestACSo014AVAsynchronousA18CompositionRequestC_tcfc",
+            "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC7requestACSo014AVAsynchronousA18CompositionRequestC_tcfc",
+            "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationC7requestACSo014AVAsynchronousA18CompositionRequestC_tcfc",
             "moduleName": "VideoEditor",
             "init_kind": "Designated"
           },
@@ -2266,8 +2266,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@VideoEditor@objc(cs)DrawCustomInstructionOperation(im)cancel",
-            "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationC6cancelyyF",
+            "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC6cancelyyF",
+            "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationC6cancelyyF",
             "moduleName": "VideoEditor",
             "overriding": true,
             "isOpen": true,
@@ -2281,8 +2281,8 @@
           },
           {
             "kind": "Function",
-            "name": "operationDidStart",
-            "printedName": "operationDidStart()",
+            "name": "main",
+            "printedName": "main()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2291,12 +2291,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@VideoEditor@objc(cs)DrawCustomInstructionOperation(im)operationDidStart",
-            "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationC17operationDidStartyyF",
+            "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC4mainyyF",
+            "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationC4mainyyF",
             "moduleName": "VideoEditor",
             "overriding": true,
             "isOpen": true,
-            "objc_name": "operationDidStart",
+            "objc_name": "main",
             "declAttributes": [
               "Dynamic",
               "ObjC",
@@ -2311,14 +2311,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "DrawCustomInstructionOperation",
-                "printedName": "VideoEditor.DrawCustomInstructionOperation",
-                "usr": "c:@M@VideoEditor@objc(cs)DrawCustomInstructionOperation"
+                "name": "DrawCustomSDKInstructionOperation",
+                "printedName": "VideoEditor.DrawCustomSDKInstructionOperation",
+                "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@VideoEditor@objc(cs)DrawCustomInstructionOperation(im)init",
-            "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationCACycfc",
+            "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationCACycfc",
+            "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationCACycfc",
             "moduleName": "VideoEditor",
             "overriding": true,
             "implicit": true,
@@ -2332,16 +2332,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@VideoEditor@objc(cs)DrawCustomInstructionOperation",
-        "mangledName": "$s11VideoEditor30DrawCustomInstructionOperationC",
+        "usr": "s:11VideoEditor33DrawCustomSDKInstructionOperationC",
+        "mangledName": "$s11VideoEditor33DrawCustomSDKInstructionOperationC",
         "moduleName": "VideoEditor",
         "isOpen": true,
-        "declAttributes": [
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)BNBAsyncOperation",
+        "superclassUsr": "c:@M@BanubaUtilities@objc(cs)BanubaAsyncOperation",
         "superclassNames": [
-          "BanubaUtilities.BNBAsyncOperation",
+          "BanubaUtilities.BanubaAsyncOperation",
           "Foundation.Operation",
           "ObjectiveC.NSObject"
         ],
@@ -30644,9 +30641,9 @@
     {
       "filePath": "\/Users\/ivangulidov\/Workspace\/banuba_ve_sdk_ios\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "StringLiteral",
-      "offset": 1622,
-      "length": 30,
-      "value": "\"VideoEditor.DrawCustomInstructionOperation\""
+      "offset": 1674,
+      "length": 33,
+      "value": "\"VideoEditor.DrawCustomSDKInstructionOperation\""
     },
     {
       "filePath": "\/Users\/ivangulidov\/Workspace\/banuba_ve_sdk_ios\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
