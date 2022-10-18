@@ -3,7 +3,7 @@ import PackageDescription
 let package = Package(
   name: "VideoEditor",
   platforms: [
-    .iOS(.v11)
+    .iOS(.v12)
   ],
   products: [
     .library(
