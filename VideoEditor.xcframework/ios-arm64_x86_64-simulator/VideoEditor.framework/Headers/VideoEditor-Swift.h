@@ -296,6 +296,12 @@ SWIFT_CLASS("_TtC11VideoEditor13VideoSequence")
 
 
 
+@interface VideoSequence (SWIFT_EXTENSION(VideoEditor))
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
 
 
 
@@ -603,6 +609,12 @@ SWIFT_CLASS("_TtC11VideoEditor13VideoSequence")
 
 
 
+
+
+
+@interface VideoSequence (SWIFT_EXTENSION(VideoEditor))
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 
