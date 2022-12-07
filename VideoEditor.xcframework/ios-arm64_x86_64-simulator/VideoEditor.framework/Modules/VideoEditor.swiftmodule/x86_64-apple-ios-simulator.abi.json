@@ -16264,26 +16264,6 @@
           },
           {
             "kind": "Function",
-            "name": "flush",
-            "printedName": "flush()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor11MetalHelperC5flushyyF",
-            "mangledName": "$s11VideoEditor11MetalHelperC5flushyyF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "rgbaTextureForPixelBuffer",
             "printedName": "rgbaTextureForPixelBuffer(_:)",
             "children": [
@@ -16674,42 +16654,6 @@
             "declAttributes": [
               "AccessControl"
             ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "prepareCacheIfNeeded",
-            "printedName": "prepareCacheIfNeeded()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor11MetalHelperC20prepareCacheIfNeededyyF",
-            "mangledName": "$s11VideoEditor11MetalHelperC20prepareCacheIfNeededyyF",
-            "moduleName": "VideoEditor",
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearCache",
-            "printedName": "clearCache()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor11MetalHelperC10clearCacheyyF",
-            "mangledName": "$s11VideoEditor11MetalHelperC10clearCacheyyF",
-            "moduleName": "VideoEditor",
-            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -19714,14 +19658,14 @@
     {
       "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 5213,
+      "offset": 4808,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
       "kind": "Array",
-      "offset": 6698,
+      "offset": 6293,
       "length": 2,
       "value": "[]"
     },

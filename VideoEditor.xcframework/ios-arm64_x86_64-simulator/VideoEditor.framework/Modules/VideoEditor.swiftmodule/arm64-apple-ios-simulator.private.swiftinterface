@@ -553,7 +553,6 @@ public class MetalHelper {
   final public let commandQueue: Metal.MTLCommandQueue
   final public let depthStencilState: Metal.MTLDepthStencilState
   public init(libraryBundle: Foundation.Bundle)
-  public func flush()
   public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> Metal.MTLTexture?
   public func createMonochromeTexture(textureData: Swift.UnsafeMutablePointer<Swift.UInt8>, width: Swift.Int, height: Swift.Int) -> Metal.MTLTexture
   public func createRenderPipeline(vertexFunctionName: Swift.String, fragmentFunctionName: Swift.String, pixelFormat: Metal.MTLPixelFormat = .bgra8Unorm, depthPixelFormat: Metal.MTLPixelFormat? = nil, blendParameters: VideoEditor.MetalBlendingParameters? = nil, bundle: Foundation.Bundle = Bundle.main, label: Swift.String? = nil) -> Metal.MTLRenderPipelineState?
@@ -565,10 +564,6 @@ public class MetalHelper {
   public func makeDefaultUVBuffer() -> Metal.MTLBuffer
   public func makeDefaultVertexBuffer() -> Metal.MTLBuffer
   @objc deinit
-}
-extension VideoEditor.MetalHelper {
-  public func prepareCacheIfNeeded()
-  public func clearCache()
 }
 extension Metal.MTLBuffer {
   public func replaceData<T>(with newData: [T])
