@@ -18613,1113 +18613,1113 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Drawers\/Move\/VideoImageHorizontalMoveEffectDrawer.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Drawers\/Move\/VideoImageHorizontalMoveEffectDrawer.swift",
       "kind": "IntegerLiteral",
       "offset": 302,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
       "kind": "FloatLiteral",
       "offset": 291,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
       "kind": "Dictionary",
       "offset": 367,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "StringLiteral",
       "offset": 298,
       "length": 44,
       "value": "\"com.banuba.sdk.video-editor.renderingqueue\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 869,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 927,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 1142,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 1200,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "StringLiteral",
       "offset": 1738,
       "length": 33,
       "value": "\"VideoEditor.DrawCustomSDKInstructionOperation\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 323,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 350,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 377,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 406,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 437,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 464,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 501,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 323,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 350,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 377,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 406,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 437,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 464,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 501,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 323,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 350,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 377,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 406,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 437,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 464,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 501,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3157,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3174,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3194,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3157,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3174,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3194,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3157,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3174,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 3194,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 4207,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
       "offset": 4221,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
       "offset": 4517,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
       "offset": 4608,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
       "offset": 2177,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
       "offset": 2707,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
       "offset": 3288,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
       "offset": 3352,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
       "offset": 3365,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
       "offset": 4243,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
       "offset": 4307,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
       "offset": 4320,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
       "offset": 5881,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/VideoImagesCompositionInstruction.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/VideoImagesCompositionInstruction.swift",
       "kind": "StringLiteral",
       "offset": 189,
       "length": 33,
       "value": "\"VideoEditor.VideoImagesCompositionInstruction\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorFilterModel.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorFilterModel.swift",
       "kind": "StringLiteral",
       "offset": 1716,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorFilterModel.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorFilterModel.swift",
       "kind": "StringLiteral",
       "offset": 2412,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
       "kind": "Array",
       "offset": 355,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
       "kind": "Array",
       "offset": 404,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
       "kind": "BooleanLiteral",
       "offset": 771,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Drawers\/VideoImageEffectDrawer.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Drawers\/VideoImageEffectDrawer.swift",
       "kind": "StringLiteral",
       "offset": 269,
       "length": 19,
       "value": "\"vertexPassThrough\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Drawers\/VideoImageEffectDrawer.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Drawers\/VideoImageEffectDrawer.swift",
       "kind": "StringLiteral",
       "offset": 313,
       "length": 21,
       "value": "\"fragmentDisplayRGBA\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
       "offset": 272,
       "length": 15,
       "value": "\"sequenceItems\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
       "offset": 325,
       "length": 7,
       "value": "\".jpeg\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 955,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "IntegerLiteral",
       "offset": 1100,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
       "offset": 4176,
       "length": 13,
       "value": "\"VideoEditor.VideoSequence\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "FloatLiteral",
       "offset": 11051,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 11083,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 11131,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 11165,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 11265,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 11301,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "FloatLiteral",
       "offset": 14298,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 14370,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 14399,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 21525,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 21796,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
       "offset": 22174,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/VideoSpeedHelper.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/VideoSpeedHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 324,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/VideoSpeedHelper.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/VideoSpeedHelper.swift",
       "kind": "IntegerLiteral",
       "offset": 364,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/VideoSpeedHelper.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/VideoSpeedHelper.swift",
       "kind": "StringLiteral",
       "offset": 436,
       "length": 3,
       "value": "\"x\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
       "length": 10,
       "value": "1000000000"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "StringLiteral",
       "offset": 302,
       "length": 17,
       "value": "\"blank_video.mp4\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "FloatLiteral",
       "offset": 366,
       "length": 3,
       "value": "2.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "FloatLiteral",
       "offset": 416,
       "length": 3,
       "value": "0.1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "StringLiteral",
       "offset": 481,
       "length": 22,
       "value": "\"VideoEditor.VideoImagesComposition\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CompositionRenderers\/RenderersCache.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CompositionRenderers\/RenderersCache.swift",
       "kind": "Dictionary",
       "offset": 302,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/VoiceTrackItem.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/VoiceTrackItem.swift",
       "kind": "StringLiteral",
       "offset": 174,
       "length": 14,
       "value": "\"VideoEditor.VoiceTrackItem\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 9,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 292,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 312,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 333,
       "length": 11,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 354,
       "length": 14,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 9,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 292,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 312,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 333,
       "length": 11,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 354,
       "length": 14,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 9,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 292,
       "length": 10,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 312,
       "length": 11,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 333,
       "length": 11,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 354,
       "length": 14,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/VideoCompositionInstruction.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/VideoCompositionInstruction.swift",
       "kind": "BooleanLiteral",
       "offset": 663,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/VideoCompositionInstruction.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/VideoCompositionInstruction.swift",
       "kind": "StringLiteral",
       "offset": 194,
       "length": 27,
       "value": "\"VideoEditor.VideoCompositionInstruction\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 272,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 309,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 348,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 387,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 272,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 309,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 348,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 387,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 272,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 309,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 348,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Helpers\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 387,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorSettings.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 249,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorSettings.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorSettings.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorSettings.swift",
       "kind": "FloatLiteral",
       "offset": 314,
       "length": 3,
       "value": "1.1"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/ExportScaledTimeline.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "Array",
       "offset": 392,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/ExportScaledTimeline.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "Array",
       "offset": 574,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/ExportScaledTimeline.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "StringLiteral",
       "offset": 265,
       "length": 20,
       "value": "\"VideoEditor.ExportScaledTimeline\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "IntegerLiteral",
       "offset": 394,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "IntegerLiteral",
       "offset": 455,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "IntegerLiteral",
       "offset": 623,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "BooleanLiteral",
       "offset": 741,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "IntegerLiteral",
       "offset": 787,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalVerticesAndUVData.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalVerticesAndUVData.swift",
       "kind": "Array",
       "offset": 258,
       "length": 105,
       "value": "[1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalVerticesAndUVData.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalVerticesAndUVData.swift",
       "kind": "Array",
       "offset": 685,
       "length": 60,
       "value": "[0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 303,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 342,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 379,
       "length": 3,
       "value": "2.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 303,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 342,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 379,
       "length": 3,
       "value": "2.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 303,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 342,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/EditorCompositionEffect.swift",
       "kind": "FloatLiteral",
       "offset": 379,
       "length": 3,
       "value": "2.0"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "Array",
       "offset": 882,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
       "offset": 277,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
       "offset": 320,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
       "kind": "Dictionary",
       "offset": 1246,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
       "kind": "BooleanLiteral",
       "offset": 4808,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Metal\/MetalHelper.swift",
       "kind": "Array",
       "offset": 6293,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Components\/WatermarkConfiguration.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Components\/WatermarkConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 239,
       "length": 18,
       "value": "\"VideoEditor.ImageConfiguration\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Components\/WatermarkConfiguration.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Components\/WatermarkConfiguration.swift",
       "kind": "IntegerLiteral",
       "offset": 1965,
       "length": 6,
       "value": "600000"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
       "kind": "StringLiteral",
       "offset": 297,
       "length": 52,
       "value": "\"com.banuba.sdk.video-editor.images.rendering-queue\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 632,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 824,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
       "kind": "BooleanLiteral",
       "offset": 1036,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceService.swift",
       "kind": "StringLiteral",
       "offset": 443,
       "length": 8,
       "value": "\"Videos\""
     },
     {
-      "filePath": "\/Users\/andrei.sak\/Developer\/Video Editor\/banuba_ve_sdk_ios\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceService.swift",
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Update_modules_iOS\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceService.swift",
       "kind": "Array",
       "offset": 1141,
       "length": 2,
