@@ -887,8 +887,8 @@
           },
           {
             "kind": "Var",
-            "name": "pixelate",
-            "printedName": "pixelate",
+            "name": "blur",
+            "printedName": "blur",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -918,8 +918,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:11VideoEditor0B10EffectTypeO8pixelateyA2CmF",
-            "mangledName": "$s11VideoEditor0B10EffectTypeO8pixelateyA2CmF",
+            "usr": "s:11VideoEditor0B10EffectTypeO4bluryA2CmF",
+            "mangledName": "$s11VideoEditor0B10EffectTypeO4bluryA2CmF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "RawDocComment"
@@ -19375,56 +19375,56 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 298,
+      "offset": 290,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 323,
+      "offset": 315,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 350,
+      "offset": 342,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 377,
+      "offset": 369,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 406,
+      "offset": 398,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 437,
+      "offset": 429,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 464,
+      "offset": 456,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 501,
+      "offset": 493,
       "length": 1,
       "value": "0"
     },
@@ -19438,56 +19438,56 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 298,
+      "offset": 290,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 323,
+      "offset": 315,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 350,
+      "offset": 342,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 377,
+      "offset": 369,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 406,
+      "offset": 398,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 437,
+      "offset": 429,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 464,
+      "offset": 456,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 501,
+      "offset": 493,
       "length": 1,
       "value": "0"
     },
@@ -19501,56 +19501,56 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 298,
+      "offset": 290,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 323,
+      "offset": 315,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 350,
+      "offset": 342,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 377,
+      "offset": 369,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 406,
+      "offset": 398,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 437,
+      "offset": 429,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 464,
+      "offset": 456,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 501,
+      "offset": 493,
       "length": 1,
       "value": "0"
     },
@@ -19648,7 +19648,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4838,
+      "offset": 4851,
       "length": 5,
       "value": "false"
     },

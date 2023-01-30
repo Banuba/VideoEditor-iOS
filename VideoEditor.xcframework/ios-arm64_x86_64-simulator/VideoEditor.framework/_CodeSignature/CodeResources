@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		7HGozhTfjFivUr6POAId+v3oxYA=
+		4rXx4UkDM8Sv5tFbMxrH/1taQEU=
 		</data>
 		<key>Headers/VideoEditor-Swift.h</key>
 		<data>
@@ -18,47 +18,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zbm9A67bDGpRmq8QS+RwBw+mFP4=
+		qKJmEK4fQuXSlKjPdwJlL8BrDnQ=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		tsC3McXveUCFm75FquUgJ8UXJQc=
+		thqnxEItkaGd085HIEA6Yop/DUs=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		p0gl4BgcPtm+pHuY/y7T1tX1oCk=
+		5RxkgNPWzSW2TqePI/Jit/87N20=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		k3GfZX4+bzbw2F0qRPQbaCC8apo=
+		376IVQ3Yqzt8nNUZ22NPqt+/qT4=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		p0gl4BgcPtm+pHuY/y7T1tX1oCk=
+		5RxkgNPWzSW2TqePI/Jit/87N20=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		E+hEQo84SENBpkaToVXYqmnqzdY=
+		3l0iTuILE+HpmRyG3z8rsprnz9Q=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		tsC3McXveUCFm75FquUgJ8UXJQc=
+		thqnxEItkaGd085HIEA6Yop/DUs=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		a7B7XHE7dReXxhIM1yXIJy98yjc=
+		x0maUIkJnV6BKzc2yxJDV/BTdz8=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		iqVhWtQBfgORJ/U5wSly1XyQxiU=
+		OLdX4yd2JdXOrQr//TMAedglpFU=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		a7B7XHE7dReXxhIM1yXIJy98yjc=
+		x0maUIkJnV6BKzc2yxJDV/BTdz8=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6eAKYRSFXnUwxvIvMKFjCnKAgi8=
+		t7ikRKcvv6jVp3Mh4VTjrQ296n0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VNxtpO9GyuTd3oWVcAj6a0P6LuZlZ+9yEEr6qUxtcuM=
+			D2i6LpX9DB9++X+BkzsC/d/53oKRckAXHtlckwjFzR4=
 			</data>
 		</dict>
 		<key>Headers/VideoEditor-Swift.h</key>
@@ -100,70 +100,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3GE2A0kPDxPDtHSHx1lxqfb993UCM9ggy3XnLlbSxS0=
+			s0szNcPpbKluvNBZ6qrLy7zyfwWNOGzJwOirXRqcSko=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6OEIIVGONFKvCy3KN3kQAUOUzwQLuRbyuclDiV8xGt4=
+			fevVWV7J4KfaVlLMjQUtEh4m0TPlGwN2knWdY1NFI7E=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/BMk5VOm2+ROpeBdpxI4RYo2stSSNXTWUvcVrpphhPs=
+			7SQxak6NAnlYV+xheT0qZNC4rRtHH0OI+lNOBQfeyrs=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6OEIIVGONFKvCy3KN3kQAUOUzwQLuRbyuclDiV8xGt4=
+			fevVWV7J4KfaVlLMjQUtEh4m0TPlGwN2knWdY1NFI7E=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gUyt5dRsVLYnJTJL8YAh8yOJCO36NV2a7vEFiR0yEeg=
+			gGMzXY9jWKwo/N6zDzUzdcQDAZbP5eXLA88Lo7iRSyc=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3GE2A0kPDxPDtHSHx1lxqfb993UCM9ggy3XnLlbSxS0=
+			s0szNcPpbKluvNBZ6qrLy7zyfwWNOGzJwOirXRqcSko=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i7/nzdTAN58MqHLm6JnFgHf5urKoQ2sWSY+V9hFZUYg=
+			sHGrsPgO4/JCaIQ4jUhV5ICgeGpBlAncfTHOQSde+BY=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aTvMWLyieiCw3RKwbzdWvokgyF6T1LKdUsj8HjQOOE8=
+			VOKLgBxtHuZ+VSsULFFy9SyJcpCiV2aac0AeEJrJVNU=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i7/nzdTAN58MqHLm6JnFgHf5urKoQ2sWSY+V9hFZUYg=
+			sHGrsPgO4/JCaIQ4jUhV5ICgeGpBlAncfTHOQSde+BY=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XiV7QdyDYulZbYVBzu10YJ9nZhFpYZ/QW6OZI1sJQ8U=
+			hLHnGtxROvv4TUlCTVdHixXKwyofXgAsM6kwF7Mtgzg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
