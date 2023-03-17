@@ -69,11 +69,12 @@ public enum EditorEffectType : Swift.Int {
 }
 public protocol VideoEditorTrackServicing {
   var preferredTrackId: CoreMedia.CMPersistentTrackID { get }
-  func hasAudioTrack() -> Swift.Bool
+  func hasVideoTrack() -> Swift.Bool
   func audioTrackVolume() -> Swift.Float
   func isAudioTrackVolumeChanged() -> Swift.Bool
   func setAudioTrackVolume(_ volume: Swift.Float)
   func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.VideoEditorPlayable?)
+  func setPiPAudioVolume(_ volume: Swift.Float, to player: BanubaUtilities.VideoEditorPlayable)
   func setPiPAudioVolume(_ volume: Swift.Float)
 }
 public protocol WatermarkApplicatorServicing : AnyObject {
@@ -139,7 +140,6 @@ extension VideoEditor.VideoEditorService : VideoEditor.SDKVideoCompositionInstru
 extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorServicing {
   final public func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
   final public func reattachMusicTracks(_ mutableAsset: AVFoundation.AVMutableComposition)
-  final public func createPIPAudioInputInstructions(mutableCompositionAudioTrack: [AVFoundation.AVMutableCompositionTrack], mutableCompositionVideoTrack: [AVFoundation.AVMutableCompositionTrack]) -> [AVFoundation.AVMutableAudioMixInputParameters]
   final public func getEditorEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.VideoEditorFilterModel]
   final public func setCurrentAsset(_ asset: VideoEditor.VideoEditorAsset?)
   final public func setEditorEffects(_ effects: [VideoEditor.VideoEditorFilterModel])
@@ -151,11 +151,15 @@ extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorTrackServicing
     get
   }
   final public func audioTrackVolume() -> Swift.Float
+  final public func pipAudioTrackVolume() -> Swift.Float
   final public func isAudioTrackVolumeChanged() -> Swift.Bool
+  final public func isPiPAudioTrackVolumeChanged() -> Swift.Bool
   final public func setAudioTrackVolume(_ volume: Swift.Float)
   final public func setAudioTrackVolume(_ volume: Swift.Float, to player: BanubaUtilities.VideoEditorPlayable?)
-  final public func hasAudioTrack() -> Swift.Bool
+  final public func setPiPAudioVolume(_ volume: Swift.Float, to player: BanubaUtilities.VideoEditorPlayable)
   final public func setPiPAudioVolume(_ volume: Swift.Float)
+  final public func hasVideoTrack() -> Swift.Bool
+  final public func hasPiPAudioTrack() -> Swift.Bool
 }
 public struct RevokedTokenError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
@@ -537,6 +541,7 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
   public func replaceAssetUrl(_ url: Foundation.URL)
   public func rotate(clockwise: Swift.Bool)
   public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
+  public func updatePreview()
   @objc deinit
   public var hashValue: Swift.Int {
     get

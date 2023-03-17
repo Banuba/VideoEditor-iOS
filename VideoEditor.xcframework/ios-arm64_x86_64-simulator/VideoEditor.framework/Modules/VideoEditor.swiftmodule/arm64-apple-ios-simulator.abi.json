@@ -1409,8 +1409,8 @@
           },
           {
             "kind": "Function",
-            "name": "hasAudioTrack",
-            "printedName": "hasAudioTrack()",
+            "name": "hasVideoTrack",
+            "printedName": "hasVideoTrack()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1420,8 +1420,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP08hasAudioC0SbyF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP08hasAudioC0SbyF",
+            "usr": "s:11VideoEditor0aB14TrackServicingP03hasaC0SbyF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP03hasaC0SbyF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
             "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
@@ -1546,6 +1546,42 @@
             "declKind": "Func",
             "usr": "s:11VideoEditor0aB14TrackServicingP08setAudioC6Volume_2toySf_15BanubaUtilities0aB8Playable_pSgtF",
             "mangledName": "$s11VideoEditor0aB14TrackServicingP08setAudioC6Volume_2toySf_15BanubaUtilities0aB8Playable_pSgtF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPiPAudioVolume",
+            "printedName": "setPiPAudioVolume(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorPlayable",
+                "printedName": "BanubaUtilities.VideoEditorPlayable",
+                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14TrackServicingP17setPiPAudioVolume_2toySf_15BanubaUtilities0aB8Playable_ptF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP17setPiPAudioVolume_2toySf_15BanubaUtilities0aB8Playable_ptF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
             "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
@@ -3813,66 +3849,6 @@
           },
           {
             "kind": "Function",
-            "name": "createPIPAudioInputInstructions",
-            "printedName": "createPIPAudioInputInstructions(mutableCompositionAudioTrack:mutableCompositionVideoTrack:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[AVFoundation.AVMutableAudioMixInputParameters]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AVMutableAudioMixInputParameters",
-                    "printedName": "AVFoundation.AVMutableAudioMixInputParameters",
-                    "usr": "c:objc(cs)AVMutableAudioMixInputParameters"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[AVFoundation.AVMutableCompositionTrack]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AVMutableCompositionTrack",
-                    "printedName": "AVFoundation.AVMutableCompositionTrack",
-                    "usr": "c:objc(cs)AVMutableCompositionTrack"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[AVFoundation.AVMutableCompositionTrack]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AVMutableCompositionTrack",
-                    "printedName": "AVFoundation.AVMutableCompositionTrack",
-                    "usr": "c:objc(cs)AVMutableCompositionTrack"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC31createPIPAudioInputInstructions28mutableCompositionAudioTrack0hiaK0SaySo09AVMutablej3MixF10ParametersCGSaySo0liK0CG_ALtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC31createPIPAudioInputInstructions28mutableCompositionAudioTrack0hiaK0SaySo09AVMutablej3MixF10ParametersCGSaySo0liK0CG_ALtF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "getEditorEffects",
             "printedName": "getEditorEffects(type:)",
             "children": [
@@ -4121,6 +4097,30 @@
           },
           {
             "kind": "Function",
+            "name": "pipAudioTrackVolume",
+            "printedName": "pipAudioTrackVolume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC19pipAudioTrackVolumeSfyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC19pipAudioTrackVolumeSfyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "isAudioTrackVolumeChanged",
             "printedName": "isAudioTrackVolumeChanged()",
             "children": [
@@ -4134,6 +4134,30 @@
             "declKind": "Func",
             "usr": "s:11VideoEditor0aB7ServiceC25isAudioTrackVolumeChangedSbyF",
             "mangledName": "$s11VideoEditor0aB7ServiceC25isAudioTrackVolumeChangedSbyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isPiPAudioTrackVolumeChanged",
+            "printedName": "isPiPAudioTrackVolumeChanged()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC28isPiPAudioTrackVolumeChangedSbyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC28isPiPAudioTrackVolumeChangedSbyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -4217,19 +4241,30 @@
           },
           {
             "kind": "Function",
-            "name": "hasAudioTrack",
-            "printedName": "hasAudioTrack()",
+            "name": "setPiPAudioVolume",
+            "printedName": "setPiPAudioVolume(_:to:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorPlayable",
+                "printedName": "BanubaUtilities.VideoEditorPlayable",
+                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC13hasAudioTrackSbyF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC13hasAudioTrackSbyF",
+            "usr": "s:11VideoEditor0aB7ServiceC17setPiPAudioVolume_2toySf_15BanubaUtilities0aB8Playable_ptF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC17setPiPAudioVolume_2toySf_15BanubaUtilities0aB8Playable_ptF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -4262,7 +4297,56 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasVideoTrack",
+            "printedName": "hasVideoTrack()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC03hasA5TrackSbyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC03hasA5TrackSbyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasPiPAudioTrack",
+            "printedName": "hasPiPAudioTrack()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC16hasPiPAudioTrackSbyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC16hasPiPAudioTrackSbyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -15937,6 +16021,27 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "updatePreview",
+            "printedName": "updatePreview()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14AssetTrackInfoC13updatePreviewyyF",
+            "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC13updatePreviewyyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "hashValue",
             "printedName": "hashValue",
@@ -19557,98 +19662,98 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3268,
+      "offset": 3473,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3285,
+      "offset": 3490,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3305,
+      "offset": 3510,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3268,
+      "offset": 3473,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3285,
+      "offset": 3490,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3305,
+      "offset": 3510,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3268,
+      "offset": 3473,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3285,
+      "offset": 3490,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3305,
+      "offset": 3510,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4324,
+      "offset": 4529,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4338,
+      "offset": 4543,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 4634,
+      "offset": 4839,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 4725,
+      "offset": 4930,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 4851,
+      "offset": 5056,
       "length": 5,
       "value": "false"
     },
@@ -19718,7 +19823,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5881,
+      "offset": 5877,
       "length": 5,
       "value": "false"
     },
@@ -20243,14 +20348,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "BooleanLiteral",
-      "offset": 741,
+      "offset": 726,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 787,
+      "offset": 762,
       "length": 3,
       "value": "100"
     },
