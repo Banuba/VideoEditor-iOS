@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VideoEditor
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -115,7 +115,7 @@ final public class VideoEditorService {
   convenience public init?(token: Swift.String)
   public init(license: BanubaLicenseServicingSDK.License)
   @objc deinit
-  final public func createExportComposition(asset: AVFoundation.AVAsset, dataSource: VideoEditor.SDKVideoCompositionInstructionDataSource?) -> AVFoundation.AVVideoComposition?
+  final public func createExportComposition(asset: AVFoundation.AVAsset, dataSource: VideoEditor.SDKVideoCompositionInstructionDataSource?, renderSize: CoreFoundation.CGSize) -> AVFoundation.AVVideoComposition?
 }
 extension VideoEditor.VideoEditorService : VideoEditor.AppliedEffect {
   final public func changeEffectTimeRange(withId id: Swift.UInt, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime)
@@ -370,7 +370,7 @@ extension VideoEditor.VideoSequence {
 }
 @objc public class VideoImagesComposition : ObjectiveC.NSObject {
   public init(sequence: VideoEditor.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
-  public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: ((Swift.Bool, Swift.Error?) -> Swift.Void)?)
+  public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: ((Swift.Error?) -> Swift.Void)?)
   public func cancelExport()
   @objc deinit
 }

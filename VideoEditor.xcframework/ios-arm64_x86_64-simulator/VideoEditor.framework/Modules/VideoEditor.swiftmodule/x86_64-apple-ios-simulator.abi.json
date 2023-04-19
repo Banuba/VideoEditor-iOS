@@ -3245,7 +3245,7 @@
           {
             "kind": "Function",
             "name": "createExportComposition",
-            "printedName": "createExportComposition(asset:dataSource:)",
+            "printedName": "createExportComposition(asset:dataSource:renderSize:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3280,11 +3280,17 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC23createExportComposition5asset10dataSourceSo07AVVideoF0CSgSo7AVAssetC_AA08SDKVideof15InstructionDataI0_pSgtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC23createExportComposition5asset10dataSourceSo07AVVideoF0CSgSo7AVAssetC_AA08SDKVideof15InstructionDataI0_pSgtF",
+            "usr": "s:11VideoEditor0aB7ServiceC23createExportComposition5asset10dataSource10renderSizeSo07AVVideoF0CSgSo7AVAssetC_AA08SDKVideof15InstructionDataI0_pSgSo6CGSizeVtF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC23createExportComposition5asset10dataSource10renderSizeSo07AVVideoF0CSgSo7AVAssetC_AA08SDKVideof15InstructionDataI0_pSgSo6CGSizeVtF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -10437,12 +10443,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.Bool, Swift.Error?) -> ())?",
+                "printedName": "((Swift.Error?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Bool, Swift.Error?) -> ()",
+                    "printedName": "(Swift.Error?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -10451,30 +10457,17 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.Bool, Swift.Error?)",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "Bool",
-                            "printedName": "Swift.Bool",
-                            "usr": "s:Sb"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Swift.Error?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Error",
-                                "printedName": "Swift.Error",
-                                "usr": "s:s5ErrorP"
-                              }
-                            ],
-                            "usr": "s:Sq"
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
                           }
-                        ]
+                        ],
+                        "usr": "s:Sq"
                       }
                     ]
                   }
@@ -10483,8 +10476,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0A17ImagesCompositionC06exportA02to7quality10completiony10Foundation3URLV_SSySb_s5Error_pSgtcSgtF",
-            "mangledName": "$s11VideoEditor0A17ImagesCompositionC06exportA02to7quality10completiony10Foundation3URLV_SSySb_s5Error_pSgtcSgtF",
+            "usr": "s:11VideoEditor0A17ImagesCompositionC06exportA02to7quality10completiony10Foundation3URLV_SSys5Error_pSgcSgtF",
+            "mangledName": "$s11VideoEditor0A17ImagesCompositionC06exportA02to7quality10completiony10Foundation3URLV_SSys5Error_pSgcSgtF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl"
