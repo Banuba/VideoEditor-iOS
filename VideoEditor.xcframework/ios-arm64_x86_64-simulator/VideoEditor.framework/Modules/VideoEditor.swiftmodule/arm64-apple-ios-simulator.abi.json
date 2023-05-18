@@ -1409,8 +1409,8 @@
           },
           {
             "kind": "Function",
-            "name": "hasVideoTrack",
-            "printedName": "hasVideoTrack()",
+            "name": "hasVideoAudio",
+            "printedName": "hasVideoAudio()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1420,33 +1420,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP03hasaC0SbyF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP03hasaC0SbyF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "audioTrackVolume",
-            "printedName": "audioTrackVolume()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP05audioC6VolumeSfyF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP05audioC6VolumeSfyF",
+            "usr": "s:11VideoEditor0aB14TrackServicingP03hasA5AudioSbyF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP03hasA5AudioSbyF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
             "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
@@ -1484,14 +1459,9 @@
           },
           {
             "kind": "Function",
-            "name": "setAudioTrackVolume",
-            "printedName": "setAudioTrackVolume(_:)",
+            "name": "videoVolume",
+            "printedName": "videoVolume()",
             "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
               {
                 "kind": "TypeNominal",
                 "name": "Float",
@@ -1500,8 +1470,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP08setAudioC6VolumeyySfF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP08setAudioC6VolumeyySfF",
+            "usr": "s:11VideoEditor0aB14TrackServicingP11videoVolumeSfyF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP11videoVolumeSfyF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
             "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
@@ -1514,8 +1484,38 @@
           },
           {
             "kind": "Function",
-            "name": "setAudioTrackVolume",
-            "printedName": "setAudioTrackVolume(_:to:)",
+            "name": "setVideoVolume",
+            "printedName": "setVideoVolume(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14TrackServicingP03setA6VolumeyySfF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP03setA6VolumeyySfF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVideoVolume",
+            "printedName": "setVideoVolume(_:to:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1530,22 +1530,89 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "BanubaUtilities.VideoEditorPlayable?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoEditorPlayable",
-                    "printedName": "BanubaUtilities.VideoEditorPlayable",
-                    "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "VideoEditorPlayable",
+                "printedName": "BanubaUtilities.VideoEditorPlayable",
+                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP08setAudioC6Volume_2toySf_15BanubaUtilities0aB8Playable_pSgtF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP08setAudioC6Volume_2toySf_15BanubaUtilities0aB8Playable_pSgtF",
+            "usr": "s:11VideoEditor0aB14TrackServicingP03setA6Volume_2toySf_15BanubaUtilities0aB8Playable_ptF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP03setA6Volume_2toySf_15BanubaUtilities0aB8Playable_ptF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasPiPAudio",
+            "printedName": "hasPiPAudio()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14TrackServicingP11hasPiPAudioSbyF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP11hasPiPAudioSbyF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isPiPAudioTrackVolumeChanged",
+            "printedName": "isPiPAudioTrackVolumeChanged()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14TrackServicingP010isPiPAudioC13VolumeChangedSbyF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP010isPiPAudioC13VolumeChangedSbyF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPiPAudioVolume",
+            "printedName": "getPiPAudioVolume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14TrackServicingP17getPiPAudioVolumeSfyF",
+            "mangledName": "$s11VideoEditor0aB14TrackServicingP17getPiPAudioVolumeSfyF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
             "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
@@ -2464,8 +2531,8 @@
         "usr": "s:11VideoEditor0aB9ServicingP",
         "mangledName": "$s11VideoEditor0aB9ServicingP",
         "moduleName": "VideoEditor",
-        "genericSig": "<τ_0_0 : VideoEditor.AppliedEffect, τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-        "sugared_genericSig": "<Self : VideoEditor.AppliedEffect, Self : VideoEditor.VideoEditorTrackServicing>",
+        "genericSig": "<τ_0_0 : VideoEditor.EffectsManagement, τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
+        "sugared_genericSig": "<Self : VideoEditor.EffectsManagement, Self : VideoEditor.VideoEditorTrackServicing>",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
@@ -2473,10 +2540,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "AppliedEffect",
-            "printedName": "AppliedEffect",
-            "usr": "s:11VideoEditor13AppliedEffectP",
-            "mangledName": "$s11VideoEditor13AppliedEffectP"
+            "name": "EffectsManagement",
+            "printedName": "EffectsManagement",
+            "usr": "s:11VideoEditor17EffectsManagementP",
+            "mangledName": "$s11VideoEditor17EffectsManagementP"
           },
           {
             "kind": "Conformance",
@@ -3301,7 +3368,7 @@
           {
             "kind": "Function",
             "name": "changeEffectTimeRange",
-            "printedName": "changeEffectTimeRange(withId:startTime:endTime:)",
+            "printedName": "changeEffectTimeRange(with:start:end:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3310,9 +3377,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -3328,8 +3395,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC21changeEffectTimeRange6withId05startF003endF0ySu_So6CMTimeaAItF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC21changeEffectTimeRange6withId05startF003endF0ySu_So6CMTimeaAItF",
+            "usr": "s:11VideoEditor0aB7ServiceC21changeEffectTimeRange4with5start3endySS_So6CMTimeaAItF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC21changeEffectTimeRange4with5start3endySS_So6CMTimeaAItF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -3341,8 +3408,8 @@
           },
           {
             "kind": "Function",
-            "name": "applyFilter",
-            "printedName": "applyFilter(effectModel:start:end:removeSameType:)",
+            "name": "applyEffect",
+            "printedName": "applyEffect(effectModel:uuid:start:end:removeSameType:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3354,6 +3421,12 @@
                 "name": "VideoEditorFilterModel",
                 "printedName": "VideoEditor.VideoEditorFilterModel",
                 "usr": "s:11VideoEditor0aB11FilterModelC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -3375,8 +3448,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC11applyFilter11effectModel5start3end14removeSameTypeyAA0abeG0C_So6CMTimeaALSbtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC11applyFilter11effectModel5start3end14removeSameTypeyAA0abeG0C_So6CMTimeaALSbtF",
+            "usr": "s:11VideoEditor0aB7ServiceC11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterG0C_SSSo6CMTimeaAMSbtF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterG0C_SSSo6CMTimeaAMSbtF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -3411,6 +3484,45 @@
             "declAttributes": [
               "Final",
               "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "undoEffect",
+            "printedName": "undoEffect(uuid:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoEditor.EditorCompositionEffectProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEffectProtocol",
+                    "printedName": "VideoEditor.EditorCompositionEffectProtocol",
+                    "usr": "s:11VideoEditor0B25CompositionEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC10undoEffect4uuidAA0b11CompositionE8Protocol_pSgSS_tF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC10undoEffect4uuidAA0b11CompositionE8Protocol_pSgSS_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -3457,35 +3569,6 @@
           },
           {
             "kind": "Function",
-            "name": "undo",
-            "printedName": "undo(withId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC4undo6withIdySu_tF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC4undo6withIdySu_tF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "undoAll",
             "printedName": "undoAll(type:)",
             "children": [
@@ -3515,8 +3598,8 @@
           },
           {
             "kind": "Function",
-            "name": "startCurrentFilter",
-            "printedName": "startCurrentFilter(effectModel:at:)",
+            "name": "startCurrentEffect",
+            "printedName": "startCurrentEffect(effectModel:at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3537,8 +3620,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC18startCurrentFilter11effectModel2atyAA0abfH0C_So6CMTimeatF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC18startCurrentFilter11effectModel2atyAA0abfH0C_So6CMTimeatF",
+            "usr": "s:11VideoEditor0aB7ServiceC18startCurrentEffect11effectModel2atyAA0ab6FilterH0C_So6CMTimeatF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC18startCurrentEffect11effectModel2atyAA0ab6FilterH0C_So6CMTimeatF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -3550,8 +3633,8 @@
           },
           {
             "kind": "Function",
-            "name": "endCurrentFilter",
-            "printedName": "endCurrentFilter(at:)",
+            "name": "endCurrentEffect",
+            "printedName": "endCurrentEffect(at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3566,8 +3649,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC16endCurrentFilter2atySo6CMTimea_tF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC16endCurrentFilter2atySo6CMTimea_tF",
+            "usr": "s:11VideoEditor0aB7ServiceC16endCurrentEffect2atySo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC16endCurrentEffect2atySo6CMTimea_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -4079,43 +4162,19 @@
           },
           {
             "kind": "Function",
-            "name": "audioTrackVolume",
-            "printedName": "audioTrackVolume()",
+            "name": "hasVideoAudio",
+            "printedName": "hasVideoAudio()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC16audioTrackVolumeSfyF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC16audioTrackVolumeSfyF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "pipAudioTrackVolume",
-            "printedName": "pipAudioTrackVolume()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC19pipAudioTrackVolumeSfyF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC19pipAudioTrackVolumeSfyF",
+            "usr": "s:11VideoEditor0aB7ServiceC03hasA5AudioSbyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC03hasA5AudioSbyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -4151,6 +4210,118 @@
           },
           {
             "kind": "Function",
+            "name": "videoVolume",
+            "printedName": "videoVolume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC11videoVolumeSfyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC11videoVolumeSfyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVideoVolume",
+            "printedName": "setVideoVolume(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC03setA6VolumeyySfF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC03setA6VolumeyySfF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVideoVolume",
+            "printedName": "setVideoVolume(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorPlayable",
+                "printedName": "BanubaUtilities.VideoEditorPlayable",
+                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC03setA6Volume_2toySf_15BanubaUtilities0aB8Playable_ptF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC03setA6Volume_2toySf_15BanubaUtilities0aB8Playable_ptF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasPiPAudio",
+            "printedName": "hasPiPAudio()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC11hasPiPAudioSbyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC11hasPiPAudioSbyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "isPiPAudioTrackVolumeChanged",
             "printedName": "isPiPAudioTrackVolumeChanged()",
             "children": [
@@ -4175,14 +4346,9 @@
           },
           {
             "kind": "Function",
-            "name": "setAudioTrackVolume",
-            "printedName": "setAudioTrackVolume(_:)",
+            "name": "getPiPAudioVolume",
+            "printedName": "getPiPAudioVolume()",
             "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
               {
                 "kind": "TypeNominal",
                 "name": "Float",
@@ -4191,51 +4357,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC19setAudioTrackVolumeyySfF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC19setAudioTrackVolumeyySfF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setAudioTrackVolume",
-            "printedName": "setAudioTrackVolume(_:to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "BanubaUtilities.VideoEditorPlayable?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoEditorPlayable",
-                    "printedName": "BanubaUtilities.VideoEditorPlayable",
-                    "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC19setAudioTrackVolume_2toySf_15BanubaUtilities0aB8Playable_pSgtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC19setAudioTrackVolume_2toySf_15BanubaUtilities0aB8Playable_pSgtF",
+            "usr": "s:11VideoEditor0aB7ServiceC17getPiPAudioVolumeSfyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC17getPiPAudioVolumeSfyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -4311,30 +4434,6 @@
           },
           {
             "kind": "Function",
-            "name": "hasVideoTrack",
-            "printedName": "hasVideoTrack()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC03hasA5TrackSbyF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC03hasA5TrackSbyF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "hasPiPAudioTrack",
             "printedName": "hasPiPAudioTrack()",
             "children": [
@@ -4370,10 +4469,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "AppliedEffect",
-            "printedName": "AppliedEffect",
-            "usr": "s:11VideoEditor13AppliedEffectP",
-            "mangledName": "$s11VideoEditor13AppliedEffectP"
+            "name": "EffectsManagement",
+            "printedName": "EffectsManagement",
+            "usr": "s:11VideoEditor17EffectsManagementP",
+            "mangledName": "$s11VideoEditor17EffectsManagementP"
           },
           {
             "kind": "Conformance",
@@ -5064,6 +5163,110 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "VideoEditorAssetMusicTrack",
+        "printedName": "VideoEditorAssetMusicTrack",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "track",
+            "printedName": "track",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MediaTrack",
+                "printedName": "BanubaUtilities.MediaTrack",
+                "usr": "s:15BanubaUtilities10MediaTrackC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0aB15AssetMusicTrackV5track15BanubaUtilities05MediaE0Cvp",
+            "mangledName": "$s11VideoEditor0aB15AssetMusicTrackV5track15BanubaUtilities05MediaE0Cvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MediaTrack",
+                    "printedName": "BanubaUtilities.MediaTrack",
+                    "usr": "s:15BanubaUtilities10MediaTrackC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0aB15AssetMusicTrackV5track15BanubaUtilities05MediaE0Cvg",
+                "mangledName": "$s11VideoEditor0aB15AssetMusicTrackV5track15BanubaUtilities05MediaE0Cvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackId",
+            "printedName": "trackId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0aB15AssetMusicTrackV7trackIds5Int32Vvp",
+            "mangledName": "$s11VideoEditor0aB15AssetMusicTrackV7trackIds5Int32Vvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0aB15AssetMusicTrackV7trackIds5Int32Vvg",
+                "mangledName": "$s11VideoEditor0aB15AssetMusicTrackV7trackIds5Int32Vvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11VideoEditor0aB15AssetMusicTrackV",
+        "mangledName": "$s11VideoEditor0aB15AssetMusicTrackV",
+        "moduleName": "VideoEditor",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VideoEditorAsset",
         "printedName": "VideoEditorAsset",
         "children": [
@@ -5650,6 +5853,68 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "musicTracks",
+            "printedName": "musicTracks",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VideoEditor.VideoEditorAssetMusicTrack]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoEditorAssetMusicTrack",
+                    "printedName": "VideoEditor.VideoEditorAssetMusicTrack",
+                    "usr": "s:11VideoEditor0aB15AssetMusicTrackV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0aB5AssetC11musicTracksSayAA0abC10MusicTrackVGvp",
+            "mangledName": "$s11VideoEditor0aB5AssetC11musicTracksSayAA0abC10MusicTrackVGvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VideoEditor.VideoEditorAssetMusicTrack]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoEditorAssetMusicTrack",
+                        "printedName": "VideoEditor.VideoEditorAssetMusicTrack",
+                        "usr": "s:11VideoEditor0aB15AssetMusicTrackV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0aB5AssetC11musicTracksSayAA0abC10MusicTrackVGvg",
+                "mangledName": "$s11VideoEditor0aB5AssetC11musicTracksSayAA0abC10MusicTrackVGvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(tracks:isDebugModeOn:fillAspectRatioRange:videoResolutionConfiguration:)",
@@ -5915,6 +6180,35 @@
           },
           {
             "kind": "Function",
+            "name": "hasMusicTrack",
+            "printedName": "hasMusicTrack(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB5AssetC13hasMusicTrack4withSbs5Int32V_tF",
+            "mangledName": "$s11VideoEditor0aB5AssetC13hasMusicTrack4withSbs5Int32V_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "addMusicTrack",
             "printedName": "addMusicTrack(_:)",
             "children": [
@@ -5966,7 +6260,7 @@
           {
             "kind": "Function",
             "name": "removeMusic",
-            "printedName": "removeMusic(trackId:url:)",
+            "printedName": "removeMusic(trackId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5979,17 +6273,11 @@
                 "name": "Int32",
                 "printedName": "Swift.Int32",
                 "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB5AssetC11removeMusic7trackId3urlSbs5Int32V_10Foundation3URLVtF",
-            "mangledName": "$s11VideoEditor0aB5AssetC11removeMusic7trackId3urlSbs5Int32V_10Foundation3URLVtF",
+            "usr": "s:11VideoEditor0aB5AssetC11removeMusic7trackIdSbs5Int32V_tF",
+            "mangledName": "$s11VideoEditor0aB5AssetC11removeMusic7trackIdSbs5Int32V_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -11162,8 +11450,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "AppliedEffect",
-        "printedName": "AppliedEffect",
+        "name": "EffectsManagement",
+        "printedName": "EffectsManagement",
         "children": [
           {
             "kind": "Function",
@@ -11192,11 +11480,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP16getStoredEffects4typeSayAA0b19CompositionEditableD8Protocol_pGAA0bD4TypeO_tF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP16getStoredEffects4typeSayAA0b19CompositionEditableD8Protocol_pGAA0bD4TypeO_tF",
+            "usr": "s:11VideoEditor17EffectsManagementP09getStoredC04typeSayAA0B33CompositionEditableEffectProtocol_pGAA0bJ4TypeO_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP09getStoredC04typeSayAA0B33CompositionEditableEffectProtocol_pGAA0bJ4TypeO_tF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
@@ -11228,19 +11516,73 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP010getCurrentC7Effects4typeSayAA0b19CompositionEditableD8Protocol_pGAA0bD4TypeO_tF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP010getCurrentC7Effects4typeSayAA0b19CompositionEditableD8Protocol_pGAA0bD4TypeO_tF",
+            "usr": "s:11VideoEditor17EffectsManagementP017getCurrentAppliedC04typeSayAA0B33CompositionEditableEffectProtocol_pGAA0bK4TypeO_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP017getCurrentAppliedC04typeSayAA0B33CompositionEditableEffectProtocol_pGAA0bK4TypeO_tF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "startCurrentFilter",
-            "printedName": "startCurrentFilter(effectModel:at:)",
+            "name": "applyEffect",
+            "printedName": "applyEffect(effectModel:uuid:start:end:removeSameType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorFilterModel",
+                "printedName": "VideoEditor.VideoEditorFilterModel",
+                "usr": "s:11VideoEditor0aB11FilterModelC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor17EffectsManagementP11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterH0C_SSSo6CMTimeaAMSbtF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterH0C_SSSo6CMTimeaAMSbtF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startCurrentEffect",
+            "printedName": "startCurrentEffect(effectModel:at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11261,19 +11603,19 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP18startCurrentFilter11effectModel2atyAA0abgI0C_So6CMTimeatF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP18startCurrentFilter11effectModel2atyAA0abgI0C_So6CMTimeatF",
+            "usr": "s:11VideoEditor17EffectsManagementP18startCurrentEffect11effectModel2atyAA0ab6FilterI0C_So6CMTimeatF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP18startCurrentEffect11effectModel2atyAA0ab6FilterI0C_So6CMTimeatF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "endCurrentFilter",
-            "printedName": "endCurrentFilter(at:)",
+            "name": "endCurrentEffect",
+            "printedName": "endCurrentEffect(at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11288,12 +11630,51 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP16endCurrentFilter2atySo6CMTimea_tF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP16endCurrentFilter2atySo6CMTimea_tF",
+            "usr": "s:11VideoEditor17EffectsManagementP16endCurrentEffect2atySo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP16endCurrentEffect2atySo6CMTimea_tF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "undoEffect",
+            "printedName": "undoEffect(uuid:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VideoEditor.EditorCompositionEffectProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEffectProtocol",
+                    "printedName": "VideoEditor.EditorCompositionEffectProtocol",
+                    "usr": "s:11VideoEditor0B25CompositionEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor17EffectsManagementP10undoEffect4uuidAA0b11CompositionF8Protocol_pSgSS_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP10undoEffect4uuidAA0b11CompositionF8Protocol_pSgSS_tF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -11324,11 +11705,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP8undoLast4typeAA0b11CompositionD8Protocol_pSgAA0bD4TypeO_tF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP8undoLast4typeAA0b11CompositionD8Protocol_pSgAA0bD4TypeO_tF",
+            "usr": "s:11VideoEditor17EffectsManagementP8undoLast4typeAA0B25CompositionEffectProtocol_pSgAA0bI4TypeO_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP8undoLast4typeAA0B25CompositionEffectProtocol_pSgAA0bI4TypeO_tF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
@@ -11351,11 +11732,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP7undoAll4typeyAA0bD4TypeO_tF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP7undoAll4typeyAA0bD4TypeO_tF",
+            "usr": "s:11VideoEditor17EffectsManagementP7undoAll4typeyAA0B10EffectTypeO_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP7undoAll4typeyAA0B10EffectTypeO_tF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
@@ -11379,19 +11760,22 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP8getSpeed2atSfSo6CMTimea_tF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP8getSpeed2atSfSo6CMTimea_tF",
+            "usr": "s:11VideoEditor17EffectsManagementP8getSpeed2atSfSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP8getSpeed2atSfSo6CMTimea_tF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
             "name": "changeEffectTimeRange",
-            "printedName": "changeEffectTimeRange(withId:startTime:endTime:)",
+            "printedName": "changeEffectTimeRange(with:start:end:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11400,9 +11784,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -11418,99 +11802,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP06changeD9TimeRange6withId05startF003endF0ySu_So6CMTimeaAItF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP06changeD9TimeRange6withId05startF003endF0ySu_So6CMTimeaAItF",
+            "usr": "s:11VideoEditor17EffectsManagementP21changeEffectTimeRange4with5start3endySS_So6CMTimeaAItF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP21changeEffectTimeRange4with5start3endySS_So6CMTimeaAItF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "applyFilter",
-            "printedName": "applyFilter(effectModel:start:end:removeSameType:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "VideoEditorFilterModel",
-                "printedName": "VideoEditor.VideoEditorFilterModel",
-                "usr": "s:11VideoEditor0aB11FilterModelC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
+            "declAttributes": [
+              "RawDocComment"
             ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP11applyFilter11effectModel5start3end14removeSameTypeyAA0abfH0C_So6CMTimeaALSbtF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP11applyFilter11effectModel5start3end14removeSameTypeyAA0abfH0C_So6CMTimeaALSbtF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "storeStack",
-            "printedName": "storeStack()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP10storeStackyyF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP10storeStackyyF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "restoreStack",
-            "printedName": "restoreStack()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP12restoreStackyyF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP12restoreStackyyF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
-            "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -11527,19 +11827,64 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor13AppliedEffectP012hasChangesInC7EffectsSbyF",
-            "mangledName": "$s11VideoEditor13AppliedEffectP012hasChangesInC7EffectsSbyF",
+            "usr": "s:11VideoEditor17EffectsManagementP019hasChangesInAppliedC0SbyF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP019hasChangesInAppliedC0SbyF",
             "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.AppliedEffect>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.AppliedEffect>",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "storeStack",
+            "printedName": "storeStack()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor17EffectsManagementP10storeStackyyF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP10storeStackyyF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "restoreStack",
+            "printedName": "restoreStack()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor17EffectsManagementP12restoreStackyyF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP12restoreStackyyF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:11VideoEditor13AppliedEffectP",
-        "mangledName": "$s11VideoEditor13AppliedEffectP",
+        "usr": "s:11VideoEditor17EffectsManagementP",
+        "mangledName": "$s11VideoEditor17EffectsManagementP",
         "moduleName": "VideoEditor",
         "genericSig": "<τ_0_0 : AnyObject>",
         "sugared_genericSig": "<Self : AnyObject>",
@@ -12931,7 +13276,6 @@
                 "kind": "TypeNominal",
                 "name": "String",
                 "printedName": "Swift.String",
-                "hasDefaultArg": true,
                 "usr": "s:SS"
               },
               {
@@ -16130,6 +16474,34 @@
             "declKind": "Func",
             "usr": "s:11VideoEditor0aB14AssetTrackInfoC4hash4intoys6HasherVz_tF",
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC4hash4intoys6HasherVz_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isTimeInGlobalTimeRange",
+            "printedName": "isTimeInGlobalTimeRange(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14AssetTrackInfoC014isTimeInGlobalG5RangeySbSo6CMTimeaF",
+            "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC014isTimeInGlobalG5RangeySbSo6CMTimeaF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl"
@@ -19655,98 +20027,98 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3473,
+      "offset": 3616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3490,
+      "offset": 3633,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3510,
+      "offset": 3653,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3473,
+      "offset": 3616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3490,
+      "offset": 3633,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3510,
+      "offset": 3653,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3473,
+      "offset": 3616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3490,
+      "offset": 3633,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 3510,
+      "offset": 3653,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4529,
+      "offset": 4672,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4543,
+      "offset": 4686,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 4839,
+      "offset": 4982,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 4930,
+      "offset": 5073,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5056,
+      "offset": 5199,
       "length": 5,
       "value": "false"
     },
@@ -19760,63 +20132,63 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 2177,
+      "offset": 2244,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 2707,
+      "offset": 2781,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 3288,
+      "offset": 3362,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3352,
+      "offset": 3426,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3365,
+      "offset": 3439,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 4243,
+      "offset": 4317,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4307,
+      "offset": 4381,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4320,
+      "offset": 4394,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5877,
+      "offset": 5951,
       "length": 5,
       "value": "false"
     },
@@ -19858,7 +20230,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/EffectStack\/AppliedEffectsStack.swift",
       "kind": "BooleanLiteral",
-      "offset": 771,
+      "offset": 789,
       "length": 5,
       "value": "false"
     },
