@@ -114,6 +114,9 @@ final public class VideoEditorService {
   final public var effects: VideoEditor.AppliedEffectsStack {
     get
   }
+  final public var autoCutEffects: VideoEditor.AppliedEffectsStack {
+    get
+  }
   final public let license: BanubaLicenseServicingSDK.License
   convenience public init?(token: Swift.String)
   public init(license: BanubaLicenseServicingSDK.License)
@@ -122,7 +125,7 @@ final public class VideoEditorService {
 }
 extension VideoEditor.VideoEditorService : VideoEditor.EffectsManagement {
   final public func changeEffectTimeRange(with uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
-  final public func applyEffect(effectModel: VideoEditor.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool)
+  final public func applyEffect(effectModel: VideoEditor.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool, isAutoCutEffect: Swift.Bool)
   final public func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
   @discardableResult
   final public func undoEffect(uuid: Swift.String) -> VideoEditor.EditorCompositionEffectProtocol?
@@ -137,6 +140,8 @@ extension VideoEditor.VideoEditorService : VideoEditor.EffectsManagement {
   final public func storeStack()
   final public func restoreStack()
   final public func hasChangesInAppliedEffects() -> Swift.Bool
+  final public func hasAutoCutEffects() -> Swift.Bool
+  final public func undoAutoCutEffects()
 }
 extension VideoEditor.VideoEditorService : VideoEditor.SDKVideoCompositionInstructionDataSource {
   final public func getAllEffects(at time: CoreMedia.CMTime) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
@@ -409,7 +414,7 @@ public protocol AudioVideoEditorSDKServicing : VideoEditor.VideoEditorSDKServici
 public protocol EffectsManagement : AnyObject {
   func getStoredEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
   func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [VideoEditor.EditorCompositionEditableEffectProtocol]
-  func applyEffect(effectModel: VideoEditor.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool)
+  func applyEffect(effectModel: VideoEditor.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool, isAutoCutEffect: Swift.Bool)
   func startCurrentEffect(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   func endCurrentEffect(at: CoreMedia.CMTime)
   func undoEffect(uuid: Swift.String) -> VideoEditor.EditorCompositionEffectProtocol?
@@ -469,6 +474,9 @@ extension UIKit.UIImage {
   public static func quadVertexData(scale: Swift.Float) -> [Swift.Float]
   public static let defaultTextureCoordinates: [Swift.Float]
   @objc deinit
+}
+extension BanubaUtilities.EffectOnVideoMetadata {
+  public init(from editorCompositionEffect: VideoEditor.EditorCompositionEditableEffectProtocol)
 }
 public enum EffectSpeed : Swift.Float {
   case normal

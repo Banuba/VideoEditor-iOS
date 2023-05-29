@@ -3162,7 +3162,6 @@
             "mangledName": "$s11VideoEditor0aB7ServiceC7effectsAA19AppliedEffectsStackCvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
-              "HasInitialValue",
               "Final",
               "HasStorage",
               "SetterAccess",
@@ -3186,6 +3185,54 @@
                 "declKind": "Accessor",
                 "usr": "s:11VideoEditor0aB7ServiceC7effectsAA19AppliedEffectsStackCvg",
                 "mangledName": "$s11VideoEditor0aB7ServiceC7effectsAA19AppliedEffectsStackCvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "autoCutEffects",
+            "printedName": "autoCutEffects",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppliedEffectsStack",
+                "printedName": "VideoEditor.AppliedEffectsStack",
+                "usr": "s:11VideoEditor19AppliedEffectsStackC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0aB7ServiceC14autoCutEffectsAA07AppliedF5StackCvp",
+            "mangledName": "$s11VideoEditor0aB7ServiceC14autoCutEffectsAA07AppliedF5StackCvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppliedEffectsStack",
+                    "printedName": "VideoEditor.AppliedEffectsStack",
+                    "usr": "s:11VideoEditor19AppliedEffectsStackC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0aB7ServiceC14autoCutEffectsAA07AppliedF5StackCvg",
+                "mangledName": "$s11VideoEditor0aB7ServiceC14autoCutEffectsAA07AppliedF5StackCvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
                 "declAttributes": [
@@ -3409,7 +3456,7 @@
           {
             "kind": "Function",
             "name": "applyEffect",
-            "printedName": "applyEffect(effectModel:uuid:start:end:removeSameType:)",
+            "printedName": "applyEffect(effectModel:uuid:start:end:removeSameType:isAutoCutEffect:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3445,11 +3492,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterG0C_SSSo6CMTimeaAMSbtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterG0C_SSSo6CMTimeaAMSbtF",
+            "usr": "s:11VideoEditor0aB7ServiceC11applyEffect11effectModel4uuid5start3end14removeSameType09isAutoCutE0yAA0ab6FilterG0C_SSSo6CMTimeaANS2btF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC11applyEffect11effectModel4uuid5start3end14removeSameType09isAutoCutE0yAA0ab6FilterG0C_SSSo6CMTimeaANS2btF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -3828,6 +3881,53 @@
             "declKind": "Func",
             "usr": "s:11VideoEditor0aB7ServiceC26hasChangesInAppliedEffectsSbyF",
             "mangledName": "$s11VideoEditor0aB7ServiceC26hasChangesInAppliedEffectsSbyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasAutoCutEffects",
+            "printedName": "hasAutoCutEffects()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC17hasAutoCutEffectsSbyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC17hasAutoCutEffectsSbyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "undoAutoCutEffects",
+            "printedName": "undoAutoCutEffects()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC18undoAutoCutEffectsyyF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC18undoAutoCutEffectsyyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -11528,7 +11628,7 @@
           {
             "kind": "Function",
             "name": "applyEffect",
-            "printedName": "applyEffect(effectModel:uuid:start:end:removeSameType:)",
+            "printedName": "applyEffect(effectModel:uuid:start:end:removeSameType:isAutoCutEffect:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11564,11 +11664,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor17EffectsManagementP11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterH0C_SSSo6CMTimeaAMSbtF",
-            "mangledName": "$s11VideoEditor17EffectsManagementP11applyEffect11effectModel4uuid5start3end14removeSameTypeyAA0ab6FilterH0C_SSSo6CMTimeaAMSbtF",
+            "usr": "s:11VideoEditor17EffectsManagementP11applyEffect11effectModel4uuid5start3end14removeSameType09isAutoCutF0yAA0ab6FilterH0C_SSSo6CMTimeaANS2btF",
+            "mangledName": "$s11VideoEditor17EffectsManagementP11applyEffect11effectModel4uuid5start3end14removeSameType09isAutoCutF0yAA0ab6FilterH0C_SSSo6CMTimeaANS2btF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.EffectsManagement>",
             "sugared_genericSig": "<Self where Self : VideoEditor.EffectsManagement>",
@@ -12967,6 +13073,16 @@
           "AccessControl"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaUtilities",
+        "printedName": "BanubaUtilities",
+        "declKind": "Import",
+        "moduleName": "VideoEditor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -19717,6 +19833,59 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "EffectOnVideoMetadata",
+        "printedName": "EffectOnVideoMetadata",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EffectOnVideoMetadata",
+                "printedName": "BanubaUtilities.EffectOnVideoMetadata",
+                "usr": "s:15BanubaUtilities21EffectOnVideoMetadataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "EditorCompositionEditableEffectProtocol",
+                "printedName": "VideoEditor.EditorCompositionEditableEffectProtocol",
+                "usr": "s:11VideoEditor0B33CompositionEditableEffectProtocolP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15BanubaUtilities21EffectOnVideoMetadataV0E6EditorE4fromAcD0g19CompositionEditableC8Protocol_p_tcfc",
+            "mangledName": "$s15BanubaUtilities21EffectOnVideoMetadataV0E6EditorE4fromAcD0g19CompositionEditableC8Protocol_p_tcfc",
+            "moduleName": "VideoEditor",
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:15BanubaUtilities21EffectOnVideoMetadataV",
+        "mangledName": "$s15BanubaUtilities21EffectOnVideoMetadataV",
+        "moduleName": "BanubaUtilities",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "MTLBuffer",
         "printedName": "MTLBuffer",
         "children": [
@@ -20104,21 +20273,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 4982,
+      "offset": 5020,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 5073,
+      "offset": 5111,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5199,
+      "offset": 5237,
       "length": 5,
       "value": "false"
     },
