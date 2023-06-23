@@ -132,6 +132,7 @@ extension VideoEditor.VideoEditorService : VideoEditor.EffectsManagement {
   @discardableResult
   final public func undoLast(type: VideoEditor.EditorEffectType) -> (any VideoEditor.EditorCompositionEffectProtocol)?
   final public func undoAll(type: VideoEditor.EditorEffectType)
+  final public func undoAll()
   final public func startCurrentEffect(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   final public func endCurrentEffect(at: CoreMedia.CMTime)
   final public func getCurrentAppliedEffects(type: VideoEditor.EditorEffectType) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
@@ -421,6 +422,7 @@ public protocol EffectsManagement : AnyObject {
   func undoEffect(uuid: Swift.String) -> (any VideoEditor.EditorCompositionEffectProtocol)?
   func undoLast(type: VideoEditor.EditorEffectType) -> (any VideoEditor.EditorCompositionEffectProtocol)?
   func undoAll(type: VideoEditor.EditorEffectType)
+  func undoAll()
   func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
   func changeEffectTimeRange(with uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
   func hasChangesInAppliedEffects() -> Swift.Bool
