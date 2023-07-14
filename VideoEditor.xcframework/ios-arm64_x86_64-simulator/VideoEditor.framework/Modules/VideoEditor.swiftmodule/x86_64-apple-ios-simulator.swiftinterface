@@ -27,6 +27,7 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
 }
 @_hasMissingDesignatedInitializers public class AudioMixer {
   public struct VolumeDefaults {
+    public static let mutedVolume: Swift.Float
     public static let defaultVolume: Swift.Float
   }
   public var audioMix: AVFoundation.AVAudioMix {
@@ -132,6 +133,7 @@ extension VideoEditor.VideoEditorService : VideoEditor.EffectsManagement {
   @discardableResult
   final public func undoLast(type: VideoEditor.EditorEffectType) -> (any VideoEditor.EditorCompositionEffectProtocol)?
   final public func undoAll(type: VideoEditor.EditorEffectType)
+  final public func undoAll(except type: VideoEditor.EditorEffectType)
   final public func undoAll()
   final public func startCurrentEffect(effectModel: VideoEditor.VideoEditorFilterModel, at: CoreMedia.CMTime)
   final public func endCurrentEffect(at: CoreMedia.CMTime)
@@ -323,7 +325,7 @@ public class VideoSequenceItem {
   }
   public var transition: BanubaUtilities.TransitionType
   public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
-  public func tryReplaceVideo(withVideAtURL videoUrl: Foundation.URL) -> Swift.Bool
+  public func tryReplaceVideo(at videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
 @objc public class VideoSequence : ObjectiveC.NSObject {
@@ -422,6 +424,7 @@ public protocol EffectsManagement : AnyObject {
   func undoEffect(uuid: Swift.String) -> (any VideoEditor.EditorCompositionEffectProtocol)?
   func undoLast(type: VideoEditor.EditorEffectType) -> (any VideoEditor.EditorCompositionEffectProtocol)?
   func undoAll(type: VideoEditor.EditorEffectType)
+  func undoAll(except: VideoEditor.EditorEffectType)
   func undoAll()
   func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
   func changeEffectTimeRange(with uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
