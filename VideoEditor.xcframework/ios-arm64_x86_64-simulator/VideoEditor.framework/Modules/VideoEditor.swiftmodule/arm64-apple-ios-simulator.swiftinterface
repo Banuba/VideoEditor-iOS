@@ -30,15 +30,13 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
     public static let mutedVolume: Swift.Float
     public static let defaultVolume: Swift.Float
   }
-  public var audioMix: AVFoundation.AVAudioMix {
-    get
-  }
+  public func getAudioMix(for asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
   public func resetTrackVolumeToDefault(trackId: CoreMedia.CMPersistentTrackID)
   public func setVolume(_ volume: Swift.Float, forTrackId trackId: CoreMedia.CMPersistentTrackID)
   public func volume(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   public func isVolumeDefault(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
-  public func mutedMusicMix() -> AVFoundation.AVAudioMix
-  public func mutedAudioMix() -> AVFoundation.AVAudioMix
+  public func mutedMusicMix(asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
+  public func mutedAudioMix(asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
   @objc deinit
 }
 public protocol CompositionRenderering : AnyObject {

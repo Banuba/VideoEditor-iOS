@@ -375,30 +375,14 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "audioMix",
-            "printedName": "audioMix",
+            "kind": "Function",
+            "name": "getAudioMix",
+            "printedName": "getAudioMix(for:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "AVAudioMix",
-                "printedName": "AVFoundation.AVAudioMix",
-                "usr": "c:objc(cs)AVAudioMix"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11VideoEditor10AudioMixerC8audioMixSo07AVAudioF0Cvp",
-            "mangledName": "$s11VideoEditor10AudioMixerC8audioMixSo07AVAudioF0Cvp",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAudioMix?",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -407,13 +391,32 @@
                     "usr": "c:objc(cs)AVAudioMix"
                   }
                 ],
-                "declKind": "Accessor",
-                "usr": "s:11VideoEditor10AudioMixerC8audioMixSo07AVAudioF0Cvg",
-                "mangledName": "$s11VideoEditor10AudioMixerC8audioMixSo07AVAudioF0Cvg",
-                "moduleName": "VideoEditor",
-                "accessorKind": "get"
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAsset?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAsset",
+                    "printedName": "AVFoundation.AVAsset",
+                    "usr": "c:objc(cs)AVAsset"
+                  }
+                ],
+                "usr": "s:Sq"
               }
-            ]
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor10AudioMixerC03getC3Mix3forSo07AVAudioF0CSgSo7AVAssetCSg_tF",
+            "mangledName": "$s11VideoEditor10AudioMixerC03getC3Mix3forSo07AVAudioF0CSgSo7AVAssetCSg_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -534,18 +537,40 @@
           {
             "kind": "Function",
             "name": "mutedMusicMix",
-            "printedName": "mutedMusicMix()",
+            "printedName": "mutedMusicMix(asset:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "AVAudioMix",
-                "printedName": "AVFoundation.AVAudioMix",
-                "usr": "c:objc(cs)AVAudioMix"
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAudioMix?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioMix",
+                    "printedName": "AVFoundation.AVAudioMix",
+                    "usr": "c:objc(cs)AVAudioMix"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAsset?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAsset",
+                    "printedName": "AVFoundation.AVAsset",
+                    "usr": "c:objc(cs)AVAsset"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor10AudioMixerC13mutedMusicMixSo07AVAudioG0CyF",
-            "mangledName": "$s11VideoEditor10AudioMixerC13mutedMusicMixSo07AVAudioG0CyF",
+            "usr": "s:11VideoEditor10AudioMixerC13mutedMusicMix5assetSo07AVAudioG0CSgSo7AVAssetCSg_tF",
+            "mangledName": "$s11VideoEditor10AudioMixerC13mutedMusicMix5assetSo07AVAudioG0CSgSo7AVAssetCSg_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -556,18 +581,40 @@
           {
             "kind": "Function",
             "name": "mutedAudioMix",
-            "printedName": "mutedAudioMix()",
+            "printedName": "mutedAudioMix(asset:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "AVAudioMix",
-                "printedName": "AVFoundation.AVAudioMix",
-                "usr": "c:objc(cs)AVAudioMix"
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAudioMix?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioMix",
+                    "printedName": "AVFoundation.AVAudioMix",
+                    "usr": "c:objc(cs)AVAudioMix"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAsset?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAsset",
+                    "printedName": "AVFoundation.AVAsset",
+                    "usr": "c:objc(cs)AVAsset"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor10AudioMixerC05mutedC3MixSo07AVAudioF0CyF",
-            "mangledName": "$s11VideoEditor10AudioMixerC05mutedC3MixSo07AVAudioF0CyF",
+            "usr": "s:11VideoEditor10AudioMixerC05mutedC3Mix5assetSo07AVAudioF0CSgSo7AVAssetCSg_tF",
+            "mangledName": "$s11VideoEditor10AudioMixerC05mutedC3Mix5assetSo07AVAudioF0CSgSo7AVAssetCSg_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -20347,28 +20394,28 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
       "kind": "Array",
-      "offset": 892,
+      "offset": 801,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2013,
+      "offset": 1920,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
       "kind": "Array",
-      "offset": 2291,
+      "offset": 2254,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/Audio\/AudioMixer.swift",
       "kind": "Array",
-      "offset": 3127,
+      "offset": 3146,
       "length": 2,
       "value": "[]"
     },
@@ -21033,105 +21080,105 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7382,
+      "offset": 7397,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 8791,
+      "offset": 8806,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 12702,
+      "offset": 12717,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 13875,
+      "offset": 13890,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 15121,
+      "offset": 15136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 15719,
+      "offset": 15734,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 17140,
+      "offset": 17116,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 17334,
+      "offset": 17310,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 17495,
+      "offset": 17471,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 17992,
+      "offset": 17968,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18585,
+      "offset": 18561,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18773,
+      "offset": 18749,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 19482,
+      "offset": 19473,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 19680,
+      "offset": 19671,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 20722,
+      "offset": 20728,
       "length": 5,
       "value": "false"
     },
