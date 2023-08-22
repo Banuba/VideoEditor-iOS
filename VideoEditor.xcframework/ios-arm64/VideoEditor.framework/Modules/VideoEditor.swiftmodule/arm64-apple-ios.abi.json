@@ -1785,379 +1785,6 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addMusicTrack",
-            "printedName": "addMusicTrack(didSelectFile:coverURL:isEditable:title:additionalTitle:uuid:preferredTrackID:start:duration:trimmedStart:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(id: Swift.Int32, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(id: Swift.Int32, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int32",
-                        "printedName": "Swift.Int32",
-                        "usr": "s:s5Int32V"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVURLAsset",
-                        "printedName": "AVFoundation.AVURLAsset",
-                        "usr": "c:objc(cs)AVURLAsset"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CMTimeRange",
-                        "printedName": "CoreMedia.CMTimeRange",
-                        "usr": "c:@SA@CMTimeRange"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVMutableCompositionTrack",
-                        "printedName": "AVFoundation.AVMutableCompositionTrack",
-                        "usr": "c:objc(cs)AVMutableCompositionTrack"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CMTime",
-                        "printedName": "CoreMedia.CMTime",
-                        "usr": "c:@SA@CMTime"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVAssetTrack",
-                        "printedName": "AVFoundation.AVAssetTrack",
-                        "usr": "c:objc(cs)AVAssetTrack"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.URL?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UUID",
-                "printedName": "Foundation.UUID",
-                "usr": "s:10Foundation4UUIDV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int32?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int32",
-                    "printedName": "Swift.Int32",
-                    "usr": "s:s5Int32V"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CoreMedia.CMTime?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTime",
-                    "printedName": "CoreMedia.CMTime",
-                    "usr": "c:@SA@CMTime"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Double?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP08addMusicC013didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredC2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionC0C11compositionSo6CMTimea011compositionW0So07AVAssetC0C07avAssetC0tSg10Foundation0K0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP08addMusicC013didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredC2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionC0C11compositionSo6CMTimea011compositionW0So07AVAssetC0C07avAssetC0tSg10Foundation0K0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "changeMusicTrackPosition",
-            "printedName": "changeMusicTrackPosition(currentTime:durationInSeconds:compositionTimeRange:composition:assetTrack:audioTrackId:audioServiceItem:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CoreMedia.CMTimeRange?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTimeRange",
-                    "printedName": "CoreMedia.CMTimeRange",
-                    "usr": "c:@SA@CMTimeRange"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTimeRange",
-                "printedName": "CoreMedia.CMTimeRange",
-                "usr": "c:@SA@CMTimeRange"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AVMutableCompositionTrack",
-                "printedName": "AVFoundation.AVMutableCompositionTrack",
-                "usr": "c:objc(cs)AVMutableCompositionTrack"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AVAssetTrack",
-                "printedName": "AVFoundation.AVAssetTrack",
-                "usr": "c:objc(cs)AVAssetTrack"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AudioServiceItem",
-                "printedName": "BanubaUtilities.AudioServiceItem",
-                "usr": "s:15BanubaUtilities16AudioServiceItemC"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP011changeMusicC8Position11currentTime17durationInSeconds011compositionI5Range0M005assetC005audioC2Id0P11ServiceItemSo06CMTimeN0aSgSd_SdAMSo020AVMutableCompositionC0CSo07AVAssetC0Cs5Int32V15BanubaUtilities05AudiorS0CtF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP011changeMusicC8Position11currentTime17durationInSeconds011compositionI5Range0M005assetC005audioC2Id0P11ServiceItemSo06CMTimeN0aSgSd_SdAMSo020AVMutableCompositionC0CSo07AVAssetC0Cs5Int32V15BanubaUtilities05AudiorS0CtF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getTrackVolume",
-            "printedName": "getTrackVolume(trackId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP03getC6Volume7trackIdSfs5Int32V_tF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP03getC6Volume7trackIdSfs5Int32V_tF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setTrack",
-            "printedName": "setTrack(trackId:volume:to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "VideoEditorPlayable",
-                "printedName": "BanubaUtilities.VideoEditorPlayable",
-                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP03setC07trackId6volume2toys5Int32V_Sf15BanubaUtilities0aB8Playable_ptF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP03setC07trackId6volume2toys5Int32V_Sf15BanubaUtilities0aB8Playable_ptF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "removeTrack",
-            "printedName": "removeTrack(trackId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP06removeC07trackIdSbs5Int32V_tF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP06removeC07trackIdSbs5Int32V_tF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "removeAllMusicTracks",
-            "printedName": "removeAllMusicTracks()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB14TrackServicingP20removeAllMusicTracksyyF",
-            "mangledName": "$s11VideoEditor0aB14TrackServicingP20removeAllMusicTracksyyF",
-            "moduleName": "VideoEditor",
-            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.VideoEditorTrackServicing>",
-            "sugared_genericSig": "<Self where Self : VideoEditor.VideoEditorTrackServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -5074,367 +4701,6 @@
               "Final",
               "AccessControl",
               "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "changeMusicTrackPosition",
-            "printedName": "changeMusicTrackPosition(currentTime:durationInSeconds:compositionTimeRange:composition:assetTrack:audioTrackId:audioServiceItem:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CoreMedia.CMTimeRange?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTimeRange",
-                    "printedName": "CoreMedia.CMTimeRange",
-                    "usr": "c:@SA@CMTimeRange"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTimeRange",
-                "printedName": "CoreMedia.CMTimeRange",
-                "usr": "c:@SA@CMTimeRange"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AVMutableCompositionTrack",
-                "printedName": "AVFoundation.AVMutableCompositionTrack",
-                "usr": "c:objc(cs)AVMutableCompositionTrack"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AVAssetTrack",
-                "printedName": "AVFoundation.AVAssetTrack",
-                "usr": "c:objc(cs)AVAssetTrack"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AudioServiceItem",
-                "printedName": "BanubaUtilities.AudioServiceItem",
-                "usr": "s:15BanubaUtilities16AudioServiceItemC"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC24changeMusicTrackPosition11currentTime17durationInSeconds011compositionI5Range0M005assetF005audioF2Id0pC4ItemSo06CMTimeN0aSgSd_SdAMSo020AVMutableCompositionF0CSo07AVAssetF0Cs5Int32V15BanubaUtilities05AudiocR0CtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC24changeMusicTrackPosition11currentTime17durationInSeconds011compositionI5Range0M005assetF005audioF2Id0pC4ItemSo06CMTimeN0aSgSd_SdAMSo020AVMutableCompositionF0CSo07AVAssetF0Cs5Int32V15BanubaUtilities05AudiocR0CtF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addMusicTrack",
-            "printedName": "addMusicTrack(didSelectFile:coverURL:isEditable:title:additionalTitle:uuid:preferredTrackID:start:duration:trimmedStart:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(id: Swift.Int32, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(id: Swift.Int32, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int32",
-                        "printedName": "Swift.Int32",
-                        "usr": "s:s5Int32V"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVURLAsset",
-                        "printedName": "AVFoundation.AVURLAsset",
-                        "usr": "c:objc(cs)AVURLAsset"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CMTimeRange",
-                        "printedName": "CoreMedia.CMTimeRange",
-                        "usr": "c:@SA@CMTimeRange"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVMutableCompositionTrack",
-                        "printedName": "AVFoundation.AVMutableCompositionTrack",
-                        "usr": "c:objc(cs)AVMutableCompositionTrack"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CMTime",
-                        "printedName": "CoreMedia.CMTime",
-                        "usr": "c:@SA@CMTime"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVAssetTrack",
-                        "printedName": "AVFoundation.AVAssetTrack",
-                        "usr": "c:objc(cs)AVAssetTrack"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.URL?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UUID",
-                "printedName": "Foundation.UUID",
-                "usr": "s:10Foundation4UUIDV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int32?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int32",
-                    "printedName": "Swift.Int32",
-                    "usr": "s:s5Int32V"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CoreMedia.CMTime?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTime",
-                    "printedName": "CoreMedia.CMTime",
-                    "usr": "c:@SA@CMTime"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Double?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC13addMusicTrack13didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredF2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionF0C11compositionSo6CMTimea011compositionW0So07AVAssetF0C07avAssetF0tSg10Foundation0K0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC13addMusicTrack13didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredF2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionF0C11compositionSo6CMTimea011compositionW0So07AVAssetF0C07avAssetF0tSg10Foundation0K0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getTrackVolume",
-            "printedName": "getTrackVolume(trackId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC14getTrackVolume7trackIdSfs5Int32V_tF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC14getTrackVolume7trackIdSfs5Int32V_tF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setTrack",
-            "printedName": "setTrack(trackId:volume:to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Float",
-                "printedName": "Swift.Float",
-                "usr": "s:Sf"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "VideoEditorPlayable",
-                "printedName": "BanubaUtilities.VideoEditorPlayable",
-                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC8setTrack7trackId6volume2toys5Int32V_Sf15BanubaUtilities0aB8Playable_ptF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC8setTrack7trackId6volume2toys5Int32V_Sf15BanubaUtilities0aB8Playable_ptF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "removeTrack",
-            "printedName": "removeTrack(trackId:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC11removeTrack7trackIdSbs5Int32V_tF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC11removeTrack7trackIdSbs5Int32V_tF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "removeAllMusicTracks",
-            "printedName": "removeAllMusicTracks()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC20removeAllMusicTracksyyF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC20removeAllMusicTracksyyF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -21688,245 +20954,231 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6019,
+      "offset": 3616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6036,
+      "offset": 3633,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6056,
+      "offset": 3653,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6019,
+      "offset": 3616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6036,
+      "offset": 3633,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6056,
+      "offset": 3653,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6019,
+      "offset": 3616,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6036,
+      "offset": 3633,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6056,
+      "offset": 3653,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6442,
+      "offset": 4039,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6653,
+      "offset": 4250,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7075,
+      "offset": 4672,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7089,
+      "offset": 4686,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 7423,
+      "offset": 5020,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 7571,
+      "offset": 5168,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7697,
+      "offset": 5294,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 8266,
+      "offset": 5863,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 8685,
+      "offset": 6282,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9800,
+      "offset": 7397,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 11209,
+      "offset": 8806,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 15120,
+      "offset": 12717,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 16293,
+      "offset": 13890,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 17770,
+      "offset": 15367,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18368,
+      "offset": 15965,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 19750,
+      "offset": 17347,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 19944,
+      "offset": 17541,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 20105,
+      "offset": 17702,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 20602,
+      "offset": 18199,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21195,
+      "offset": 18792,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21383,
+      "offset": 18980,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22107,
+      "offset": 19704,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22305,
+      "offset": 19902,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23362,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 25676,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/ios\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
-      "kind": "BooleanLiteral",
-      "offset": 28058,
+      "offset": 20959,
       "length": 5,
       "value": "false"
     },

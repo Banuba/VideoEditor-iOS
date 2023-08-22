@@ -78,12 +78,6 @@ public protocol VideoEditorTrackServicing {
   func getPiPAudioVolume() -> Swift.Float
   func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   func setPiPAudioVolume(_ volume: Swift.Float)
-  func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
-  func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
-  func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
-  func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
-  func removeTrack(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
-  func removeAllMusicTracks()
 }
 public protocol WatermarkApplicatorServicing : AnyObject {
   func adjustWatermarkEffect(configuration: VideoEditor.WatermarkConfiguration, videoSize: CoreFoundation.CGSize) -> VideoEditor.VideoEditorFilterModel
@@ -177,12 +171,6 @@ extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorTrackServicing
   final public func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   final public func setPiPAudioVolume(_ volume: Swift.Float)
   final public func hasPiPAudioTrack() -> Swift.Bool
-  final public func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
-  final public func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
-  final public func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
-  final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
-  final public func removeTrack(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
-  final public func removeAllMusicTracks()
 }
 public struct RevokedTokenError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
