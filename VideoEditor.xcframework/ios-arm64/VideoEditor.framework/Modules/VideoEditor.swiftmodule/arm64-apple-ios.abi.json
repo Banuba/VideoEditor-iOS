@@ -20869,6 +20869,34 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VideoEditor"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VideoEditor"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VideoEditor"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "VideoEditor"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UIImage",
         "printedName": "UIImage",
@@ -24988,6 +25016,13 @@
       "offset": 6788,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-dvbqgkbyffpndzghkkiwcffgdpts\/Build\/Intermediates.noindex\/ArchiveIntermediates\/VideoEditor\/IntermediateBuildFilesPath\/VideoEditor.build\/Release-iphoneos\/VideoEditor.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 746,
+      "length": 19,
+      "value": "\"expired_watermark\""
     }
   ]
 }
