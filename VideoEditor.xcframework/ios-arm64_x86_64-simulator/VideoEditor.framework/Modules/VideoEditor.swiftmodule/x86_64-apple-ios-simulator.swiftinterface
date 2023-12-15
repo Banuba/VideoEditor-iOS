@@ -11,7 +11,6 @@ import CoreMedia
 import CoreVideo
 import DeveloperToolsSupport
 import Foundation
-import GLKit
 import MetalKit
 import QuartzCore
 import Swift
@@ -42,9 +41,19 @@ public protocol VideoEditorImageAssetProtocol : AnyObject {
   public func mutedAudioMix(asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
   @objc deinit
 }
+extension VideoEditor.CompositionRenderering {
+  public var className: Swift.String {
+    get
+  }
+  public static var className: Swift.String {
+    get
+  }
+  public func cleanUpResources()
+}
 public protocol CompositionRenderering : AnyObject {
   init()
   func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: any VideoEditor.EditorCompositionEffectProtocol, additionalParameters: [Swift.String : Any]?)
+  func cleanUpResources()
 }
 @_hasMissingDesignatedInitializers public class EditorEffectsFilter {
   public static func filterAddedEffects(effects: [any VideoEditor.EditorCompositionEditableEffectProtocol]) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
@@ -154,7 +163,8 @@ extension VideoEditor.VideoEditorService : VideoEditor.EffectsManagement {
   final public func undoAutoCutEffects()
 }
 extension VideoEditor.VideoEditorService : VideoEditor.SDKVideoCompositionInstructionDataSource {
-  final public func getAllEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
+  final public func getEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
+  final public func getEffectsBefore(time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
 }
 extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorServicing {
   final public func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
@@ -474,7 +484,8 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
   @objc deinit
 }
 extension VideoEditor.ExportScaledTimeline : VideoEditor.SDKVideoCompositionInstructionDataSource {
-  public func getAllEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
+  public func getEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
+  public func getEffectsBefore(time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
 }
 public class AverageSum {
   public init(name: Swift.String, skipFirstCount: Swift.Int, autoprint: Swift.Bool = true, autoprintInterval: Swift.UInt = 100)
@@ -603,7 +614,8 @@ extension VideoEditor.VideoEditorAssetTrackInfo {
   public func isTimeInGlobalTimeRange(_ time: CoreMedia.CMTime) -> Swift.Bool
 }
 public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
-  func getAllEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
+  func getEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
+  func getEffectsBefore(time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
 }
 @objc @_inheritsConvenienceInitializers public class VideoImageEffectDrawersFactory : ObjectiveC.NSObject {
   public static let normalDrawer: any VideoEditor.VideoImageEffectDrawable

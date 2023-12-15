@@ -740,6 +740,134 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanUpResources",
+            "printedName": "cleanUpResources()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor22CompositionRendereringP16cleanUpResourcesyyF",
+            "mangledName": "$s11VideoEditor22CompositionRendereringP16cleanUpResourcesyyF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.CompositionRenderering>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.CompositionRenderering>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "className",
+            "printedName": "className",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor22CompositionRendereringPAAE9classNameSSvp",
+            "mangledName": "$s11VideoEditor22CompositionRendereringPAAE9classNameSSvp",
+            "moduleName": "VideoEditor",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor22CompositionRendereringPAAE9classNameSSvg",
+                "mangledName": "$s11VideoEditor22CompositionRendereringPAAE9classNameSSvg",
+                "moduleName": "VideoEditor",
+                "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.CompositionRenderering>",
+                "sugared_genericSig": "<Self where Self : VideoEditor.CompositionRenderering>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "className",
+            "printedName": "className",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor22CompositionRendereringPAAE9classNameSSvpZ",
+            "mangledName": "$s11VideoEditor22CompositionRendereringPAAE9classNameSSvpZ",
+            "moduleName": "VideoEditor",
+            "static": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor22CompositionRendereringPAAE9classNameSSvgZ",
+                "mangledName": "$s11VideoEditor22CompositionRendereringPAAE9classNameSSvgZ",
+                "moduleName": "VideoEditor",
+                "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.CompositionRenderering>",
+                "sugared_genericSig": "<Self where Self : VideoEditor.CompositionRenderering>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "cleanUpResources",
+            "printedName": "cleanUpResources()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor22CompositionRendereringPAAE16cleanUpResourcesyyF",
+            "mangledName": "$s11VideoEditor22CompositionRendereringPAAE16cleanUpResourcesyyF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.CompositionRenderering>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.CompositionRenderering>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -4461,8 +4589,8 @@
           },
           {
             "kind": "Function",
-            "name": "getAllEffects",
-            "printedName": "getAllEffects(at:)",
+            "name": "getEffects",
+            "printedName": "getEffects(at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4486,8 +4614,46 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC13getAllEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC13getAllEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "usr": "s:11VideoEditor0aB7ServiceC10getEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC10getEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getEffectsBefore",
+            "printedName": "getEffectsBefore(time:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VideoEditor.EditorCompositionEditableEffectProtocol]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEditableEffectProtocol",
+                    "printedName": "VideoEditor.EditorCompositionEditableEffectProtocol",
+                    "usr": "s:11VideoEditor0B33CompositionEditableEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB7ServiceC16getEffectsBefore4timeSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor0aB7ServiceC16getEffectsBefore4timeSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "Final",
@@ -13616,8 +13782,8 @@
           },
           {
             "kind": "Function",
-            "name": "getAllEffects",
-            "printedName": "getAllEffects(at:)",
+            "name": "getEffects",
+            "printedName": "getEffects(at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13641,8 +13807,45 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor20ExportScaledTimelineC13getAllEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
-            "mangledName": "$s11VideoEditor20ExportScaledTimelineC13getAllEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "usr": "s:11VideoEditor20ExportScaledTimelineC10getEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor20ExportScaledTimelineC10getEffects2atSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getEffectsBefore",
+            "printedName": "getEffectsBefore(time:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VideoEditor.EditorCompositionEditableEffectProtocol]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEditableEffectProtocol",
+                    "printedName": "VideoEditor.EditorCompositionEditableEffectProtocol",
+                    "usr": "s:11VideoEditor0B33CompositionEditableEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor20ExportScaledTimelineC16getEffectsBefore4timeSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor20ExportScaledTimelineC16getEffectsBefore4timeSayAA0B33CompositionEditableEffectProtocol_pGSo6CMTimea_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -17835,8 +18038,8 @@
         "children": [
           {
             "kind": "Function",
-            "name": "getAllEffects",
-            "printedName": "getAllEffects(at:)",
+            "name": "getEffects",
+            "printedName": "getEffects(at:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -17860,8 +18063,47 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor40SDKVideoCompositionInstructionDataSourceP13getAllEffects2atSayAA0bD22EditableEffectProtocol_pGSo6CMTimea_tF",
-            "mangledName": "$s11VideoEditor40SDKVideoCompositionInstructionDataSourceP13getAllEffects2atSayAA0bD22EditableEffectProtocol_pGSo6CMTimea_tF",
+            "usr": "s:11VideoEditor40SDKVideoCompositionInstructionDataSourceP10getEffects2atSayAA0bD22EditableEffectProtocol_pGSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor40SDKVideoCompositionInstructionDataSourceP10getEffects2atSayAA0bD22EditableEffectProtocol_pGSo6CMTimea_tF",
+            "moduleName": "VideoEditor",
+            "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.SDKVideoCompositionInstructionDataSource>",
+            "sugared_genericSig": "<Self where Self : VideoEditor.SDKVideoCompositionInstructionDataSource>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getEffectsBefore",
+            "printedName": "getEffectsBefore(time:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VideoEditor.EditorCompositionEditableEffectProtocol]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEditableEffectProtocol",
+                    "printedName": "VideoEditor.EditorCompositionEditableEffectProtocol",
+                    "usr": "s:11VideoEditor0B33CompositionEditableEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor40SDKVideoCompositionInstructionDataSourceP16getEffectsBefore4timeSayAA0bD22EditableEffectProtocol_pGSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor40SDKVideoCompositionInstructionDataSourceP16getEffectsBefore4timeSayAA0bD22EditableEffectProtocol_pGSo6CMTimea_tF",
             "moduleName": "VideoEditor",
             "genericSig": "<τ_0_0 where τ_0_0 : VideoEditor.SDKVideoCompositionInstructionDataSource>",
             "sugared_genericSig": "<Self where Self : VideoEditor.SDKVideoCompositionInstructionDataSource>",
@@ -18080,13 +18322,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "GLKit",
-        "printedName": "GLKit",
-        "declKind": "Import",
-        "moduleName": "VideoEditor"
       },
       {
         "kind": "Import",
@@ -21184,14 +21419,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CompositionRenderers\/CompositionRenderering.swift",
       "kind": "StringLiteral",
-      "offset": 305,
+      "offset": 312,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CompositionRenderers\/CompositionRenderering.swift",
       "kind": "StringLiteral",
-      "offset": 416,
+      "offset": 423,
       "length": 3,
       "value": "\".\""
     },
@@ -21848,113 +22083,127 @@
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9840,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10244,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 11209,
+      "offset": 11402,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 15120,
+      "offset": 15313,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 16293,
+      "offset": 16486,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 17770,
+      "offset": 18224,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18368,
+      "offset": 18822,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 19750,
+      "offset": 20204,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 19944,
+      "offset": 20398,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 20105,
+      "offset": 20559,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 20602,
+      "offset": 21056,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21195,
+      "offset": 21649,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21383,
+      "offset": 21837,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22107,
+      "offset": 22561,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22305,
+      "offset": 22759,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23362,
+      "offset": 23816,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25676,
+      "offset": 26130,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 28058,
+      "offset": 28512,
       "length": 5,
       "value": "false"
     },
@@ -24250,56 +24499,70 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "BooleanLiteral",
-      "offset": 860,
+      "offset": 837,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1085,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
+      "kind": "FloatLiteral",
+      "offset": 1533,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 1265,
+      "offset": 1938,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "BooleanLiteral",
-      "offset": 1374,
+      "offset": 2047,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 1519,
+      "offset": 2192,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "BooleanLiteral",
-      "offset": 2090,
+      "offset": 2772,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 2299,
+      "offset": 2981,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "StringLiteral",
-      "offset": 2441,
+      "offset": 3123,
       "length": 70,
       "value": "\"CustomSDKVideoCompositionInstruction cannot render new CVPixelBuffer\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "BooleanLiteral",
-      "offset": 2970,
+      "offset": 3652,
       "length": 5,
       "value": "false"
     },
@@ -24362,56 +24625,56 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 277,
+      "offset": 264,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 320,
+      "offset": 307,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 2786,
+      "offset": 2773,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 2792,
+      "offset": 2779,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "BooleanLiteral",
-      "offset": 2967,
+      "offset": 2954,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 3106,
+      "offset": 3093,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 3109,
+      "offset": 3096,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesCompositionInstruction.swift",
       "kind": "IntegerLiteral",
-      "offset": 3182,
+      "offset": 3169,
       "length": 1,
       "value": "0"
     },
