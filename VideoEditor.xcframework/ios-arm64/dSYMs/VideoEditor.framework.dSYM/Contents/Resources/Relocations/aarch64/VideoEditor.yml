@@ -3,7 +3,7 @@ triple:          'arm64-apple-darwin'
 binary-path:     '/Users/user/Library/Developer/Xcode/DerivedData/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi/Build/Intermediates.noindex/ArchiveIntermediates/VideoEditor/InstallationBuildProductsLocation/Library/Frameworks/VideoEditor.framework/VideoEditor'
 relocations:
   - { offsetInCU: 0x34, offset: 0x73F55, size: 0x8, addend: 0x0, symName: _VideoEditorVersionString, symObjAddr: 0x0, symBinAddr: 0x4F220, symSize: 0x0 }
-  - { offsetInCU: 0x69, offset: 0x73F8A, size: 0x8, addend: 0x0, symName: _VideoEditorVersionNumber, symObjAddr: 0x38, symBinAddr: 0x4F258, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x73F8A, size: 0x8, addend: 0x0, symName: _VideoEditorVersionNumber, symObjAddr: 0x40, symBinAddr: 0x4F260, symSize: 0x0 }
   - { offsetInCU: 0x3F, offset: 0x73FDF, size: 0x8, addend: 0x0, symName: ___swift_memcpy24_4, symObjAddr: 0x64, symBinAddr: 0x8064, symSize: 0x14 }
   - { offsetInCU: 0x53, offset: 0x73FF3, size: 0x8, addend: 0x0, symName: ___swift_noop_void_return, symObjAddr: 0x78, symBinAddr: 0x8078, symSize: 0x4 }
   - { offsetInCU: 0x67, offset: 0x74007, size: 0x8, addend: 0x0, symName: '_$sSo6CMTimeawet', symObjAddr: 0x7C, symBinAddr: 0x807C, symSize: 0x20 }
