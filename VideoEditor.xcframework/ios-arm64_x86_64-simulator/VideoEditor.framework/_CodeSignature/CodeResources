@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ciuyeQFLII5OUI2WtvTOoGNbEBY=
+		P2ip6EKbLAsvLxxcZX4YzkAv3cM=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -63,6 +63,10 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		WlP1Yo0DYu6ek7lwsUXNaANnXnU=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		3tqGi0Hnvkl3pLLmPC4+dxADBoY=
 		</data>
 		<key>blank_video.mp4</key>
 		<data>
@@ -171,6 +175,13 @@
 			<key>hash2</key>
 			<data>
 			FaaMeu7HGD486YUxu+mtbld155/qWRpG+IIwDZutVX4=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pVoL1WmSQsBt2GetxnbDcMeLXFBRgG4QXBNBc9Ls8iw=
 			</data>
 		</dict>
 		<key>blank_video.mp4</key>
