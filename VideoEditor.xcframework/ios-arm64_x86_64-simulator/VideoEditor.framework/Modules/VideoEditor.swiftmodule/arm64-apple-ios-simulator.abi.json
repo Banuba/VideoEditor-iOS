@@ -22336,140 +22336,140 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 8007,
+      "offset": 7951,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9228,
+      "offset": 9172,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9397,
+      "offset": 9341,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 10965,
+      "offset": 10854,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 12780,
+      "offset": 12669,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "StringLiteral",
-      "offset": 13137,
+      "offset": 13026,
       "length": 35,
       "value": "\"No valid time range in track info\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 13848,
+      "offset": 13737,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 14151,
+      "offset": 14040,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 15068,
+      "offset": 14957,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 16623,
+      "offset": 16512,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 16998,
+      "offset": 16887,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 17112,
+      "offset": 17001,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 17363,
+      "offset": 17252,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 17444,
+      "offset": 17333,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "StringLiteral",
-      "offset": 18002,
+      "offset": 17891,
       "length": 27,
       "value": "\"Cannot insert audio track\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 18061,
+      "offset": 17950,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 19170,
+      "offset": 19059,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 19779,
+      "offset": 19668,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 19795,
+      "offset": 19684,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "StringLiteral",
-      "offset": 20461,
+      "offset": 20350,
       "length": 21,
       "value": "\"index out of bounds\""
     },
