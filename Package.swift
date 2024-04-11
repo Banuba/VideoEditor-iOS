@@ -1,17 +1,22 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
+
 import PackageDescription
+
 let package = Package(
   name: "VideoEditor",
   platforms: [
-    .iOS(.v12)
+    .iOS(.v15)
   ],
   products: [
     .library(
       name: "VideoEditor",
-      targets: ["VideoEditor"])
+      targets: ["VideoEditor"]
+    )
   ],
   targets: [
     .binaryTarget(
       name: "VideoEditor",
-      path: "VideoEditor.xcframework")
-  ])
+      path: "VideoEditor.xcframework"
+    )
+  ]
+)
