@@ -22115,106 +22115,113 @@
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12128,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 15776,
+      "offset": 16063,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 16949,
+      "offset": 17236,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18687,
+      "offset": 18974,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 19285,
+      "offset": 19572,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 20667,
+      "offset": 20954,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 20861,
+      "offset": 21148,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21022,
+      "offset": 21309,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 21519,
+      "offset": 21806,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22112,
+      "offset": 22399,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22300,
+      "offset": 22587,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23024,
+      "offset": 23311,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23222,
+      "offset": 23509,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 24279,
+      "offset": 24566,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 26593,
+      "offset": 26880,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 28975,
+      "offset": 29262,
       "length": 5,
       "value": "false"
     },
