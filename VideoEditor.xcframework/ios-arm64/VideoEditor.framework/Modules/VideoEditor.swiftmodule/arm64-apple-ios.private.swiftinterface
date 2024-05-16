@@ -413,6 +413,12 @@ extension VideoEditor.VideoSequence {
 extension VideoEditor.VideoSequence {
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
 }
+@_hasMissingDesignatedInitializers public class VideoSpeedHelper {
+  public static func generateFilename(with name: Swift.String, speed: Swift.Double) -> Swift.String
+  public static func extractSpeed(from filename: Swift.String) -> Swift.Double
+  public static func extractSpeed(from fileUrl: Foundation.URL) -> Swift.Double
+  @objc deinit
+}
 @objc public class VideoImagesComposition : ObjectiveC.NSObject {
   public init(sequence: VideoEditor.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
   public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)?)
@@ -437,6 +443,10 @@ public protocol VideoEditorSDKServicing {
 }
 public protocol AudioVideoEditorSDKServicing : VideoEditor.VideoEditorSDKServicing {
   var audioService: any BanubaUtilities.AudioServicing { get }
+}
+extension CoreMedia.CMTime {
+  public func scaledTime(by scaleValue: Swift.Double) -> CoreMedia.CMTime
+  public func unscaledTime(by scaleValue: Swift.Double) -> CoreMedia.CMTime
 }
 public protocol EffectsManagement : AnyObject {
   func getStoredEffects(type: VideoEditor.EditorEffectType) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
@@ -473,6 +483,11 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
   public var rawValue: Swift.UInt8 {
     get
   }
+}
+extension AVFoundation.AVAssetTrack {
+  public func transform(with dstSize: CoreFoundation.CGSize) -> CoreFoundation.CGAffineTransform
+  public func fillOrFitTransform(with dstSize: CoreFoundation.CGSize, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, rotation: VideoEditor.AssetRotation) -> CoreFoundation.CGAffineTransform
+  public func compositionTransformInstruction(transform: CoreFoundation.CGAffineTransform, start: CoreMedia.CMTime, duration: CoreMedia.CMTime, bgColor: CoreGraphics.CGColor? = nil) -> any AVFoundation.AVVideoCompositionInstructionProtocol
 }
 @_hasMissingDesignatedInitializers public class ExportScaledTimeline : VideoEditor.EffectStack {
   public var composition: AVFoundation.AVMutableComposition? {
@@ -572,6 +587,10 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
     get
     set
   }
+  public var speed: Swift.Double? {
+    get
+    set
+  }
   public var videoName: Swift.String {
     get
   }
@@ -595,12 +614,13 @@ public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
   public var timeRangeInGlobal: CoreMedia.CMTimeRange
   final public let originalAssetResolution: CoreFoundation.CGSize?
   public var transitionEffectType: BanubaUtilities.TransitionType
-  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, transitionEffectType: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, transitionEffectType: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
   public func copy() -> VideoEditor.VideoEditorAssetTrackInfo
   public func replaceAssetUrl(_ url: Foundation.URL)
   public func rotate(clockwise: Swift.Bool)
   public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
   public func updatePreview()
+  public func extractSpeed() -> Swift.Double
   @objc deinit
   public var hashValue: Swift.Int {
     get
