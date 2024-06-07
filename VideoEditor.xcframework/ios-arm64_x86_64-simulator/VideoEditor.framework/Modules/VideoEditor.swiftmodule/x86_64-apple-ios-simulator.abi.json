@@ -11136,6 +11136,36 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "deleteVideo",
+            "printedName": "deleteVideo(uuidString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0A8SequenceC06deleteA010uuidStringSbSS_tF",
+            "mangledName": "$s11VideoEditor0A8SequenceC06deleteA010uuidStringSbSS_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "hasRemovedVideos",
             "printedName": "hasRemovedVideos",
@@ -16291,6 +16321,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC3url10Foundation3URLVvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "HasStorage",
               "SetterAccess",
               "AccessControl",
@@ -16315,6 +16346,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC3url10Foundation3URLVvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -16344,6 +16378,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20fillAspectRatioRangeSNy12CoreGraphics7CGFloatVGvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -16375,6 +16410,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20fillAspectRatioRangeSNy12CoreGraphics7CGFloatVGvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -16407,6 +16445,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20fillAspectRatioRangeSNy12CoreGraphics7CGFloatVGvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -16425,6 +16466,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20fillAspectRatioRangeSNy12CoreGraphics7CGFloatVGvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -16504,6 +16548,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -16535,6 +16580,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC15videoCurentSize12CoreGraphics7CGFloatVSgvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -16567,6 +16615,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC15videoCurentSize12CoreGraphics7CGFloatVSgvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -16585,6 +16636,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC15videoCurentSize12CoreGraphics7CGFloatVSgvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -16615,6 +16669,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -16646,6 +16701,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9thumbnailSo7UIImageCSgvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -16678,6 +16736,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9thumbnailSo7UIImageCSgvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -16696,6 +16757,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9thumbnailSo7UIImageCSgvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -16726,6 +16790,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -16757,6 +16822,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10thumbnailsSaySo7UIImageCGvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -16789,6 +16857,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10thumbnailsSaySo7UIImageCGvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -16807,6 +16878,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10thumbnailsSaySo7UIImageCGvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -16829,6 +16903,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -16852,6 +16927,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC13trimTimeRangeSo06CMTimeH0avg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -16876,6 +16954,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC13trimTimeRangeSo06CMTimeH0avs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -16894,6 +16975,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC13trimTimeRangeSo06CMTimeH0avM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -16916,6 +17000,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -16939,6 +17024,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC8rotationAA0C8RotationOvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -16963,6 +17051,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC8rotationAA0C8RotationOvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -16981,6 +17072,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC8rotationAA0C8RotationOvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -17011,6 +17105,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -17042,6 +17137,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC5speedSdSgvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -17074,6 +17172,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC5speedSdSgvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -17092,6 +17193,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC5speedSdSgvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -17113,6 +17217,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9videoNameSSvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -17133,6 +17238,9 @@
                 "usr": "s:11VideoEditor0aB14AssetTrackInfoC9videoNameSSvg",
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9videoNameSSvg",
                 "moduleName": "VideoEditor",
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -17154,6 +17262,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC09isGalleryC0Sbvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -17177,6 +17286,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC09isGalleryC0Sbvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -17201,6 +17313,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC09isGalleryC0Sbvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -17219,6 +17334,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC09isGalleryC0SbvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -17240,6 +17358,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC11isSlideShowSbvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -17263,6 +17382,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC11isSlideShowSbvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -17287,6 +17409,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC11isSlideShowSbvs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -17305,6 +17430,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC11isSlideShowSbvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -17335,6 +17463,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "SetterAccess",
               "AccessControl",
@@ -17367,6 +17496,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC11compositionSo13AVCompositionCSgvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -17405,6 +17537,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "SetterAccess",
               "AccessControl",
@@ -17445,6 +17578,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC12instructionsSaySo29AVVideoCompositionInstruction_pGSgvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -17475,6 +17611,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "SetterAccess",
               "AccessControl",
@@ -17507,6 +17644,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC5errors5Error_pSgvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -17529,6 +17669,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "SetterAccess",
               "AccessControl",
@@ -17553,6 +17694,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9timeRangeSo06CMTimeG0avg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -17574,6 +17718,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC03urlC0So7AVAssetCvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "HasStorage",
               "SetterAccess",
               "AccessControl",
@@ -17598,6 +17743,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC03urlC0So7AVAssetCvg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -17620,6 +17768,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -17643,6 +17792,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC17timeRangeInGlobalSo06CMTimeG0avg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -17667,6 +17819,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC17timeRangeInGlobalSo06CMTimeG0avs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -17685,6 +17840,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC17timeRangeInGlobalSo06CMTimeG0avM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -17772,6 +17930,7 @@
             "moduleName": "VideoEditor",
             "declAttributes": [
               "HasInitialValue",
+              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
@@ -17795,6 +17954,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20transitionEffectType15BanubaUtilities010TransitionH0Ovg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -17819,6 +17981,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20transitionEffectType15BanubaUtilities010TransitionH0Ovs",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -17837,6 +18002,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC20transitionEffectType15BanubaUtilities010TransitionH0OvM",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -17962,6 +18130,708 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "TypeDecl",
+            "name": "CodingKeys",
+            "printedName": "CodingKeys",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "uuidString",
+                "printedName": "uuidString",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO10uuidStringyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO10uuidStringyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "url",
+                "printedName": "url",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO3urlyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO3urlyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "rotation",
+                "printedName": "rotation",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rotationyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rotationyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "thumbnail",
+                "printedName": "thumbnail",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO9thumbnailyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO9thumbnailyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "fillAspectRatioRange",
+                "printedName": "fillAspectRatioRange",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO20fillAspectRatioRangeyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO20fillAspectRatioRangeyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "videoResolutionConfiguration",
+                "printedName": "videoResolutionConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO28videoResolutionConfigurationyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO28videoResolutionConfigurationyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "isGalleryAsset",
+                "printedName": "isGalleryAsset",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO09isGalleryC0yA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO09isGalleryC0yA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "isSlideShow",
+                "printedName": "isSlideShow",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11isSlideShowyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11isSlideShowyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Var",
+                "name": "originalAssetResolution",
+                "printedName": "originalAssetResolution",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type) -> VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO08originalC10ResolutionyA2EmF",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO08originalC10ResolutionyA2EmF",
+                "moduleName": "VideoEditor"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rawValueAESgSS_tcfc",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rawValueAESgSS_tcfc",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rawValueSSvp",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rawValueSSvp",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rawValueSSvg",
+                    "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8rawValueSSvg",
+                    "moduleName": "VideoEditor",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "stringValue",
+                "printedName": "stringValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11stringValueSSvp",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11stringValueSSvp",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11stringValueSSvg",
+                    "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11stringValueSSvg",
+                    "moduleName": "VideoEditor",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(stringValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11stringValueAESgSS_tcfc",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO11stringValueAESgSS_tcfc",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "intValue",
+                "printedName": "intValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8intValueSiSgvp",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8intValueSiSgvp",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Int?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8intValueSiSgvg",
+                    "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8intValueSiSgvg",
+                    "moduleName": "VideoEditor",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(intValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "VideoEditor.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8intValueAESgSi_tcfc",
+                "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO8intValueAESgSi_tcfc",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:11VideoEditor0aB14AssetTrackInfoC10CodingKeysO",
+            "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC10CodingKeysO",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CodingKey",
+                "printedName": "CodingKey",
+                "usr": "s:s9CodingKeyP",
+                "mangledName": "$ss9CodingKeyP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorAssetTrackInfo",
+                "printedName": "VideoEditor.VideoEditorAssetTrackInfo",
+                "usr": "s:11VideoEditor0aB14AssetTrackInfoC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoEditor0aB14AssetTrackInfoC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0aB14AssetTrackInfoC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC6encode2toys7Encoder_p_tKF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Function",
             "name": "copy",
             "printedName": "copy()",
@@ -17978,6 +18848,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC4copyACyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18005,6 +18876,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC07replaceC3Urlyy10Foundation3URLVF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18032,6 +18904,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC6rotate9clockwiseySb_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18054,6 +18927,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC30getTimeRangeWithSpeedExtensionSo06CMTimeH0ayF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18075,6 +18949,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC13updatePreviewyyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18097,6 +18972,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC12extractSpeedSdyF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18119,6 +18995,9 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9hashValueSivp",
             "moduleName": "VideoEditor",
             "implicit": true,
+            "declAttributes": [
+              "Final"
+            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -18137,6 +19016,9 @@
                 "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC9hashValueSivg",
                 "moduleName": "VideoEditor",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -18200,6 +19082,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC4hash4intoys6HasherVz_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -18228,6 +19111,7 @@
             "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC014isTimeInGlobalG5RangeySbSo6CMTimeaF",
             "moduleName": "VideoEditor",
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -18239,6 +19123,7 @@
         "mangledName": "$s11VideoEditor0aB14AssetTrackInfoC",
         "moduleName": "VideoEditor",
         "declAttributes": [
+          "Final",
           "AccessControl",
           "RawDocComment"
         ],
@@ -18256,6 +19141,20 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
           }
         ]
       },
@@ -23538,372 +24437,379 @@
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8695,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "IntegerLiteral",
-      "offset": 8654,
+      "offset": 8943,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 8816,
+      "offset": 9105,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "Array",
-      "offset": 8995,
+      "offset": 9284,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 9516,
+      "offset": 9805,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 9696,
+      "offset": 9985,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 9760,
+      "offset": 10049,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 11023,
+      "offset": 11312,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11055,
+      "offset": 11344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11103,
+      "offset": 11392,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11137,
+      "offset": 11426,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11237,
+      "offset": 11526,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11273,
+      "offset": 11562,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 11831,
+      "offset": 12120,
       "length": 77,
       "value": "\"Failed to copy video file to sequence. Error message: \""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 11907,
+      "offset": 12196,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 12147,
+      "offset": 12436,
       "length": 77,
       "value": "\"Failed to move video file to sequence. Error message: \""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 12223,
+      "offset": 12512,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 12801,
+      "offset": 13090,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 14265,
+      "offset": 14554,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 14358,
+      "offset": 14647,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 14723,
+      "offset": 15012,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 15537,
+      "offset": 15826,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 15833,
+      "offset": 16122,
       "length": 42,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 15841,
+      "offset": 16130,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 15874,
+      "offset": 16163,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 15950,
+      "offset": 16239,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 16137,
+      "offset": 16426,
       "length": 65,
       "value": "\"func savePreviewImage throw error \""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 16201,
+      "offset": 16490,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 16374,
+      "offset": 16663,
       "length": 65,
       "value": "\"func savePreviewImage throw error \""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 16438,
+      "offset": 16727,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "Array",
-      "offset": 16992,
+      "offset": 17281,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "Array",
-      "offset": 17040,
+      "offset": 17329,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 18004,
+      "offset": 18293,
       "length": 73,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 18043,
+      "offset": 18332,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 18076,
+      "offset": 18365,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 18394,
+      "offset": 18683,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 19968,
+      "offset": 20257,
       "length": 85,
       "value": "\"func updateSettings(forVideoSequenceItem) throw error \""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "StringLiteral",
-      "offset": 20052,
+      "offset": 20341,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "Array",
-      "offset": 20393,
+      "offset": 20682,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "Array",
-      "offset": 20451,
+      "offset": 20740,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 20486,
+      "offset": 20775,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 20728,
+      "offset": 21017,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 21703,
+      "offset": 21992,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 21974,
+      "offset": 22263,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 22138,
+      "offset": 22427,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22352,
+      "offset": 22641,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "IntegerLiteral",
-      "offset": 22510,
+      "offset": 22799,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22746,
+      "offset": 23035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22849,
+      "offset": 23138,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 24843,
+      "offset": 25132,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 24985,
+      "offset": 25274,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 25746,
+      "offset": 26035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 26463,
+      "offset": 26752,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 27042,
+      "offset": 27331,
       "length": 5,
       "value": "false"
     },
@@ -25051,56 +25957,63 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "Array",
-      "offset": 882,
+      "offset": 897,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 3668,
+      "offset": 3683,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "BooleanLiteral",
-      "offset": 4791,
+      "offset": 4946,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6741,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 5185,
+      "offset": 7135,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 5825,
+      "offset": 7775,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 5892,
+      "offset": 7842,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 7631,
+      "offset": 9581,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 7698,
+      "offset": 9648,
       "length": 3,
       "value": "1.0"
     },

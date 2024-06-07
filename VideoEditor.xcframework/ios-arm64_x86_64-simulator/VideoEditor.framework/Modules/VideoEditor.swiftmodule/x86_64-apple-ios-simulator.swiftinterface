@@ -382,6 +382,8 @@ extension VideoEditor.VideoSequence {
   public func removeVideos()
   @discardableResult
   public func deleteVideo(_ video: VideoEditor.VideoSequenceItem) -> Swift.Bool
+  @discardableResult
+  public func deleteVideo(uuidString: Swift.String) -> Swift.Bool
   public var hasRemovedVideos: Swift.Bool {
     get
   }
@@ -572,66 +574,92 @@ public struct VideoSequenceNameFormatter {
   public func formattedNameFromDate(_ date: Foundation.Date) -> Swift.String
   public func formattedDraftSubtitleFromTime(_ time: Foundation.TimeInterval) -> Swift.String
 }
-public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable {
+final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, Swift.Codable {
   final public let uuidString: Swift.String
-  public var url: Foundation.URL {
+  final public var url: Foundation.URL {
     get
   }
-  public var fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>
+  final public var fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>
   final public let videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
-  public var videoCurentSize: CoreFoundation.CGFloat?
-  public var thumbnail: UIKit.UIImage?
-  public var thumbnails: [UIKit.UIImage]
-  public var trimTimeRange: CoreMedia.CMTimeRange
-  public var rotation: VideoEditor.AssetRotation {
+  final public var videoCurentSize: CoreFoundation.CGFloat?
+  final public var thumbnail: UIKit.UIImage?
+  final public var thumbnails: [UIKit.UIImage]
+  final public var trimTimeRange: CoreMedia.CMTimeRange
+  final public var rotation: VideoEditor.AssetRotation {
     get
     set
   }
-  public var speed: Swift.Double? {
+  final public var speed: Swift.Double? {
     get
     set
   }
-  public var videoName: Swift.String {
+  final public var videoName: Swift.String {
     get
   }
-  public var isGalleryAsset: Swift.Bool
-  public var isSlideShow: Swift.Bool
-  public var composition: AVFoundation.AVComposition! {
+  final public var isGalleryAsset: Swift.Bool
+  final public var isSlideShow: Swift.Bool
+  final public var composition: AVFoundation.AVComposition! {
     get
   }
-  public var instructions: [any AVFoundation.AVVideoCompositionInstructionProtocol]? {
+  final public var instructions: [any AVFoundation.AVVideoCompositionInstructionProtocol]? {
     get
   }
-  public var error: (any Swift.Error)? {
+  final public var error: (any Swift.Error)? {
     get
   }
-  public var timeRange: CoreMedia.CMTimeRange {
+  final public var timeRange: CoreMedia.CMTimeRange {
     get
   }
-  public var urlAsset: AVFoundation.AVAsset {
+  final public var urlAsset: AVFoundation.AVAsset {
     get
   }
-  public var timeRangeInGlobal: CoreMedia.CMTimeRange
+  final public var timeRangeInGlobal: CoreMedia.CMTimeRange
   final public let originalAssetResolution: CoreFoundation.CGSize?
-  public var transitionEffectType: BanubaUtilities.TransitionType
+  final public var transitionEffectType: BanubaUtilities.TransitionType
   public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, transitionEffectType: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
-  public func copy() -> VideoEditor.VideoEditorAssetTrackInfo
-  public func replaceAssetUrl(_ url: Foundation.URL)
-  public func rotate(clockwise: Swift.Bool)
-  public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
-  public func updatePreview()
-  public func extractSpeed() -> Swift.Double
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case uuidString
+    case url
+    case rotation
+    case thumbnail
+    case fillAspectRatioRange
+    case videoResolutionConfiguration
+    case isGalleryAsset
+    case isSlideShow
+    case originalAssetResolution
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  final public func encode(to encoder: any Swift.Encoder) throws
+  final public func copy() -> VideoEditor.VideoEditorAssetTrackInfo
+  final public func replaceAssetUrl(_ url: Foundation.URL)
+  final public func rotate(clockwise: Swift.Bool)
+  final public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
+  final public func updatePreview()
+  final public func extractSpeed() -> Swift.Double
   @objc deinit
-  public var hashValue: Swift.Int {
+  final public var hashValue: Swift.Int {
     get
   }
 }
 extension VideoEditor.VideoEditorAssetTrackInfo {
   public static func == (lhs: VideoEditor.VideoEditorAssetTrackInfo, rhs: VideoEditor.VideoEditorAssetTrackInfo) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
+  final public func hash(into hasher: inout Swift.Hasher)
 }
 extension VideoEditor.VideoEditorAssetTrackInfo {
-  public func isTimeInGlobalTimeRange(_ time: CoreMedia.CMTime) -> Swift.Bool
+  final public func isTimeInGlobalTimeRange(_ time: CoreMedia.CMTime) -> Swift.Bool
 }
 public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
   func getEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
@@ -742,5 +770,8 @@ extension VideoEditor.AssetRotation : Swift.RawRepresentable {}
 extension VideoEditor.EffectSpeed : Swift.Equatable {}
 extension VideoEditor.EffectSpeed : Swift.Hashable {}
 extension VideoEditor.EffectSpeed : Swift.RawRepresentable {}
+extension VideoEditor.VideoEditorAssetTrackInfo.CodingKeys : Swift.Equatable {}
+extension VideoEditor.VideoEditorAssetTrackInfo.CodingKeys : Swift.Hashable {}
+extension VideoEditor.VideoEditorAssetTrackInfo.CodingKeys : Swift.RawRepresentable {}
 extension VideoEditor.WatermarkConfiguration.WatermarkPosition : Swift.Equatable {}
 extension VideoEditor.WatermarkConfiguration.WatermarkPosition : Swift.Hashable {}
