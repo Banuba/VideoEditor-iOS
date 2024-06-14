@@ -337,6 +337,8 @@ public class VideoSequenceItem {
   final public let isPIP: Swift.Bool
   final public let isCopy: Swift.Bool
   public var rotation: VideoEditor.AssetRotation
+  public var crop: VideoEditor.AssetCrop?
+  public var cropFrame: CoreFoundation.CGRect?
   final public let preview: UIKit.UIImage?
   final public let originalAssetResolution: CoreFoundation.CGSize?
   public var previewUrl: Foundation.URL?
@@ -347,7 +349,7 @@ public class VideoSequenceItem {
     get
   }
   public var transition: BanubaUtilities.TransitionType
-  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
   public func tryReplaceVideo(at videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
@@ -396,9 +398,9 @@ extension VideoEditor.VideoSequence {
 }
 extension VideoEditor.VideoSequence {
   @discardableResult
-  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
+  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   @discardableResult
-  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
 }
 extension VideoEditor.VideoSequence {
@@ -470,6 +472,22 @@ public protocol EffectsManagement : AnyObject {
 public class VideoEditorImagesSequence {
   @objc deinit
   public init(imageAssets: [any VideoEditor.VideoEditorImageAssetProtocol])
+}
+public enum AssetCrop : Swift.UInt8, Swift.Codable {
+  case custom
+  case crop9x16
+  case crop3x4
+  case crop4x3
+  case crop1x1
+  case crop4x5
+  public var value: CoreFoundation.CGFloat {
+    get
+  }
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
 }
 public enum AssetRotation : Swift.UInt8, Swift.Codable {
   case none
@@ -593,6 +611,8 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
     get
     set
   }
+  final public var cropFrame: CoreFoundation.CGRect?
+  final public var crop: VideoEditor.AssetCrop?
   final public var videoName: Swift.String {
     get
   }
@@ -764,6 +784,9 @@ extension VideoEditor.EditorEffectType : Swift.Hashable {}
 extension VideoEditor.EditorEffectType : Swift.RawRepresentable {}
 extension VideoEditor.ContentLocationType : Swift.Equatable {}
 extension VideoEditor.ContentLocationType : Swift.Hashable {}
+extension VideoEditor.AssetCrop : Swift.Equatable {}
+extension VideoEditor.AssetCrop : Swift.Hashable {}
+extension VideoEditor.AssetCrop : Swift.RawRepresentable {}
 extension VideoEditor.AssetRotation : Swift.Equatable {}
 extension VideoEditor.AssetRotation : Swift.Hashable {}
 extension VideoEditor.AssetRotation : Swift.RawRepresentable {}
