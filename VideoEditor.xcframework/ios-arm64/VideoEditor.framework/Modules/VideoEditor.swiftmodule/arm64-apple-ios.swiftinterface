@@ -63,6 +63,7 @@ public struct CustomSDKVideoCompositionConfig {
   public static let renderingQueueName: Swift.String
 }
 public enum EditorEffectType : Swift.Int {
+  case crop
   case transition
   case blur
   case gif
@@ -398,7 +399,7 @@ extension VideoEditor.VideoSequence {
 }
 extension VideoEditor.VideoSequence {
   @discardableResult
-  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
+  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop? = nil, cropFrame: CoreFoundation.CGRect? = nil, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   @discardableResult
   public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
@@ -472,6 +473,10 @@ public protocol EffectsManagement : AnyObject {
 public class VideoEditorImagesSequence {
   @objc deinit
   public init(imageAssets: [any VideoEditor.VideoEditorImageAssetProtocol])
+}
+@_hasMissingDesignatedInitializers public class VideoEditorTrackRotationCalculator {
+  public static func getTrackRotation(_ track: VideoEditor.VideoEditorAssetTrackInfo) -> VideoEditor.AssetRotation
+  @objc deinit
 }
 public enum AssetCrop : Swift.UInt8, Swift.Codable {
   case custom
@@ -613,6 +618,9 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   }
   final public var cropFrame: CoreFoundation.CGRect?
   final public var crop: VideoEditor.AssetCrop?
+  final public var videoSize: CoreFoundation.CGSize {
+    get
+  }
   final public var videoName: Swift.String {
     get
   }
