@@ -154,7 +154,7 @@ relocations:
   - { offsetInCU: 0xD6, offset: 0x808EA, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeOSYAASY8rawValuexSg03RawF0Qz_tcfCTW', symObjAddr: 0x1DC, symBinAddr: 0xDCFC, symSize: 0x8 }
   - { offsetInCU: 0xF2, offset: 0x80906, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeOSYAASY8rawValue03RawF0QzvgTW', symObjAddr: 0x1E4, symBinAddr: 0xDD04, symSize: 0x14 }
   - { offsetInCU: 0x10A, offset: 0x8091E, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeOSYAASY8rawValue03RawF0QzvgTW', symObjAddr: 0x1E4, symBinAddr: 0xDD04, symSize: 0x14 }
-  - { offsetInCU: 0x128, offset: 0x8093C, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeO019possibleIntersectedC5TypesSayACGvpZ', symObjAddr: 0x4B30, symBinAddr: 0x6D240, symSize: 0x0 }
+  - { offsetInCU: 0x128, offset: 0x8093C, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeO019possibleIntersectedC5TypesSayACGvpZ', symObjAddr: 0x4B28, symBinAddr: 0x6D240, symSize: 0x0 }
   - { offsetInCU: 0x157, offset: 0x8096B, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeO19imageAppliedEffects33_9D42124767D0F87A7A3E2D8B31BD0E8ALL_WZ', symObjAddr: 0x0, symBinAddr: 0xDB20, symSize: 0x4C }
   - { offsetInCU: 0x1C6, offset: 0x809DA, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeO019possibleIntersectedC5Types_WZ', symObjAddr: 0x4C, symBinAddr: 0xDB6C, symSize: 0x4C }
   - { offsetInCU: 0x240, offset: 0x80A54, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0B10EffectTypeOSHAASQWb', symObjAddr: 0xD8, symBinAddr: 0xDBF8, symSize: 0x4 }
@@ -795,7 +795,7 @@ relocations:
   - { offsetInCU: 0x2407, offset: 0xA4B30, size: 0x8, addend: 0x0, symName: '_$sSMsSkRzrlE4sort2byySb7ElementSTQz_ADtKXE_tKFSay11VideoEditor0E33CompositionEditableEffectProtocol_pG_Tg504$s11d8Editor11h38StackC13getAllEffects2at4fromSayAA0b19fg2C8i26_pGSo6CMTimea_AHtFSbAaG_p_W10G_ptXEfU4_Tf1cn_n', symObjAddr: 0x0, symBinAddr: 0x2F60C, symSize: 0x6C }
   - { offsetInCU: 0x2699, offset: 0xA4DC2, size: 0x8, addend: 0x0, symName: '_$ss14_ArrayProtocolPsE6filterySay7ElementQzGSbAEKXEKFSay11VideoEditor0f25CompositionEditableEffectB0_pG_Tg504$s11e8Editor11i38StackC13getAllEffects2at4fromSayAA0b19gh2C8B30_pGSo6CMTimea_AHtFSbAaG_pXEfU_AG0iL0CTf1cn_nTf4gg_n', symObjAddr: 0x19E4, symBinAddr: 0x30FF0, symSize: 0x198 }
   - { offsetInCU: 0x2B, offset: 0xA5284, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor14RenderersCacheC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x311C0, symSize: 0x44 }
-  - { offsetInCU: 0x4F, offset: 0xA52A8, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor14RenderersCacheC6sharedACvpZ', symObjAddr: 0x3510, symBinAddr: 0x6D320, symSize: 0x0 }
+  - { offsetInCU: 0x4F, offset: 0xA52A8, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor14RenderersCacheC6sharedACvpZ', symObjAddr: 0x3508, symBinAddr: 0x6D320, symSize: 0x0 }
   - { offsetInCU: 0xB6, offset: 0xA530F, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor14RenderersCacheCfD', symObjAddr: 0x44, symBinAddr: 0x31204, symSize: 0x24 }
   - { offsetInCU: 0x102, offset: 0xA535B, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor14RenderersCacheC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x311C0, symSize: 0x44 }
   - { offsetInCU: 0x166, offset: 0xA53BF, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor14RenderersCacheCMa', symObjAddr: 0x68, symBinAddr: 0x31228, symSize: 0x20 }
@@ -931,7 +931,7 @@ relocations:
   - { offsetInCU: 0xD40, offset: 0xA9F99, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor13AssetRotationOSeAASe4fromxs7Decoder_p_tKcfCTW', symObjAddr: 0x758, symBinAddr: 0x33EB4, symSize: 0x5C }
   - { offsetInCU: 0xD63, offset: 0xA9FBC, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor13AssetRotationOSEAASE6encode2toys7Encoder_p_tKFTW', symObjAddr: 0x7B4, symBinAddr: 0x33F10, symSize: 0x4C }
   - { offsetInCU: 0x27, offset: 0xAA3ED, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0aB8SettingsV20defaultFrameDuration_WZ', symObjAddr: 0x0, symBinAddr: 0x348B4, symSize: 0x34 }
-  - { offsetInCU: 0x4B, offset: 0xAA411, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0aB8SettingsV20defaultFrameDurationSo6CMTimeavpZ', symObjAddr: 0x2D18, symBinAddr: 0x6D338, symSize: 0x0 }
+  - { offsetInCU: 0x4B, offset: 0xAA411, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0aB8SettingsV20defaultFrameDurationSo6CMTimeavpZ', symObjAddr: 0x2D10, symBinAddr: 0x6D338, symSize: 0x0 }
   - { offsetInCU: 0x59, offset: 0xAA41F, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor0aB8SettingsV20defaultFrameDuration_WZ', symObjAddr: 0x0, symBinAddr: 0x348B4, symSize: 0x34 }
   - { offsetInCU: 0x2B, offset: 0xAA6A0, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor20ExportScaledTimelineC11compositionSo20AVMutableCompositionCSgvpACTk', symObjAddr: 0x0, symBinAddr: 0x348E8, symSize: 0x5C }
   - { offsetInCU: 0x79, offset: 0xAA6EE, size: 0x8, addend: 0x0, symName: '_$s11VideoEditor20ExportScaledTimelineC11compositionSo20AVMutableCompositionCSgvg', symObjAddr: 0x5C, symBinAddr: 0x34944, symSize: 0x44 }
