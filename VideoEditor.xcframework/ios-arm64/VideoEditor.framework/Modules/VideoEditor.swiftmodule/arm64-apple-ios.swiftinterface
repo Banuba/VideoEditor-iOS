@@ -91,7 +91,7 @@ public protocol VideoEditorTrackServicing {
   func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   func setPiPAudioVolume(_ volume: Swift.Float)
   func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
-  func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
+  func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
   func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   func removeTrack(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
@@ -189,8 +189,7 @@ extension VideoEditor.VideoEditorService : VideoEditor.VideoEditorTrackServicing
   final public func getPiPAudioVolume() -> Swift.Float
   final public func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   final public func setPiPAudioVolume(_ volume: Swift.Float)
-  final public func hasPiPAudioTrack() -> Swift.Bool
-  final public func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
+  final public func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
   final public func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
   final public func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
@@ -350,7 +349,6 @@ public class VideoSequenceItem {
   }
   public var transition: BanubaUtilities.TransitionType
   public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: VideoEditor.AssetRotation, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
-  public func tryReplaceVideo(at videoUrl: Foundation.URL) -> Swift.Bool
   @objc deinit
 }
 @objc public class VideoSequence : ObjectiveC.NSObject {
@@ -400,12 +398,12 @@ extension VideoEditor.VideoSequence {
   @discardableResult
   public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop? = nil, cropFrame: CoreFoundation.CGRect? = nil, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   @discardableResult
-  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
 }
 extension VideoEditor.VideoSequence {
   public typealias SequnceVideos = (originalVideos: [VideoEditor.VideoSequenceItem], videos: [VideoEditor.VideoSequenceItem])
-  public func getVideoFileNames(in directory: Foundation.URL) -> VideoEditor.VideoSequence.SequnceVideos
+  public func getVideoFileNames() -> VideoEditor.VideoSequence.SequnceVideos
 }
 extension VideoEditor.VideoSequence {
   public func totalDuration(isSpeedCountingEnabled: Swift.Bool = true) -> Foundation.TimeInterval
@@ -605,7 +603,6 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public let videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
   final public var videoCurentSize: CoreFoundation.CGFloat?
   final public var thumbnail: UIKit.UIImage?
-  final public var thumbnails: [UIKit.UIImage]
   final public var trimTimeRange: CoreMedia.CMTimeRange
   final public var rotation: VideoEditor.AssetRotation {
     get
@@ -643,7 +640,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public var timeRangeInGlobal: CoreMedia.CMTimeRange
   final public let originalAssetResolution: CoreFoundation.CGSize?
   final public var transitionEffectType: BanubaUtilities.TransitionType
-  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, transitionEffectType: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, url: Foundation.URL, rotation: VideoEditor.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case uuidString
     case url
@@ -684,9 +681,6 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
 extension VideoEditor.VideoEditorAssetTrackInfo {
   public static func == (lhs: VideoEditor.VideoEditorAssetTrackInfo, rhs: VideoEditor.VideoEditorAssetTrackInfo) -> Swift.Bool
   final public func hash(into hasher: inout Swift.Hasher)
-}
-extension VideoEditor.VideoEditorAssetTrackInfo {
-  final public func isTimeInGlobalTimeRange(_ time: CoreMedia.CMTime) -> Swift.Bool
 }
 public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
   func getEffects(at time: CoreMedia.CMTime) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
@@ -764,7 +758,6 @@ public protocol VideoSequenceServicing {
   func replaceSequence(_ videoSequenceToReplace: VideoEditor.VideoSequence, withSequence videoSequence: VideoEditor.VideoSequence)
   @discardableResult
   func removeSequence(_ videoSequence: VideoEditor.VideoSequence) -> Swift.Bool
-  func removeAllSequences()
 }
 public class VideoSequenceService {
   public var videoSequences: [VideoEditor.VideoSequence] {
@@ -784,7 +777,6 @@ extension VideoEditor.VideoSequenceService : VideoEditor.VideoSequenceServicing 
   @discardableResult
   public func duplicateSequence(_ videoSequence: VideoEditor.VideoSequence) -> VideoEditor.VideoSequence
   public func replaceSequence(_ videoSequenceToReplace: VideoEditor.VideoSequence, withSequence videoSequence: VideoEditor.VideoSequence)
-  public func removeAllSequences()
 }
 extension VideoEditor.EditorEffectType : Swift.Equatable {}
 extension VideoEditor.EditorEffectType : Swift.Hashable {}
