@@ -254,9 +254,6 @@ public class VideoEditorAsset {
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
-  @objc deinit
-}
-extension VideoEditor.VideoEditorAsset {
   public func changeMusicTrackPosition(_ musicTrack: BanubaUtilities.MediaTrack) -> Swift.Bool
   public func hasMusicTrack(with trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   @discardableResult
@@ -264,6 +261,7 @@ extension VideoEditor.VideoEditorAsset {
   @discardableResult
   public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   public func removeAllMusic()
+  @objc deinit
 }
 extension VideoEditor.VideoEditorAsset : VideoEditor.ExportScalable {
   public func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: VideoEditor.VideoTrimData?, completion: (((any Swift.Error)?) -> Swift.Void)?)
@@ -701,7 +699,7 @@ public class MetalHelper {
   public init(libraryBundle: Foundation.Bundle)
   public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> (any Metal.MTLTexture)?
   public func createMonochromeTexture(textureData: Swift.UnsafeMutablePointer<Swift.UInt8>, width: Swift.Int, height: Swift.Int) -> any Metal.MTLTexture
-  public func createRenderPipeline(vertexFunctionName: Swift.String, fragmentFunctionName: Swift.String, pixelFormat: Metal.MTLPixelFormat = .bgra8Unorm, depthPixelFormat: Metal.MTLPixelFormat? = nil, blendParameters: VideoEditor.MetalBlendingParameters? = nil, bundle: Foundation.Bundle = Bundle.main, label: Swift.String? = nil) -> (any Metal.MTLRenderPipelineState)?
+  public func createRenderPipeline(vertexFunctionName: Swift.String, fragmentFunctionName: Swift.String, pixelFormat: Metal.MTLPixelFormat = .bgra8Unorm, depthPixelFormat: Metal.MTLPixelFormat? = nil, blendParameters: VideoEditor.MetalBlendingParameters? = nil, label: Swift.String? = nil) -> (any Metal.MTLRenderPipelineState)?
   public func setupRenderPassDescriptor(destinationTexture: any Metal.MTLTexture, useBufferFetch: Swift.Bool = false) -> Metal.MTLRenderPassDescriptor
   public func setupRenderPassDescriptor(destinationTexture: any Metal.MTLTexture, depth: any Metal.MTLTexture) -> Metal.MTLRenderPassDescriptor
   public func makeBuffer<T>(array: [T]) -> any Metal.MTLBuffer
@@ -720,7 +718,7 @@ extension Metal.MTLBuffer {
   @objc public var image: UIKit.UIImage? {
     @objc get
   }
-  public init(imageName: Swift.String, tintColor: UIKit.UIColor? = nil)
+  public init(imageName: Swift.String)
   public init(image: UIKit.UIImage, tintColor: UIKit.UIColor? = nil)
   @objc deinit
 }

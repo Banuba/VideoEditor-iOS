@@ -7316,7 +7316,6 @@
               "AccessControl",
               "RawDocComment"
             ],
-            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -7345,7 +7344,6 @@
               "AccessControl",
               "RawDocComment"
             ],
-            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -7395,7 +7393,6 @@
               "AccessControl",
               "DiscardableResult"
             ],
-            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -7424,7 +7421,6 @@
               "AccessControl",
               "DiscardableResult"
             ],
-            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -7446,7 +7442,6 @@
               "AccessControl",
               "RawDocComment"
             ],
-            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -12521,16 +12516,6 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "VideoEditor",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreMedia",
-        "printedName": "CoreMedia",
         "declKind": "Import",
         "moduleName": "VideoEditor",
         "declAttributes": [
@@ -20604,7 +20589,7 @@
           {
             "kind": "Function",
             "name": "createRenderPipeline",
-            "printedName": "createRenderPipeline(vertexFunctionName:fragmentFunctionName:pixelFormat:depthPixelFormat:blendParameters:bundle:label:)",
+            "printedName": "createRenderPipeline(vertexFunctionName:fragmentFunctionName:pixelFormat:depthPixelFormat:blendParameters:label:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -20671,13 +20656,6 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Bundle",
-                "printedName": "Foundation.Bundle",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)NSBundle"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "Optional",
                 "printedName": "Swift.String?",
                 "children": [
@@ -20693,8 +20671,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor11MetalHelperC20createRenderPipeline18vertexFunctionName08fragmentiJ011pixelFormat010depthPixelM015blendParameters6bundle5labelSo09MTLRenderG5State_pSgSS_SSSo08MTLPixelM0VAOSgAA0c8BlendingQ0VSgSo8NSBundleCSSSgtF",
-            "mangledName": "$s11VideoEditor11MetalHelperC20createRenderPipeline18vertexFunctionName08fragmentiJ011pixelFormat010depthPixelM015blendParameters6bundle5labelSo09MTLRenderG5State_pSgSS_SSSo08MTLPixelM0VAOSgAA0c8BlendingQ0VSgSo8NSBundleCSSSgtF",
+            "usr": "s:11VideoEditor11MetalHelperC20createRenderPipeline18vertexFunctionName08fragmentiJ011pixelFormat010depthPixelM015blendParameters5labelSo09MTLRenderG5State_pSgSS_SSSo08MTLPixelM0VANSgAA0c8BlendingQ0VSgSSSgtF",
+            "mangledName": "$s11VideoEditor11MetalHelperC20createRenderPipeline18vertexFunctionName08fragmentiJ011pixelFormat010depthPixelM015blendParameters5labelSo09MTLRenderG5State_pSgSS_SSSo08MTLPixelM0VANSgAA0c8BlendingQ0VSgSSSgtF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl"
@@ -21216,7 +21194,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(imageName:tintColor:)",
+            "printedName": "init(imageName:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -21229,26 +21207,11 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIColor?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIColor",
-                    "printedName": "UIKit.UIColor",
-                    "usr": "c:objc(cs)UIColor"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11VideoEditor18ImageConfigurationC9imageName9tintColorACSS_So7UIColorCSgtcfc",
-            "mangledName": "$s11VideoEditor18ImageConfigurationC9imageName9tintColorACSS_So7UIColorCSgtcfc",
+            "usr": "s:11VideoEditor18ImageConfigurationC9imageNameACSS_tcfc",
+            "mangledName": "$s11VideoEditor18ImageConfigurationC9imageNameACSS_tcfc",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -23991,63 +23954,63 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 2268,
+      "offset": 1882,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 2805,
+      "offset": 2419,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 3386,
+      "offset": 3000,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3450,
+      "offset": 3064,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3463,
+      "offset": 3077,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 4341,
+      "offset": 3955,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4405,
+      "offset": 4019,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4418,
+      "offset": 4032,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5956,
+      "offset": 5570,
       "length": 5,
       "value": "false"
     },
@@ -24274,13 +24237,6 @@
       "offset": 302,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/Audio\/VoiceTrackItem.swift",
-      "kind": "StringLiteral",
-      "offset": 174,
-      "length": 14,
-      "value": "\"VideoEditor.VoiceTrackItem\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Extensions\/CGAffineTransform+Utils.swift",
@@ -24663,42 +24619,42 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 394,
+      "offset": 423,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 424,
+      "offset": 453,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 455,
+      "offset": 484,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 623,
+      "offset": 674,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "BooleanLiteral",
-      "offset": 726,
+      "offset": 777,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 762,
+      "offset": 813,
       "length": 3,
       "value": "100"
     },
@@ -24824,14 +24780,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/Metal\/MetalHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 4808,
+      "offset": 4754,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/Metal\/MetalHelper.swift",
       "kind": "Array",
-      "offset": 6293,
+      "offset": 6239,
       "length": 2,
       "value": "[]"
     },
@@ -24845,7 +24801,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Configurations\/WatermarkConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1965,
+      "offset": 1901,
       "length": 6,
       "value": "600000"
     },
