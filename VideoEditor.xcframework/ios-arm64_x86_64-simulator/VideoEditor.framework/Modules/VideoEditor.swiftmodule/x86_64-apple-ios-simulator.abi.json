@@ -24150,28 +24150,28 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 14653,
+      "offset": 14812,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22115,
+      "offset": 22274,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22386,
+      "offset": 22545,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22764,
+      "offset": 22923,
       "length": 4,
       "value": "true"
     },
