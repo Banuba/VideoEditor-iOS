@@ -16889,8 +16889,41 @@
           },
           {
             "kind": "Function",
-            "name": "formattedNameFromDate",
-            "printedName": "formattedNameFromDate(_:)",
+            "name": "title",
+            "printedName": "title(modificationDate:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor0A21SequenceNameFormatterV5title16modificationDate4nameSS10Foundation0H0V_SStF",
+            "mangledName": "$s11VideoEditor0A21SequenceNameFormatterV5title16modificationDate4nameSS10Foundation0H0V_SStF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "title",
+            "printedName": "title(modificationDate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -16906,8 +16939,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0A21SequenceNameFormatterV09formattedD8FromDateySS10Foundation0H0VF",
-            "mangledName": "$s11VideoEditor0A21SequenceNameFormatterV09formattedD8FromDateySS10Foundation0H0VF",
+            "usr": "s:11VideoEditor0A21SequenceNameFormatterV5title16modificationDateSS10Foundation0H0V_tF",
+            "mangledName": "$s11VideoEditor0A21SequenceNameFormatterV5title16modificationDateSS10Foundation0H0V_tF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl"
@@ -16916,8 +16949,8 @@
           },
           {
             "kind": "Function",
-            "name": "formattedDraftSubtitleFromTime",
-            "printedName": "formattedDraftSubtitleFromTime(_:)",
+            "name": "subtitle",
+            "printedName": "subtitle(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -16933,8 +16966,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0A21SequenceNameFormatterV30formattedDraftSubtitleFromTimeySSSdF",
-            "mangledName": "$s11VideoEditor0A21SequenceNameFormatterV30formattedDraftSubtitleFromTimeySSSdF",
+            "usr": "s:11VideoEditor0A21SequenceNameFormatterV8subtitleySSSdF",
+            "mangledName": "$s11VideoEditor0A21SequenceNameFormatterV8subtitleySSSdF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl"
@@ -24123,70 +24156,70 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 10984,
+      "offset": 10986,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11016,
+      "offset": 11018,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11064,
+      "offset": 11066,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11098,
+      "offset": 11100,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11256,
+      "offset": 11258,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11292,
+      "offset": 11294,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 14928,
+      "offset": 14930,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22390,
+      "offset": 22392,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22661,
+      "offset": 22663,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 23039,
+      "offset": 23041,
       "length": 4,
       "value": "true"
     },

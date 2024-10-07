@@ -589,8 +589,9 @@ public protocol EditorCompositionEditableEffectProtocol : Foundation.NSCopying, 
 }
 public struct VideoSequenceNameFormatter {
   public init()
-  public func formattedNameFromDate(_ date: Foundation.Date) -> Swift.String
-  public func formattedDraftSubtitleFromTime(_ time: Foundation.TimeInterval) -> Swift.String
+  public func title(modificationDate: Foundation.Date, name: Swift.String) -> Swift.String
+  public func title(modificationDate: Foundation.Date) -> Swift.String
+  public func subtitle(_ duration: Foundation.TimeInterval) -> Swift.String
 }
 final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, Swift.Codable {
   final public let uuidString: Swift.String
