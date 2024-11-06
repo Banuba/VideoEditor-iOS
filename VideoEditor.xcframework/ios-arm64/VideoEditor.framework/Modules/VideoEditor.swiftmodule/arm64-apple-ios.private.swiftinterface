@@ -396,7 +396,7 @@ extension VideoEditor.VideoSequence {
   @discardableResult
   public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop? = nil, cropFrame: CoreFoundation.CGRect? = nil, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil, index: Swift.Int? = nil) -> VideoEditor.VideoSequenceItem?
   @discardableResult
-  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: VideoEditor.AssetRotation = .none, crop: VideoEditor.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> VideoEditor.VideoSequenceItem?
   public func didUpdateVideo(_ video: VideoEditor.VideoSequenceItem)
 }
 extension VideoEditor.VideoSequence {

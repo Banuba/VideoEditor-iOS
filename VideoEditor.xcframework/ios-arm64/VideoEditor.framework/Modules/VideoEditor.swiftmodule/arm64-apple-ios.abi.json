@@ -11678,7 +11678,7 @@
           {
             "kind": "Function",
             "name": "addVideoCopy",
-            "printedName": "addVideoCopy(uuidString:at:isGalleryAsset:isSlideShow:isPIP:isRemoved:rotation:crop:cropFrame:preview:transition:originalAssetResolution:)",
+            "printedName": "addVideoCopy(uuidString:at:speed:isGalleryAsset:isSlideShow:isPIP:isRemoved:rotation:crop:cropFrame:preview:transition:originalAssetResolution:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11705,6 +11705,12 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
               },
               {
                 "kind": "TypeNominal",
@@ -11804,8 +11810,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:11VideoEditor0A8SequenceC03addA4Copy10uuidString2at14isGalleryAsset0I9SlideShow0I3PIP0I7Removed8rotation4crop0Q5Frame7preview10transition08originalK10ResolutionAA0aC4ItemCSgSS_10Foundation3URLVS4bAA0K8RotationOAA0K4CropOSgSo6CGRectVSgSo7UIImageCSg15BanubaUtilities14TransitionTypeOSo6CGSizeVSgtF",
-            "mangledName": "$s11VideoEditor0A8SequenceC03addA4Copy10uuidString2at14isGalleryAsset0I9SlideShow0I3PIP0I7Removed8rotation4crop0Q5Frame7preview10transition08originalK10ResolutionAA0aC4ItemCSgSS_10Foundation3URLVS4bAA0K8RotationOAA0K4CropOSgSo6CGRectVSgSo7UIImageCSg15BanubaUtilities14TransitionTypeOSo6CGSizeVSgtF",
+            "usr": "s:11VideoEditor0A8SequenceC03addA4Copy10uuidString2at5speed14isGalleryAsset0J9SlideShow0J3PIP0J7Removed8rotation4crop0R5Frame7preview10transition08originalL10ResolutionAA0aC4ItemCSgSS_10Foundation3URLVSdS4bAA0L8RotationOAA0L4CropOSgSo6CGRectVSgSo7UIImageCSg15BanubaUtilities14TransitionTypeOSo6CGSizeVSgtF",
+            "mangledName": "$s11VideoEditor0A8SequenceC03addA4Copy10uuidString2at5speed14isGalleryAsset0J9SlideShow0J3PIP0J7Removed8rotation4crop0R5Frame7preview10transition08originalL10ResolutionAA0aC4ItemCSgSS_10Foundation3URLVSdS4bAA0L8RotationOAA0L4CropOSgSo6CGRectVSgSo7UIImageCSg15BanubaUtilities14TransitionTypeOSo6CGSizeVSgtF",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -23543,13 +23549,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Placeholder",
-            "printedName": "Placeholder",
-            "usr": "s:15BanubaUtilities11PlaceholderP",
-            "mangledName": "$s15BanubaUtilities11PlaceholderP"
-          },
-          {
-            "kind": "Conformance",
             "name": "CacheCostCalculable",
             "printedName": "CacheCostCalculable",
             "usr": "s:15BanubaUtilities19CacheCostCalculableP",
@@ -23561,6 +23560,13 @@
             "printedName": "KingfisherCompatible",
             "usr": "s:15BanubaUtilities20KingfisherCompatibleP",
             "mangledName": "$s15BanubaUtilities20KingfisherCompatibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Placeholder",
+            "printedName": "Placeholder",
+            "usr": "s:15BanubaUtilities11PlaceholderP",
+            "mangledName": "$s15BanubaUtilities11PlaceholderP"
           }
         ]
       },
@@ -23680,7 +23686,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoComposition\/CustomSDKVideoComposition.swift",
       "kind": "StringLiteral",
-      "offset": 1761,
+      "offset": 1767,
       "length": 33,
       "value": "\"VideoEditor.DrawCustomSDKInstructionOperation\""
     },
@@ -24198,28 +24204,28 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 14930,
+      "offset": 15044,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22392,
+      "offset": 22654,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22663,
+      "offset": 22925,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 23041,
+      "offset": 23303,
       "length": 4,
       "value": "true"
     },
@@ -24793,7 +24799,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 7639,
+      "offset": 7659,
       "length": 3,
       "value": "1.0"
     },

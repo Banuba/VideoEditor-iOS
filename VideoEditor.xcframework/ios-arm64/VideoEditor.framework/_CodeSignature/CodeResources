@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tTxTBjSqiHhGwJlS1IumMeSuJDw=
+		ra0rQFsIPs0RrV5/Mxxmo61t0L0=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		IIoT5Tw61OTW1zzSiluLmxicao4=
+		zc2jlO6aO49DW4weGqcJoaywNEU=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Nj75mStjIM4r/Wjj3q7gFPHLCp0=
+		bbBi8EXzNpw9udcfue84Ujl3y9Y=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		5tqVtc01qEL8UTfL0H6Q3I9Awt8=
+		e+2nzwxgwossaFwlpx0ZlUhr7fQ=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Nj75mStjIM4r/Wjj3q7gFPHLCp0=
+		bbBi8EXzNpw9udcfue84Ujl3y9Y=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		hyMKJI9CCB3xMBn8paYLxGomOQA=
+		VZXzE2eiwKGrojNbNOQt+V8EIbM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5SRUgt7FfiAZLnzv9wcegXvKj8ZwEvn/URAce4IH7jI=
+			uWBahXgy8u72Sp+y78tc+tvf1awUfKOlatBbBa0/UcQ=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s91OQTXymQXbptQUutn6ytc14fYnEon1srz4777Rwyo=
+			HdeUXyzwN2Sh5WPLPPjybFEoCYlU6+io4a3wmWVi5kc=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8L+hPunI+ii2uxPT+At3wqUJl4PlZvuTlwbNUY4OMzU=
+			1ALuvUUyLcTSeWxrg87NqhqJrihRW0sFcojQSnzQNoY=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s91OQTXymQXbptQUutn6ytc14fYnEon1srz4777Rwyo=
+			HdeUXyzwN2Sh5WPLPPjybFEoCYlU6+io4a3wmWVi5kc=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rGYgQPtx1nVJ/mpQzNmH1lYr6X/oA7PUtuV0YGqAbWo=
+			6esNl8azNKe6qvjjXSP37xZDzStJSobwnn6xdNermrc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
