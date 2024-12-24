@@ -21147,13 +21147,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "BanubaUtilities",
-        "printedName": "BanubaUtilities",
-        "declKind": "Import",
-        "moduleName": "VideoEditor"
-      },
-      {
         "kind": "TypeDecl",
         "name": "MetalBlendingParameters",
         "printedName": "MetalBlendingParameters",
@@ -24646,70 +24639,70 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 252,
+      "offset": 257,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 291,
+      "offset": 295,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 318,
+      "offset": 322,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 343,
+      "offset": 347,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 370,
+      "offset": 374,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 397,
+      "offset": 401,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 426,
+      "offset": 430,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 457,
+      "offset": 461,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 484,
+      "offset": 488,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 521,
+      "offset": 525,
       "length": 1,
       "value": "0"
     },
@@ -25430,21 +25423,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/Metal\/MetalHelper.swift",
       "kind": "Dictionary",
-      "offset": 1269,
+      "offset": 1246,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/Metal\/MetalHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 4777,
+      "offset": 4754,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/Metal\/MetalHelper.swift",
       "kind": "Array",
-      "offset": 6470,
+      "offset": 6239,
       "length": 2,
       "value": "[]"
     },
