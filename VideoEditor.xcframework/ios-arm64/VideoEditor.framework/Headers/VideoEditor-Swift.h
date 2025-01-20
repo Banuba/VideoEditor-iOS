@@ -326,8 +326,6 @@ SWIFT_CLASS("_TtC11VideoEditor18ImageConfiguration")
 
 
 
-
-
 SWIFT_CLASS("_TtC11VideoEditor30VideoImageEffectDrawersFactory")
 @interface VideoImageEffectDrawersFactory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

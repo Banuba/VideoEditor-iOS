@@ -25493,7 +25493,7 @@
     {
       "filePath": "\/Users\/user\/Library\/Developer\/Xcode\/DerivedData\/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi\/Build\/Intermediates.noindex\/ArchiveIntermediates\/VideoEditor\/IntermediateBuildFilesPath\/VideoEditor.build\/Release-iphonesimulator\/VideoEditor.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 746,
+      "offset": 839,
       "length": 19,
       "value": "\"expired_watermark\""
     }
