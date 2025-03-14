@@ -18,27 +18,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		X3YWJjywXR5yA/tmVxZee2WqSYw=
+		DgGieo0YeGXBY0+38IU8gznjtCw=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		g8K9Unfpd41/OvcSEiwhh3f4kNA=
+		aaTQ+YPY1x9LGxPiqNUmaU+fvSI=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Yfz/qzUtjeFteejS/kwRP4fKDFY=
+		m/ZiuKBTFZV83nbHnLi2SgOpOTE=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		/0fmlbsT9bEb90tmGtw7AUJjeXU=
+		Btwn0i3J32JkGIF/eDjMhkTHe+o=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Yfz/qzUtjeFteejS/kwRP4fKDFY=
+		m/ZiuKBTFZV83nbHnLi2SgOpOTE=
 		</data>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vu5MK9ZxwgsZCH8eAznF9PoX5PI=
+		ZgznGs9CyK17o00KXtv7MMgodHA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,35 +84,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			73fQBXZ4PUbLfZFE+LkC+9PBEELduuHLL97HIio9KtM=
+			gQjByaa4rCCVMljl3qlcGGuR8+OCDaR7ylSXCT8KlHs=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bTz+W7WJZ+QxN6LgNGNz3zWHOdxo1K9GQUKIHVVWy9c=
+			EdXBHbTZ9+citP7oRAT1wXA7zYbehN7KWV3wfLQpmvw=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NbJDm1mf8bf6PRBLWw5HCBCqbOX/UifjeEiEM6Mk+bs=
+			MO8Ap2tXgyWME0VZQp1R4/7oBqS2Nz0jL7LuoPkIfxE=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bTz+W7WJZ+QxN6LgNGNz3zWHOdxo1K9GQUKIHVVWy9c=
+			EdXBHbTZ9+citP7oRAT1wXA7zYbehN7KWV3wfLQpmvw=
 			</data>
 		</dict>
 		<key>Modules/VideoEditor.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I0gR2dnsp6NTN9p0LwfsgSy7GoCn49/hrEfZinwfD84=
+			EqkfkPeRo+rA1vGM4djvotA/XkBy0EB7pBfscvH1dAk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
