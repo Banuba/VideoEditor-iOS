@@ -118,7 +118,6 @@ public protocol VideoEditorServicing : VideoEditor.EffectsManagement, VideoEdito
 }
 final public class VideoEditorService {
   final public func getVideoPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
-  final public func getMusicPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
   final public var videoAsset: VideoEditor.VideoEditorAsset? {
     get
     set

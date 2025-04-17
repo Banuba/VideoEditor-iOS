@@ -3387,51 +3387,6 @@
             "funcSelfKind": "NonMutating"
           },
           {
-            "kind": "Function",
-            "name": "getMusicPlayerItem",
-            "printedName": "getMusicPlayerItem(forExternalAsset:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AVFoundation.AVPlayerItem?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AVPlayerItem",
-                    "printedName": "AVFoundation.AVPlayerItem",
-                    "usr": "c:objc(cs)AVPlayerItem"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AVFoundation.AVAsset?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AVAsset",
-                    "printedName": "AVFoundation.AVAsset",
-                    "usr": "c:objc(cs)AVAsset"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11VideoEditor0aB7ServiceC18getMusicPlayerItem16forExternalAssetSo08AVPlayerG0CSgSo7AVAssetCSg_tF",
-            "mangledName": "$s11VideoEditor0aB7ServiceC18getMusicPlayerItem16forExternalAssetSo08AVPlayerG0CSgSo7AVAssetCSg_tF",
-            "moduleName": "VideoEditor",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
             "kind": "Var",
             "name": "videoAsset",
             "printedName": "videoAsset",
@@ -24425,63 +24380,63 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6913,
+      "offset": 6701,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6927,
+      "offset": 6715,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 7199,
+      "offset": 6987,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 7290,
+      "offset": 7078,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7416,
+      "offset": 7204,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 11030,
+      "offset": 10818,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11397,
+      "offset": 11185,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11431,
+      "offset": 11219,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11756,
+      "offset": 11544,
       "length": 1,
       "value": "1"
     },
@@ -24804,27 +24759,27 @@
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
-      "length": 10,
-      "value": "1000000000"
+      "length": 9,
+      "value": "1000000"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "StringLiteral",
-      "offset": 302,
+      "offset": 301,
       "length": 17,
       "value": "\"blank_video.mp4\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "FloatLiteral",
-      "offset": 366,
+      "offset": 365,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoFromImages\/VideoImagesComposition.swift",
       "kind": "FloatLiteral",
-      "offset": 416,
+      "offset": 415,
       "length": 3,
       "value": "0.1"
     },
