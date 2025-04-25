@@ -12,6 +12,7 @@ import CoreVideo
 import DeveloperToolsSupport
 import Foundation
 import MetalKit
+import Photos
 import QuartzCore
 import Swift
 import SwiftUI
@@ -414,6 +415,13 @@ extension VideoEditor.VideoSequence {
   public static func extractSpeed(from fileUrl: Foundation.URL) -> Swift.Double
   @objc deinit
 }
+public class ImageToVideoConverter {
+  public init(image: UIKit.UIImage, duration: Foundation.TimeInterval, fps: CoreMedia.CMTimeScale)
+  public func exportVideo(to file: Foundation.URL) async throws
+  public func cancelExport()
+  public func getImageInfo(at time: CoreMedia.CMTime) -> VideoEditor.VideoImageInSequence
+  @objc deinit
+}
 @objc public class VideoImagesComposition : ObjectiveC.NSObject {
   public init(sequence: VideoEditor.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
   public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)?)
@@ -423,6 +431,21 @@ extension VideoEditor.VideoSequence {
 @_hasMissingDesignatedInitializers public class EffectStack {
   public func getAllEffects(at time: CoreMedia.CMTime, from: [any VideoEditor.EditorCompositionEditableEffectProtocol]) -> [any VideoEditor.EditorCompositionEditableEffectProtocol]
   @objc deinit
+}
+public class CapturedImage {
+  final public let duration: Foundation.TimeInterval
+  public var capturedImage: CoreGraphics.CGImage
+  public var image: CoreGraphics.CGImage?
+  public var isImageEffectEnabled: Swift.Bool
+  public init(capturedImage: CoreGraphics.CGImage, duration: Foundation.TimeInterval, isImageEffectEnabled: Swift.Bool)
+  @objc deinit
+}
+extension VideoEditor.CapturedImage : VideoEditor.VideoEditorImageAssetProtocol {
+  public var shouldUseImageEffect: Swift.Bool {
+    get
+  }
+  public func getOrPreloadImage() -> CoreGraphics.CGImage?
+  public func unloadImage()
 }
 public protocol VideoImageEffectDrawable {
   func draw(imageTexture: any Metal.MTLTexture, in pixelBuffer: CoreVideo.CVPixelBuffer, sampleTime: Foundation.TimeInterval, startTime: Foundation.TimeInterval, endTime: Foundation.TimeInterval, imageSize: CoreFoundation.CGSize)
@@ -459,6 +482,13 @@ public protocol EffectsManagement : AnyObject {
   func hasChangesInAppliedEffects() -> Swift.Bool
   func storeStack()
   func restoreStack()
+}
+public class VideoImageInSequence {
+  final public let imageAsset: any VideoEditor.VideoEditorImageAssetProtocol
+  final public let startTime: Foundation.TimeInterval
+  final public let drawer: any VideoEditor.VideoImageEffectDrawable
+  public init(imageAsset: any VideoEditor.VideoEditorImageAssetProtocol, startTime: Foundation.TimeInterval)
+  @objc deinit
 }
 public class VideoEditorImagesSequence {
   @objc deinit

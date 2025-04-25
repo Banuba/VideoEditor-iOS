@@ -12498,6 +12498,150 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ImageToVideoConverter",
+        "printedName": "ImageToVideoConverter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(image:duration:fps:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageToVideoConverter",
+                "printedName": "VideoEditor.ImageToVideoConverter",
+                "usr": "s:11VideoEditor07ImageToA9ConverterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoEditor07ImageToA9ConverterC5image8duration3fpsACSo7UIImageC_Sds5Int32Vtcfc",
+            "mangledName": "$s11VideoEditor07ImageToA9ConverterC5image8duration3fpsACSo7UIImageC_Sds5Int32Vtcfc",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "exportVideo",
+            "printedName": "exportVideo(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor07ImageToA9ConverterC06exportA02toy10Foundation3URLV_tYaKF",
+            "mangledName": "$s11VideoEditor07ImageToA9ConverterC06exportA02toy10Foundation3URLV_tYaKF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cancelExport",
+            "printedName": "cancelExport()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor07ImageToA9ConverterC12cancelExportyyF",
+            "mangledName": "$s11VideoEditor07ImageToA9ConverterC12cancelExportyyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getImageInfo",
+            "printedName": "getImageInfo(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoImageInSequence",
+                "printedName": "VideoEditor.VideoImageInSequence",
+                "usr": "s:11VideoEditor0A15ImageInSequenceC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor07ImageToA9ConverterC03getC4Info2atAA0aC10InSequenceCSo6CMTimea_tF",
+            "mangledName": "$s11VideoEditor07ImageToA9ConverterC03getC4Info2atAA0aC10InSequenceCSo6CMTimea_tF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11VideoEditor07ImageToA9ConverterC",
+        "mangledName": "$s11VideoEditor07ImageToA9ConverterC",
+        "moduleName": "VideoEditor",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VideoImagesComposition",
         "printedName": "VideoImagesComposition",
         "children": [
@@ -12816,6 +12960,513 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Photos",
+        "printedName": "Photos",
+        "declKind": "Import",
+        "moduleName": "VideoEditor",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CapturedImage",
+        "printedName": "CapturedImage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "duration",
+            "printedName": "duration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor13CapturedImageC8durationSdvp",
+            "mangledName": "$s11VideoEditor13CapturedImageC8durationSdvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC8durationSdvg",
+                "mangledName": "$s11VideoEditor13CapturedImageC8durationSdvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "capturedImage",
+            "printedName": "capturedImage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGImage",
+                "printedName": "CoreGraphics.CGImage",
+                "usr": "c:@T@CGImageRef"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavp",
+            "mangledName": "$s11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGImage",
+                    "printedName": "CoreGraphics.CGImage",
+                    "usr": "c:@T@CGImageRef"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavg",
+                "mangledName": "$s11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGImage",
+                    "printedName": "CoreGraphics.CGImage",
+                    "usr": "c:@T@CGImageRef"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavs",
+                "mangledName": "$s11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavs",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavM",
+                "mangledName": "$s11VideoEditor13CapturedImageC08capturedD0So10CGImageRefavM",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGImage",
+                    "printedName": "CoreGraphics.CGImage",
+                    "usr": "c:@T@CGImageRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvp",
+            "mangledName": "$s11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGImage",
+                        "printedName": "CoreGraphics.CGImage",
+                        "usr": "c:@T@CGImageRef"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvg",
+                "mangledName": "$s11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreGraphics.CGImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGImage",
+                        "printedName": "CoreGraphics.CGImage",
+                        "usr": "c:@T@CGImageRef"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvs",
+                "mangledName": "$s11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvs",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvM",
+                "mangledName": "$s11VideoEditor13CapturedImageC5imageSo10CGImageRefaSgvM",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isImageEffectEnabled",
+            "printedName": "isImageEffectEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor13CapturedImageC02isD13EffectEnabledSbvp",
+            "mangledName": "$s11VideoEditor13CapturedImageC02isD13EffectEnabledSbvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC02isD13EffectEnabledSbvg",
+                "mangledName": "$s11VideoEditor13CapturedImageC02isD13EffectEnabledSbvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC02isD13EffectEnabledSbvs",
+                "mangledName": "$s11VideoEditor13CapturedImageC02isD13EffectEnabledSbvs",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC02isD13EffectEnabledSbvM",
+                "mangledName": "$s11VideoEditor13CapturedImageC02isD13EffectEnabledSbvM",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(capturedImage:duration:isImageEffectEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CapturedImage",
+                "printedName": "VideoEditor.CapturedImage",
+                "usr": "s:11VideoEditor13CapturedImageC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGImage",
+                "printedName": "CoreGraphics.CGImage",
+                "usr": "c:@T@CGImageRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoEditor13CapturedImageC08capturedD08duration02isD13EffectEnabledACSo10CGImageRefa_SdSbtcfc",
+            "mangledName": "$s11VideoEditor13CapturedImageC08capturedD08duration02isD13EffectEnabledACSo10CGImageRefa_SdSbtcfc",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "shouldUseImageEffect",
+            "printedName": "shouldUseImageEffect",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor13CapturedImageC09shouldUseD6EffectSbvp",
+            "mangledName": "$s11VideoEditor13CapturedImageC09shouldUseD6EffectSbvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor13CapturedImageC09shouldUseD6EffectSbvg",
+                "mangledName": "$s11VideoEditor13CapturedImageC09shouldUseD6EffectSbvg",
+                "moduleName": "VideoEditor",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getOrPreloadImage",
+            "printedName": "getOrPreloadImage()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGImage",
+                    "printedName": "CoreGraphics.CGImage",
+                    "usr": "c:@T@CGImageRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor13CapturedImageC012getOrPreloadD0So10CGImageRefaSgyF",
+            "mangledName": "$s11VideoEditor13CapturedImageC012getOrPreloadD0So10CGImageRefaSgyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unloadImage",
+            "printedName": "unloadImage()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11VideoEditor13CapturedImageC06unloadD0yyF",
+            "mangledName": "$s11VideoEditor13CapturedImageC06unloadD0yyF",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11VideoEditor13CapturedImageC",
+        "mangledName": "$s11VideoEditor13CapturedImageC",
+        "moduleName": "VideoEditor",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VideoEditorImageAssetProtocol",
+            "printedName": "VideoEditorImageAssetProtocol",
+            "usr": "s:11VideoEditor0aB18ImageAssetProtocolP",
+            "mangledName": "$s11VideoEditor0aB18ImageAssetProtocolP"
           }
         ]
       },
@@ -13892,6 +14543,213 @@
         "moduleName": "VideoEditor",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VideoImageInSequence",
+        "printedName": "VideoImageInSequence",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "imageAsset",
+            "printedName": "imageAsset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorImageAssetProtocol",
+                "printedName": "any VideoEditor.VideoEditorImageAssetProtocol",
+                "usr": "s:11VideoEditor0aB18ImageAssetProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0A15ImageInSequenceC10imageAssetAA0abcG8Protocol_pvp",
+            "mangledName": "$s11VideoEditor0A15ImageInSequenceC10imageAssetAA0abcG8Protocol_pvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoEditorImageAssetProtocol",
+                    "printedName": "any VideoEditor.VideoEditorImageAssetProtocol",
+                    "usr": "s:11VideoEditor0aB18ImageAssetProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0A15ImageInSequenceC10imageAssetAA0abcG8Protocol_pvg",
+                "mangledName": "$s11VideoEditor0A15ImageInSequenceC10imageAssetAA0abcG8Protocol_pvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "startTime",
+            "printedName": "startTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0A15ImageInSequenceC9startTimeSdvp",
+            "mangledName": "$s11VideoEditor0A15ImageInSequenceC9startTimeSdvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0A15ImageInSequenceC9startTimeSdvg",
+                "mangledName": "$s11VideoEditor0A15ImageInSequenceC9startTimeSdvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "drawer",
+            "printedName": "drawer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoImageEffectDrawable",
+                "printedName": "any VideoEditor.VideoImageEffectDrawable",
+                "usr": "s:11VideoEditor0A19ImageEffectDrawableP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11VideoEditor0A15ImageInSequenceC6drawerAA0aC14EffectDrawable_pvp",
+            "mangledName": "$s11VideoEditor0A15ImageInSequenceC6drawerAA0aC14EffectDrawable_pvp",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoImageEffectDrawable",
+                    "printedName": "any VideoEditor.VideoImageEffectDrawable",
+                    "usr": "s:11VideoEditor0A19ImageEffectDrawableP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11VideoEditor0A15ImageInSequenceC6drawerAA0aC14EffectDrawable_pvg",
+                "mangledName": "$s11VideoEditor0A15ImageInSequenceC6drawerAA0aC14EffectDrawable_pvg",
+                "moduleName": "VideoEditor",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(imageAsset:startTime:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoImageInSequence",
+                "printedName": "VideoEditor.VideoImageInSequence",
+                "usr": "s:11VideoEditor0A15ImageInSequenceC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorImageAssetProtocol",
+                "printedName": "any VideoEditor.VideoEditorImageAssetProtocol",
+                "usr": "s:11VideoEditor0aB18ImageAssetProtocolP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11VideoEditor0A15ImageInSequenceC10imageAsset9startTimeAcA0abcG8Protocol_p_Sdtcfc",
+            "mangledName": "$s11VideoEditor0A15ImageInSequenceC10imageAsset9startTimeAcA0abcG8Protocol_p_Sdtcfc",
+            "moduleName": "VideoEditor",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11VideoEditor0A15ImageInSequenceC",
+        "mangledName": "$s11VideoEditor0A15ImageInSequenceC",
+        "moduleName": "VideoEditor",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
