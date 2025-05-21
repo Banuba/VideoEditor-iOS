@@ -7224,7 +7224,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(sequence:isGalleryAssets:isSlideShow:isDebugModeOn:fillAspectRatioRange:videoResolutionConfiguration:)",
+            "printedName": "init(sequence:isDebugModeOn:fillAspectRatioRange:videoResolutionConfiguration:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7237,18 +7237,6 @@
                 "name": "VideoSequence",
                 "printedName": "VideoEditor.VideoSequence",
                 "usr": "c:@M@VideoEditor@objc(cs)VideoSequence"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -7280,8 +7268,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11VideoEditor0aB5AssetC8sequence15isGalleryAssets0E9SlideShow0E11DebugModeOn20fillAspectRatioRange28videoResolutionConfigurationAcA0A8SequenceC_S3bSNy14CoreFoundation7CGFloatVG15BanubaUtilities0arS0Vtcfc",
-            "mangledName": "$s11VideoEditor0aB5AssetC8sequence15isGalleryAssets0E9SlideShow0E11DebugModeOn20fillAspectRatioRange28videoResolutionConfigurationAcA0A8SequenceC_S3bSNy12CoreGraphics7CGFloatVG15BanubaUtilities0arS0Vtcfc",
+            "usr": "s:11VideoEditor0aB5AssetC8sequence13isDebugModeOn20fillAspectRatioRange28videoResolutionConfigurationAcA0A8SequenceC_SbSNy14CoreFoundation7CGFloatVG15BanubaUtilities0anO0Vtcfc",
+            "mangledName": "$s11VideoEditor0aB5AssetC8sequence13isDebugModeOn20fillAspectRatioRange28videoResolutionConfigurationAcA0A8SequenceC_SbSNy12CoreGraphics7CGFloatVG15BanubaUtilities0anO0Vtcfc",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -11342,8 +11330,8 @@
           },
           {
             "kind": "Var",
-            "name": "isGallerySequence",
-            "printedName": "isGallerySequence",
+            "name": "hasCameraVideos",
+            "printedName": "hasCameraVideos",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11353,8 +11341,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:11VideoEditor0A8SequenceC09isGalleryC0Sbvp",
-            "mangledName": "$s11VideoEditor0A8SequenceC09isGalleryC0Sbvp",
+            "usr": "s:11VideoEditor0A8SequenceC15hasCameraVideosSbvp",
+            "mangledName": "$s11VideoEditor0A8SequenceC15hasCameraVideosSbvp",
             "moduleName": "VideoEditor",
             "declAttributes": [
               "AccessControl",
@@ -11374,8 +11362,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:11VideoEditor0A8SequenceC09isGalleryC0Sbvg",
-                "mangledName": "$s11VideoEditor0A8SequenceC09isGalleryC0Sbvg",
+                "usr": "s:11VideoEditor0A8SequenceC15hasCameraVideosSbvg",
+                "mangledName": "$s11VideoEditor0A8SequenceC15hasCameraVideosSbvg",
                 "moduleName": "VideoEditor",
                 "accessorKind": "get"
               }
@@ -25343,105 +25331,105 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 3955,
+      "offset": 3797,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4019,
+      "offset": 3861,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4032,
+      "offset": 3874,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5569,
+      "offset": 5416,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5645,
+      "offset": 5492,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5801,
+      "offset": 5648,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5817,
+      "offset": 5664,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5922,
+      "offset": 5769,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7008,
+      "offset": 6855,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7046,
+      "offset": 6893,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7228,
+      "offset": 7075,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7536,
+      "offset": 7383,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 8513,
+      "offset": 8360,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9748,
+      "offset": 9595,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9917,
+      "offset": 9764,
       "length": 3,
       "value": "1.0"
     },
@@ -25525,70 +25513,70 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 10986,
+      "offset": 10991,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11018,
+      "offset": 11023,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11066,
+      "offset": 11071,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11100,
+      "offset": 11105,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11258,
+      "offset": 11263,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11294,
+      "offset": 11299,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 15044,
+      "offset": 15049,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22654,
+      "offset": 22659,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22925,
+      "offset": 22930,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/VideoEditor\/VideoEditor\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 23303,
+      "offset": 23308,
       "length": 4,
       "value": "true"
     },

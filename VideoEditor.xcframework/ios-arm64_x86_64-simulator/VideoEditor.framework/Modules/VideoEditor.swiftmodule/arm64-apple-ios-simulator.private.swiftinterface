@@ -246,7 +246,7 @@ public class VideoEditorAsset {
     get
   }
   public init(tracks: [VideoEditor.VideoEditorAssetTrackInfo], isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
-  convenience public init(sequence: VideoEditor.VideoSequence, isGalleryAssets: Swift.Bool, isSlideShow: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
+  convenience public init(sequence: VideoEditor.VideoSequence, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
   public func reloadComposition()
   public func loadNonExistingThumbnails(completion: (() -> ())?)
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
@@ -362,7 +362,7 @@ public class VideoSequenceItem {
   public var initialDurations: [Foundation.TimeInterval] {
     get
   }
-  public var isGallerySequence: Swift.Bool {
+  public var hasCameraVideos: Swift.Bool {
     get
   }
   public var removedVideos: [VideoEditor.VideoSequenceItem] {
