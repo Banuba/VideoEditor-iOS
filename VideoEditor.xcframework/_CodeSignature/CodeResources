@@ -18,7 +18,7 @@
 		</data>
 		<key>ios-arm64/VideoEditor.framework/Info.plist</key>
 		<data>
-		iB1vYKzKLkWBultY84xamncz7cc=
+		LBY3e7ZjIJGKyfeFCwWchoHQN+o=
 		</data>
 		<key>ios-arm64/VideoEditor.framework/Modules/VideoEditor.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>ios-arm64/VideoEditor.framework/VideoEditor</key>
 		<data>
-		3HD/ffOSphMz1LpCKSK3SSwT3l0=
+		YOT+9vVs1dAXpArdN319lvd7Lys=
 		</data>
 		<key>ios-arm64/VideoEditor.framework/_CodeSignature/CodeResources</key>
 		<data>
-		SXTJlL1sbr341y1c3JXsaQvS7Yw=
+		495y7OBcOjmXotGmrCVBLgWjUGM=
 		</data>
 		<key>ios-arm64/VideoEditor.framework/blank_video.mp4</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/VideoEditor.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		c+mp9CUHueFuXDRxPOOtscSuLIE=
+		RrvaKD85SxLI9jVjcUl8fIk82Gc=
 		</data>
 		<key>ios-arm64/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/DWARF/VideoEditor</key>
 		<data>
-		i4ifhH/IetYcdaCLALpXO2T0+FI=
+		miN7y8JWObQL7EXXcoRYnwBCf9s=
 		</data>
 		<key>ios-arm64/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/Relocations/aarch64/VideoEditor.yml</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/Info.plist</key>
 		<data>
-		sqCZUP8TyAqxrIwLEWCeXuiDH8s=
+		j7CQhMpy5vnZNHoboEJvdJ1/RHs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/VideoEditor</key>
 		<data>
-		G0PrFAwepQVMeg6tDauCqhzQyWo=
+		ZKpwWPXQEUKoq8UqJTkNxeDz1kw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/_CodeSignature/CodeResources</key>
 		<data>
-		xvZfoczmXbNOKOX98xUXips2AoE=
+		HjEuiVDifNVSCoheFRlMcBV4Y98=
 		</data>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/blank_video.mp4</key>
 		<data>
@@ -146,11 +146,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/VideoEditor.framework.dSYM/Contents/Info.plist</key>
 		<data>
-		c+mp9CUHueFuXDRxPOOtscSuLIE=
+		RrvaKD85SxLI9jVjcUl8fIk82Gc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/DWARF/VideoEditor</key>
 		<data>
-		9KBLR3RqsNIJmvUPUEBra45MCG0=
+		I1Mrcu6VLeL3QWsQ68tXvnT4e/g=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/Relocations/aarch64/VideoEditor.yml</key>
 		<data>
@@ -200,11 +200,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iB1vYKzKLkWBultY84xamncz7cc=
+			LBY3e7ZjIJGKyfeFCwWchoHQN+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			ckU2xwr8MzVHwAeHOvGIwJzw2ZVnkf0Q+G3lO+1WDws=
+			I8QhPkZJH4W4fC6BVUIhqcs76kwFuAnV1f/TNPAwrd0=
 			</data>
 		</dict>
 		<key>ios-arm64/VideoEditor.framework/Modules/VideoEditor.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -277,22 +277,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3HD/ffOSphMz1LpCKSK3SSwT3l0=
+			YOT+9vVs1dAXpArdN319lvd7Lys=
 			</data>
 			<key>hash2</key>
 			<data>
-			dhfw4unwxDPvczlNS9l49IS3uc1e5Qy1a0pNqAlmZoQ=
+			2dmiUBF9o5nYHeBQsW6FF1SiJ1LVXExd/xJBPgqkqyg=
 			</data>
 		</dict>
 		<key>ios-arm64/VideoEditor.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SXTJlL1sbr341y1c3JXsaQvS7Yw=
+			495y7OBcOjmXotGmrCVBLgWjUGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			38wXE6dtF+k73MSUCy9GTjkmN7GfvysPoUziQDjEwdA=
+			dTa/0ZO6zFBPOcGBVzcreDhpqjNlRWs7H9BItKqwGqc=
 			</data>
 		</dict>
 		<key>ios-arm64/VideoEditor.framework/blank_video.mp4</key>
@@ -321,22 +321,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c+mp9CUHueFuXDRxPOOtscSuLIE=
+			RrvaKD85SxLI9jVjcUl8fIk82Gc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sVDzgzFUwvsjVzvidXP/vsEpG4gPr+gkhl+caalf394=
+			y6Ee8BQrl3X7N0vFeWz+Ohj0CIOtMhZCya24gTiR2/s=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/DWARF/VideoEditor</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			i4ifhH/IetYcdaCLALpXO2T0+FI=
+			miN7y8JWObQL7EXXcoRYnwBCf9s=
 			</data>
 			<key>hash2</key>
 			<data>
-			SE92uZCNDzrIVCAeZ1CNoLzL363yUU1iaCcveKIkTzs=
+			KTkvB4COJX2EPD9crSMbX4m8mdOXcDPipIJy3N43YwA=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/Relocations/aarch64/VideoEditor.yml</key>
@@ -387,11 +387,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sqCZUP8TyAqxrIwLEWCeXuiDH8s=
+			j7CQhMpy5vnZNHoboEJvdJ1/RHs=
 			</data>
 			<key>hash2</key>
 			<data>
-			CjT1fM6E5KkOmgxaGXE02PRQbS7x4ozcK2HLbS/wFvU=
+			nFCXV1RsWiDnSfdDlcZFU91LWTpU79NQrd47KTVTGsY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/Modules/VideoEditor.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -508,22 +508,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			G0PrFAwepQVMeg6tDauCqhzQyWo=
+			ZKpwWPXQEUKoq8UqJTkNxeDz1kw=
 			</data>
 			<key>hash2</key>
 			<data>
-			JYsPE4nHgPnsAVi3hf0YRMomuvUubzxgaSyr+NvQbLQ=
+			jIyySXV+0jWtX1IF6jsybDfbbXCw4ASQszU1qsVbIsI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xvZfoczmXbNOKOX98xUXips2AoE=
+			HjEuiVDifNVSCoheFRlMcBV4Y98=
 			</data>
 			<key>hash2</key>
 			<data>
-			y9FpcoZFJ5/QdHtH6+6qiWdF7cIznXha0EoMY5Z6zFE=
+			AGo/rfnOQaAj6YUzhOl6Bc7SAJdwLFsPd27Jnbn5Q18=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/VideoEditor.framework/blank_video.mp4</key>
@@ -552,22 +552,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c+mp9CUHueFuXDRxPOOtscSuLIE=
+			RrvaKD85SxLI9jVjcUl8fIk82Gc=
 			</data>
 			<key>hash2</key>
 			<data>
-			sVDzgzFUwvsjVzvidXP/vsEpG4gPr+gkhl+caalf394=
+			y6Ee8BQrl3X7N0vFeWz+Ohj0CIOtMhZCya24gTiR2/s=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/DWARF/VideoEditor</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9KBLR3RqsNIJmvUPUEBra45MCG0=
+			I1Mrcu6VLeL3QWsQ68tXvnT4e/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			cvmqvPwZbr6bI61VJ3RtRYPILQ3G9QxJRorK0c+AGY8=
+			5UV5SWNJGe7o8D/cJj7S/wmSyPuHmPWb0upQ+83N4wM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/VideoEditor.framework.dSYM/Contents/Resources/Relocations/aarch64/VideoEditor.yml</key>
